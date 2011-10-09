@@ -23,7 +23,7 @@ score-system-spacing #'stretchability = #5
 oddHeaderMarkup = \markup { \override #'(font-name . "JohnSans Medium Pro") \abs-fontsize #16 "34"}
 
 oddFooterMarkup = \markup {\fill-line { \override #'(font-name . "JohnSans Medium Pro") "15"}}
-evenFooterMarkup = \markup { \fill-line { \center-column { \override #'(font-name . "JohnSans White Pro") \abs-fontsize #6 "\"Gnade und Wahrheit\" von Albert Frey, D&D Medien 2001, D-88287 Grünkraut ©" \override #'(font-name . "JohnSans Medium Pro") "16"}}}
+evenFooterMarkup = \markup { \fill-line { \center-column { \override #'(font-name . "JohnSans White Pro") \abs-fontsize #6 "\"Gnade und Wahrheit\" von Albert Frey, D&D Medien 2001 ©" \override #'(font-name . "JohnSans Medium Pro") "16"}}}
 print-page-number = ##f
 %first-page-number = #16
 %print-first-page-number = ##t
