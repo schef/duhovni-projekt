@@ -52,21 +52,21 @@ scoreA = \relative c' {
 	%\partial 4
 	%\repeat volta 2 {
 	%}
-	g'8 g g g ~ g g g fis ~ |
+	g'8[ g] g[ g] ~ g[ g] fis fis ~ |
 	fis8 e4. r2 |
-	d8 d d d ~ d e4 d8 ~ |
+	d8[ d] d[ d] ~ d e4 d8 ~ |
 	d2 r4 r8 h8 |
-	g'8 g g g ~ g fis4 fis8 ~ |
+	g'8[ g] g[ g] ~ g fis4 fis8 ~ |
 	fis8 e4. r2 |
-	d8 d d d ~ d e4 d8 ~ |
+	d8[ d] d[ d] ~ d e4 d8 ~ |
 	d2 r4 r8 d8 |
-	c'8 c c c ~ c h4 h8 ~ |
+	c'8[ c] c[ c] ~ c h4 h8 ~ |
 	h8 a4. r2 |
-	g8 g g g ~ g h4 h8 ~ |
+	g8[ g] g[ g] ~ g h4 h8 ~ |
 	h2 r4 r8 g8 |
-	c8 c c c ~ c h h h ~ |
+	c8[ c] c[ c] ~ c[ h] h h ~ |
 	h8 a4. r2 |
-	g8 g g g ~ g h4 h8 ~ |
+	g8[ g] g[ g] ~ g h4 h8 ~ |
 	h2. r4 |
 	%\alternative {
 	%prima
@@ -82,20 +82,20 @@ scoreB = \relative c' {
 	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") B }
 	\set Score.currentBarNumber = #9
 	%\partial 4
-	h'4\( a8\) a8 ~ a4 d4 |
-	h4 ~ a8 a ~ a4 r4 |
-	a4 ~ g8 g ~ g4 d4 |
-	a4 ~ g8 g ~ g8 r4 |
-	h4 ~ a8 a ~ a4 d4 |
-	h4 ~ a8 a ~ a4 r8 h8 |
+	h'4\( a8\) a8 ~ a4 d,4 |
+	h'4\( a8\) a ~ a4 r4 |
+	a4\( g8\) g ~ g4 d4 |
+	a'4\( g8\) g ~ g4 r4 |
+	h4\( a8\) a ~ a4 d,4 |
+	h'4\( a8\) a ~ a4 r8 h8 |
 	c4 c8 c ~ c h4 h8 ~ |
 	h2. r4 |
-	h4 ~  a8 a ~ a4 d4 |
-	h4 ~ a8 a ~ a4 r4 |
-	a4 ~ g8 g ~ g4 d4 |
-	a4 ~ g8 g ~ g8 r4 |
-	h4 ~ a8 a ~ a4 d4 |
-	h4 ~ a8 a ~ a4 g |
+	h4\( a8\) a ~ a4 d,4 |
+	h'4\( a8\) a ~ a4 r4 |
+	a4\( g8\) g ~ g4 d4 |
+	a'4\( g8\) g ~ g4 r4 |
+	h4\( a8\) a ~ a4 d,4 |
+	h'4\( a8\) a ~ a4 g |
 	g1 |
 	r1 |
 	\bar "|." \break
@@ -129,7 +129,7 @@ chordsB = \chordmode {
 	a1:m7 | d2:sus4 d2 | g1 | e:m7 |
 	a1:m7 | d2:sus4 d2 | dis1:dim | e:m |
 	a1:m7 | d2:sus4 d2 | g1 | e:m7 |
-	a1:m7 | d2:sus4 d2 | g1 | r1 |
+	a1:m7 | d2:sus4 d2 | g1 | g1 |
 }
 
 chordsC = \chordmode {
@@ -152,10 +152,10 @@ pje -- vam pun ra -- do -- sti.
 }
 
 lyricsB = \lyricmode {
-I -- su -- se, svije -- tli mi -- lo -- šću svo -- jom.
-I -- su -- se, do -- đi, ra -- svije -- tli ta -- mu svu.
-Sr -- ca nam mije -- njaj mi -- lo -- šću svo -- jom.
-I -- su -- se, o -- ba -- sjaj nas!
+I -- \skip8 su -- se, svije -- \skip8 tli mi -- \skip8 lo -- šću svo --  \skip8 jom.
+I -- \skip8 su -- se, do -- \skip8 đi, ra -- svije -- tli ta -- mu svu.
+Sr -- \skip8 ca nam mije -- \skip8 njaj mi -- \skip8 lo -- šću svo -- \skip8 jom.
+I -- \skip8 su -- se, o -- \skip8 ba -- sjaj nas!
 }
 
 lyricsC = \lyricmode {
@@ -163,7 +163,7 @@ lyricsC = \lyricmode {
 }
 
 lyricsATwo = \lyricmode {
-"test kitica 2"
+
 }
 
 \book {
