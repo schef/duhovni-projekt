@@ -80,7 +80,7 @@ scoreA = \relative c' {
 scoreB = \relative c' {
 	\key e \minor
 	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") B }
-	\set Score.currentBarNumber = #9
+	\set Score.currentBarNumber = #17
 	%\partial 4
 	h'4\( a8\) a8 ~ a4 d,4 |
 	h'4\( a8\) a ~ a4 r4 |
