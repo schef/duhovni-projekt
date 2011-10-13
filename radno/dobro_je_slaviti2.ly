@@ -1,47 +1,17 @@
 \version "2.14.2"
 
-#(set-default-paper-size "biblija")
-#(set-global-staff-size 16)
+#(define naslov "DOBRO JE SLAVITI" )
+#(define autor "FRANK BOSCH" )
+#(define mjera "UBRZAVAJUĆA | ŽIDOVSKA" )
 
-\paper {
-indent = 0
-top-markup-spacing #'padding = #2
-markup-system-spacing #'padding = #5
-markup-system-spacing #'stretchability = #5
-score-system-spacing #'padding = #5
-last-bottom-spacing #'padding = #5
-score-markup-spacing #'padding = #5
-top-system-spacing #'padding = #17.5
-
-markup-markup-spacing #'padding = #3
-
-system-system-spacing #'padding = #1
-%system-system-spacing #'minimum-distance = #1
-system-system-spacing #'stretchability = #0
-score-system-spacing #'stretchability = #5
-%system-system-spacing #'space = #1
-oddHeaderMarkup = \markup { \override #'(font-name . "JohnSans Medium Pro") \abs-fontsize #16 "34"}
-
-oddFooterMarkup = \markup {\fill-line { \override #'(font-name . "JohnSans Medium Pro") "15"}}
-evenFooterMarkup = \markup { \fill-line { \center-column { \override #'(font-name . "JohnSans White Pro") \abs-fontsize #6 "Copyright Information ©" \override #'(font-name . "JohnSans Medium Pro") "16"}}}
-print-page-number = ##f
-%first-page-number = #16
-%print-first-page-number = ##t
-%auto-first-page-number = ##t
-%ragged-last-bottom=##t
-%annotate-spacing = ##t
-}
+#(define brojPjesme "345" )
+#(define brojStraniceLijevo "3" )
+#(define brojStraniceDesno "4" )
+#(define copyright "Copyright Information ©" )
 
 \include "jazzchords.ly"
 \include "deutsch.ly"
-\header {
-  title =  \markup { \override #'(font-name . "JohnSans Medium Pro") \abs-fontsize #16 "DOBRO JE SLAVITI" }
-  %subtitle = ""
-  composer =  \markup { \lower #1 \override #'(font-name . "JohnSans Medium Pro") \abs-fontsize #7 "FRANK BOSCH" }
-  %tagline = \markup { \override #'(font-name . "JohnSans White Pro") \abs-fontsize #6 "Copyright Information ©" }
-  poet = \markup { \lower #1 \override #'(font-name . "JohnSans Medium Pro") \abs-fontsize #7 "UBRZAVAJUĆA | ŽIDOVSKA" }
-}
-
+\include "config.ly"
 
 %NOTE
 scoreA = {
@@ -171,17 +141,17 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 %DIO A
 \score {
 	<<
-	\new ChordNames {	\frenchChords
-						\override ChordName #'font-size = #0
-						\override ChordName #'font-name = #"JohnSans White Pro"
+	\new ChordNames {	
+						\override ChordName #'font-size = #fontStupnjevaVelicina
+						\override ChordName #'font-name = #fontStupnjeva
 						%\override ChordName #'font-shape = #'italic
 						\set chordChanges = ##t
 						\transpose h c
 						\chordsA
 						}
 	\new ChordNames {   \semiGermanChords
-						\override ChordName #'font-size = #3
-						\override ChordName #'font-name = #"JohnSans Medium Pro Lilypond"
+						\override ChordName #'font-size = #fontAkordiVelicina
+						\override ChordName #'font-name = #fontAkordi
 						\set chordRootNamer = #my-chord-name->pop-markup
 						\set chordChanges = ##t
                         			%\transpose d h,
@@ -204,16 +174,16 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 \score {
 	<<
 	\new ChordNames {	\italianChords
-						\override ChordName #'font-size = #0
-						\override ChordName #'font-name = #"JohnSans White Pro"
+						\override ChordName #'font-size = #fontStupnjevaVelicina
+						\override ChordName #'font-name = #fontStupnjeva
 						%\override ChordName #'font-shape = #'italic
 						\set chordChanges = ##t
 						\transpose h c
 						\chordsB
 						}
 	\new ChordNames {   \semiGermanChords
-						\override ChordName #'font-size = #3
-						\override ChordName #'font-name = #"JohnSans Medium Pro Lilypond"
+						\override ChordName #'font-size = #fontAkordiVelicina
+						\override ChordName #'font-name = #fontAkordi
 						\set chordRootNamer = #my-chord-name->pop-markup
 						\set chordChanges = ##t
 						%\transpose e c
@@ -234,16 +204,16 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 \score {
 	<<
 	\new ChordNames {	\italianChords
-						\override ChordName #'font-size = #0
-						\override ChordName #'font-name = #"JohnSans White Pro"
+						\override ChordName #'font-size = #fontStupnjevaVelicina
+						\override ChordName #'font-name = #fontStupnjeva
 						%\override ChordName #'font-shape = #'italic
 						\set chordChanges = ##t
 						\transpose h c
 						\chordsC
 						}
 	\new ChordNames {   \semiGermanChords
-						\override ChordName #'font-size = #3
-						\override ChordName #'font-name = #"JohnSans Medium Pro Lilypond"
+						\override ChordName #'font-size = #fontAkordiVelicina
+						\override ChordName #'font-name = #fontAkordi
 						\set chordRootNamer = #my-chord-name->pop-markup
 						\set chordChanges = ##t
 						%\transpose e c
@@ -264,16 +234,16 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 \score {
 	<<
 	\new ChordNames {	\italianChords
-						\override ChordName #'font-size = #0
-						\override ChordName #'font-name = #"JohnSans White Pro"
+						\override ChordName #'font-size = #fontStupnjevaVelicina
+						\override ChordName #'font-name = #fontStupnjeva
 						%\override ChordName #'font-shape = #'italic
 						\set chordChanges = ##t
 						\transpose h c
 						\chordsD
 						}
 	\new ChordNames {   \semiGermanChords
-						\override ChordName #'font-size = #3
-						\override ChordName #'font-name = #"JohnSans Medium Pro Lilypond"
+						\override ChordName #'font-size = #fontAkordiVelicina
+						\override ChordName #'font-name = #fontAkordi
 						\set chordRootNamer = #my-chord-name->pop-markup
 						\set chordChanges = ##t
 						%\transpose e c

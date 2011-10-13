@@ -232,3 +232,12 @@ zigzagTear = \zigzagTearCustom #zigzagDefaultYext #zigzagDefaultSerrationCount
 wstem = #(define-music-function (parser location extent) (pair?) #{ 
      \once \override Staff.BarLine #'extra-spacing-width = #$extent \bar "|" \zigzagTear 
      #})
+
+#(define-public (note-name->roman-markup pitch lowercase?)
+ "Return roman numeral pitch markup for @var{pitch}.
+  NOTE: Only works in key of C."
+ (make-line-markup
+  (list
+   (make-simple-markup
+      (vector-ref #("I" "II" "III" "IV" "V" "VI" "VII") (ly:pitch-notename
+pitch))))))
