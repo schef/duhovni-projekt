@@ -233,6 +233,7 @@ wstem = #(define-music-function (parser location extent) (pair?) #{
      \once \override Staff.BarLine #'extra-spacing-width = #$extent \bar "|" \zigzagTear 
      #})
 
+%roman
 #(define-public (note-name->roman-markup pitch lowercase?)
  "Return roman numeral pitch markup for @var{pitch}.
   NOTE: Only works in key of C."

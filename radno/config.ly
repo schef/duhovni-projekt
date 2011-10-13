@@ -53,5 +53,5 @@ evenFooterMarkup = \markup { \fill-line { \center-column { \override #'(font-nam
   poet = \markup { \lower #1 \override #'(font-name . "JohnSans Medium Pro") \abs-fontsize #7 \mjera }
 }
 
-%definicije za unutar notnog zapisa
+%definicije za unutar notnog zapisa tu
 
