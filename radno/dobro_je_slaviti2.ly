@@ -13,6 +13,7 @@
 \include "deutsch.ly"
 \include "config.ly"
 
+%test
 %NOTE
 scoreA = {
 	\key h \minor
