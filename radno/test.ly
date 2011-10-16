@@ -14,7 +14,7 @@
 \include "deutsch.ly"
 \include "config.ly"
 \include "zigZag.ly"
-#(set-global-staff-size 35)
+%#(set-global-staff-size 35)
 
 %NOTE
 scoreA = {
