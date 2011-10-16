@@ -1,12 +1,15 @@
 %ovo je config.ly za sve variable u notama. bez tog file-a nebude htelo compalirati.
 
+%variable globalnog fonta
+#(define globalFont "JohnSans Medium Pro" )
+
 %variable stupnjeva
 #(define fontStupnjevaVelicina 0) 
 #(define fontStupnjeva "JohnSans White Pro") 
 
 %variable akordi
 #(define fontAkordiVelicina 3) 
-#(define fontAkordi "JohnSans Medium Pro Lilypond") 
+#(define fontAkordi "JohnSans Medium Pro") 
 
 %velicina papira
 #(define mm 1.0)
@@ -53,5 +56,32 @@ evenFooterMarkup = \markup { \fill-line { \center-column { \override #'(font-nam
   poet = \markup { \lower #1 \override #'(font-name . "JohnSans Medium Pro") \abs-fontsize #7 \mjera }
 }
 
-%definicije za unutar notnog zapisa tu
+%definicije za unutar notnog zapisa
 
+#(define-markup-command (abox layout props text) (markup?)
+  "Draw a box around text."
+    (interpret-markup layout props
+        (markup #:box
+	        #:override '(font-name . "JohnSans Medium Pro") text)))
+
+%definicije unutar knjige
+
+romanDegreeChords = {
+  \override ChordName #'font-size = #fontStupnjevaVelicina
+  \override ChordName #'font-name = #fontStupnjeva
+  \set chordRootNamer = #my-chord-name->cigo-markup
+  \set chordChanges = ##t
+%  \transpose \tonalitet c
+}
+
+standardChords = {
+  \semiGermanChords
+  \override ChordName #'font-size = #fontAkordiVelicina
+  \override ChordName #'font-name = #fontAkordi
+  \set chordRootNamer = #my-chord-name->pop-markup
+  \set chordChanges = ##t
+}
+
+voiceFont = {
+  \override Score.BarNumber #'font-name = "JohnSans Medium Pro"
+}

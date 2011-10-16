@@ -9,14 +9,16 @@
 #(define brojStraniceDesno "4" )
 #(define copyright "Copyright Information ©" )
 
-\include "jazzchords.ly"
+#(define tonalitet "h" )
+
 \include "deutsch.ly"
 \include "config.ly"
+\include "zigZag.ly"
 
 %NOTE
 scoreA = {
 	\key h \minor
-	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") A }
+	\mark \markup \abox A
 	%triola = \times 2/3
 	%\override Staff.TimeSignature #'style = #'()
 	%\partial 4
@@ -37,7 +39,7 @@ scoreA = {
 
 scoreB = {
 	\key h \minor
-	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") B }
+	\mark \markup \abox B
 	\set Score.currentBarNumber = #9
 	%\partial 4
 	r2 r4. \wstem #'(-2 . 2) h8 |
@@ -50,7 +52,7 @@ scoreB = {
 
 scoreC = {
 	\key h \minor
-	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") C }
+	\mark \markup \abox C
 	\set Score.currentBarNumber = #19
 	%\partial 2
 	\repeat volta 2 {
@@ -70,7 +72,7 @@ scoreC = {
 
 scoreD = {
 	\key h \minor
-	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") D }
+	\mark \markup \abox D
 	\set Score.currentBarNumber = #19
 	%\partial 2
 fis'4 b4 fis'4 h8 h8 |
@@ -141,27 +143,17 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 %DIO A
 \score {
 	<<
-	\new ChordNames {	
-						\override ChordName #'font-size = #fontStupnjevaVelicina
-						\override ChordName #'font-name = #fontStupnjeva
-						%\override ChordName #'font-shape = #'italic
-						\set chordChanges = ##t
-						\transpose h c
-						\chordsA
-						}
-	\new ChordNames {   \semiGermanChords
-						\override ChordName #'font-size = #fontAkordiVelicina
-						\override ChordName #'font-name = #fontAkordi
-						\set chordRootNamer = #my-chord-name->pop-markup
-						\set chordChanges = ##t
-                        			%\transpose d h,
-						\chordsA
-						}
-	\new Voice {
-		       	\override Score.BarNumber #'font-name = "JohnSans Medium Pro"
-                        %\transpose d h,
-			\scoreA
+	\new ChordNames { \romanDegreeChords
+			  \chordsA
 			}
+	\new ChordNames { \standardChords
+                          %\transpose d h,
+			  \chordsA
+			}
+	\new Voice { \voiceFont
+                     %\transpose d h,
+		     \scoreA
+		   }
 	\addlyrics { \override LyricText #'font-name = #"JohnSans Text Pro" \lyricsAOne }
 	%\addlyrics { \override LyricText #'font-name = #"JohnSans Text Pro" \lyricsATwo } 
 	%\addlyrics { \override LyricText #'font-name = #"JohnSans Text Pro" \lyricsAThree } 
@@ -173,27 +165,17 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 %DIO B
 \score {
 	<<
-	\new ChordNames {	\italianChords
-						\override ChordName #'font-size = #fontStupnjevaVelicina
-						\override ChordName #'font-name = #fontStupnjeva
-						%\override ChordName #'font-shape = #'italic
-						\set chordChanges = ##t
-						\transpose h c
-						\chordsB
-						}
-	\new ChordNames {   \semiGermanChords
-						\override ChordName #'font-size = #fontAkordiVelicina
-						\override ChordName #'font-name = #fontAkordi
-						\set chordRootNamer = #my-chord-name->pop-markup
-						\set chordChanges = ##t
-						%\transpose e c
-						\chordsB
-						}
-	\new Voice {
-		       	\override Score.BarNumber #'font-name = "JohnSans Medium Pro"
-                        %\transpose d h,
-			\scoreB
+	\new ChordNames { \romanDegreeChords
+			  \chordsB
 			}
+	\new ChordNames { \standardChords
+			  %\transpose e c
+			  \chordsB
+			}
+	\new Voice { \voiceFont
+                     %\transpose d h,
+		     \scoreB
+		   }
 	\addlyrics { \override LyricText #'font-name = #"JohnSans Text Pro" \lyricsB }
 	>>
 	\layout {\context {\Staff \remove "Time_signature_engraver" }}
@@ -203,27 +185,17 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 %DIO C
 \score {
 	<<
-	\new ChordNames {	\italianChords
-						\override ChordName #'font-size = #fontStupnjevaVelicina
-						\override ChordName #'font-name = #fontStupnjeva
-						%\override ChordName #'font-shape = #'italic
-						\set chordChanges = ##t
-						\transpose h c
-						\chordsC
-						}
-	\new ChordNames {   \semiGermanChords
-						\override ChordName #'font-size = #fontAkordiVelicina
-						\override ChordName #'font-name = #fontAkordi
-						\set chordRootNamer = #my-chord-name->pop-markup
-						\set chordChanges = ##t
-						%\transpose e c
-						\chordsC
-						}
+	\new ChordNames { \romanDegreeChords
+			  \chordsC
+			}
+	\new ChordNames { \standardChords
+			  \chordsC
+			}
 	\new Voice {
-		        \override Score.BarNumber #'font-name = "JohnSans Medium Pro"
+			\voiceFont
                         %\transpose d h,	
 			\scoreC
-			}
+		   }
 	\addlyrics { \override LyricText #'font-name = #"JohnSans Text Pro" \lyricsC }
 	>>
 	\layout {\context {\Staff \remove "Time_signature_engraver" }}
@@ -233,24 +205,14 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 %DIO D
 \score {
 	<<
-	\new ChordNames {	\italianChords
-						\override ChordName #'font-size = #fontStupnjevaVelicina
-						\override ChordName #'font-name = #fontStupnjeva
-						%\override ChordName #'font-shape = #'italic
-						\set chordChanges = ##t
-						\transpose h c
-						\chordsD
+	\new ChordNames { \romanDegreeChords
+			  \chordsD
 						}
-	\new ChordNames {   \semiGermanChords
-						\override ChordName #'font-size = #fontAkordiVelicina
-						\override ChordName #'font-name = #fontAkordi
-						\set chordRootNamer = #my-chord-name->pop-markup
-						\set chordChanges = ##t
-						%\transpose e c
-						\chordsD
+	\new ChordNames { \standardChords
+			  %\transpose e c
+			  \chordsD
 						}
-	\new Voice {
-		        \override Score.BarNumber #'font-name = "JohnSans Medium Pro"
+	\new Voice {	\voiceFont
                         %\transpose d h,	
 			\scoreD
 			}
