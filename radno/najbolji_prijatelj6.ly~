@@ -1,7 +1,7 @@
 \version "2.14.2"
 
-#(define naslov "TEST" )
-#(define autor "TEST" )
+#(define naslov "NAJBOLJI PRIJATELJ" )
+#(define autor "DRAŽEN I DOMAGOJ PAVIN" )
 #(define mjera "TEST | TEST" )
 
 #(define brojPjesme "345" )
@@ -9,7 +9,7 @@
 #(define brojStraniceDesno "4" )
 #(define copyright "Copyright Information ©" )
 
-#(define tonalitet "fis" )
+#(define tonalitet "d" )
 
 \include "deutsch.ly"
 \include "config.ly"
@@ -19,14 +19,38 @@
 
 %NOTE
 scoreA = \relative c' {
-	\key e \major
+	\key d \major
 	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") A }
 	%triola = \times 2/3
 	%\override Staff.TimeSignature #'style = #'()
 	%\partial 4
 	%\repeat volta 2 {
 	%}
-	c'1
+	d8 e8 |
+	fis8 d a a ~ a8 fis'4 e8( | 
+	d2.) cis8 d |
+	e4 e8 d e4 a8 fis ~ |
+	fis2 ~ fis8 fis e d |
+	e8 d2.( b8 |
+	a2 ~ a8) fis' e d |
+	e8 fis4 fis8 ~ fis2 |
+	r2 r4 d8 e |
+	fis8 d a a ~ a8 fis'4 e8( | 
+	d2.) cis8 d |
+	e4 e8 d e4 a8 fis ~ |
+	fis2 ~ fis8 fis e d |
+	e8 d ~ d2. ~ |
+	d2 ~ d8 fis e d |
+	e8 d4 d8 ~ d2 |
+	r2 r4 d8 e |
+	fis8 d4 a8 ~ a8 fis'4 e8( |
+	d2.) cis8 d |
+	\times 2/3 { e4 cis a ~ } a8 g'4 fis8 ~ |
+	fis2 ~ fis8 fis e d |
+	e4 d8 d ~ d2 |
+	r2 r8 fis8 e d |
+	e8 d4 d8 ~  d2 |
+	{\set Timing.measurePosition = #(ly:make-moment -3 4) r2 r4 } |
 	%\alternative {
 	%prima
 	%	{ }
@@ -39,9 +63,21 @@ scoreA = \relative c' {
 scoreB = \relative c' {
 	\key e \major
 	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") B }
-	\set Score.currentBarNumber = #9
+	\set Score.currentBarNumber = #25
 	%\partial 4
-	c1
+	d8 d |
+	fis8 g4 a8 ~ a8 d, d d |
+	fis8 g4 a8 ~ a8 d, d d |
+	fis8 g4 a8 ~ a8 a a a |
+	\times 2/3 { a4 fis e ~ } e8 d d d |
+	fis8 g4 a8 ~ a8 d, d d |
+	fis8 g4 a8 ~ a4 d,8 d |
+	fis8 g4 a8 ~ a8 a a a |
+	\times 2/3 { a4 fis e ~ } e4 a,8 a |
+	h8 d16 d ~ d e8. d2 |
+	r2 r4 d8 e |
+	fis8 e16 e ~ e d8. e2 |
+	r1 |
 	\bar "|." \break
 }
 
@@ -56,8 +92,14 @@ scoreC = \relative c' {
 
 %AKORDI
 chordsA = \chordmode {
-%\skip 8
-	ces1
+	\skip 4
+	d2 d/fis | g1 | a | h:m |
+	b | a | d | g2 a2 |
+	d2 d/fis | g1 | a | h:m |
+	b | a | d | g2 a2 |
+	d2 d/fis | g1 | a | h:m |
+	b | a | d | d2. |
+
 %pomice akord u gore
 %\override ChordName #'Y-offset = #4
 %pomice akord u desno
@@ -65,7 +107,11 @@ chordsA = \chordmode {
 }
 
 chordsB = \chordmode {
-	ces1
+	\skip 4
+	h1:m | fis:m | g | a |
+	h:m | fis:m | g | a |
+	g | g | a | a |
+
 }
 
 chordsC = \chordmode {
@@ -79,11 +125,21 @@ chordsD = \chordmode {
 %AKORDI STUPNJEVI
 
 romanChordsA = \chordmode {
-	ces1
+	\skip 4
+	c2 c/e:8 | f1 | g | a |
+	gis | g | c | f2 g2 |
+	c2 c/e:8 | f1 | g | a |
+	gis | g | c | f2 g2 |
+	c2 c/e:8 | f1 | g | a |
+	gis | g | c | c2. | 
 }
 
 romanChordsB = \chordmode {
-	ces1
+	\skip4
+	a1 | e | f | g |
+	a1 | e | f | g |
+	f | f | g | g |
+
 }
 
 romanChordsC = \chordmode {
@@ -93,11 +149,27 @@ romanChordsC = \chordmode {
 %HRVATSKI TEKST
 
 lyricsAOne = \lyricmode {
-"test kitica 1"
+Svo -- ja sr -- ca o -- tvo -- ri -- te
+Svo -- ju du -- šu pri -- pre -- mi -- te
+Za sve -- tu va -- tru što "s Ne" -- ba si -- la -- zi
+
+Svo -- je o -- či o -- tvo -- ri -- te
+Svo -- je grije -- he o -- pe -- ri -- te
+U sve -- toj vo -- di što "s Ne" -- ba si -- la -- zi
+
+I -- sus do -- la -- zi po nas
+I -- sus do -- la -- zi po nas
+I voj -- ska an -- đe -- la što put mu pri -- pra -- vlja
 }
 
 lyricsB = \lyricmode {
-"test refren"
+Ja -- nje Ne -- be -- sko što krv je pro -- li -- lo
+Za nas se pre -- da -- lo, grije -- he o -- tku --pi -- lo
+Pr -- vi i Po -- slje -- dnji, Al -- fa i O -- me -- ga
+Svije -- ta Spa -- si -- telj, naj -- bo -- lji pri -- ja -- telj 
+
+I -- sus do -- la -- zi po nas
+I -- sus do -- la -- zi po nas
 }
 
 lyricsC = \lyricmode {

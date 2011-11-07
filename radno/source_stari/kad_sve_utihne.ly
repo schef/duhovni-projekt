@@ -23,8 +23,7 @@ score-system-spacing #'stretchability = #5
 oddHeaderMarkup = \markup { \override #'(font-name . "JohnSans Medium Pro") \abs-fontsize #16 "34"}
 
 oddFooterMarkup = \markup {\fill-line { \override #'(font-name . "JohnSans Medium Pro") "15"}}
-evenFooterMarkup = \markup { \fill-line { \center-column { \override #'(font-name . "JohnSans White Pro") \abs-fontsize #6 "The Heart of Worship” by Matt Redman
-Copyright © 1997 Thankyou Music" \override #'(font-name . "JohnSans Medium Pro") "16"}}}
+evenFooterMarkup = \markup { \fill-line { \center-column { \override #'(font-name . "JohnSans White Pro") \abs-fontsize #6 "The Heart of Worship” by Matt Redman Copyright © 1997 Thankyou Music" \override #'(font-name . "JohnSans Medium Pro") "16"}}}
 print-page-number = ##f
 %first-page-number = #16
 %print-first-page-number = ##t
@@ -272,20 +271,42 @@ Ku -- ca li o -- no za tebe
 %\markup { \override #'(font-name . "JohnSans White Pro")
 %	\wordwrap {
 %	\box \override #'(font-name . "JohnSans Medium Pro") A
-%"kitica 1 (A)"
+%When the music fades
+%All is stripped away
+%And I simply come
+%Longing just to bring
+%Something that's of worth
+%That will bless your heart
+%
+%I'll bring You more than a song
+%For a song in itself
+%Is not what You have required
+%You search much deeper within
+%Through the way things appear
+%You're looking into my heart
 %	}
 %}
 %
 %\markup { \override #'(font-name . "JohnSans White Pro")
 %	\wordwrap {
-%"kitica 2 (A)"
+%King of endless worth
+%No one could express
+%How much you deserve
+%Though I'm weak and poor
+%All I have is yours
+%Every single breath
 %	}
 %}
 %
 %\markup { \override #'(font-name . "JohnSans White Pro")
 %	\wordwrap {
 %	\box \override #'(font-name . "JohnSans Medium Pro") B
-%"refren (B)"
+%I'm coming back to the heart of worhip
+%And it's all about You
+%It's all about You, Jesus
+%I'm sorry, Lord, for the thing I've made it
+%When it's all about You
+%It's all about You, Jesus
 %	}
 %}
 %

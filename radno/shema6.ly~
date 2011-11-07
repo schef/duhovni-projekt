@@ -154,23 +154,23 @@ lyricsATwo = \lyricmode {
 }
 
 %DIO C
-%\score {
-%  <<
-%  \new ChordNames { \romanMajorChords
-%                    \romanChordsC
-%                  }
-%  \new ChordNames { \standardChords
-%                    \chordsC
-%                  }
-%  \new Voice { \voiceFont
-%               %\transpose d h, 
-%               \scoreC
-%             }
-%  \addlyrics { \lyricsFont \lyricsC }
-%  >>
-%  \layout {\context {\Staff \remove "Time_signature_engraver" }}
-%  %\midi {}
-%}
+\score {
+  <<
+  \new ChordNames { \romanMajorChords
+                    \romanChordsC
+                  }
+  \new ChordNames { \standardChords
+                    \chordsC
+                  }
+  \new Voice { \voiceFont
+               %\transpose d h, 
+               \scoreC
+             }
+  \addlyrics { \lyricsFont \lyricsC }
+  >>
+  \layout {\context {\Staff \remove "Time_signature_engraver" }}
+  %\midi {}
+}
 
 %ENGLESKI (STRANI) TEKST
 
