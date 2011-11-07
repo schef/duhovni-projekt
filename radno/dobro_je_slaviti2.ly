@@ -42,7 +42,7 @@ scoreA = {
 scoreB = {
 	\key h \minor
 	\mark \markup \abox B
-	\set Score.currentBarNumber = #9
+	\set Score.currentBarNumber = #4
 	%\partial 4
 	r2 r4. \wstem #'(-2 . 2) h8 |
 	h8 cis'8 d'4 cis'4 e'4 |
@@ -55,7 +55,7 @@ scoreB = {
 scoreC = {
 	\key h \minor
 	\mark \markup \abox C
-	\set Score.currentBarNumber = #19
+	\set Score.currentBarNumber = #9
 	%\partial 2
 	\repeat volta 2 {
 	g'2. a'8 g'8 |
@@ -66,7 +66,7 @@ scoreC = {
 	d'2 cis'2 | }
 	\alternative {
 	{d'2 d'4 d'4 | e'4.\( fis'8\) fis'2 |}
-	{d'2 e'4 d'4 | cis'2 b2 | }
+	{d'2 e'4 d'4 | cis'2 h2 | }
 	}
 
 	\bar "||" \break
@@ -77,7 +77,7 @@ scoreD = {
 	\mark \markup \abox D
 	\set Score.currentBarNumber = #19
 	%\partial 2
-fis'4 b4 fis'4 h8 h8 |
+fis'4 h4 fis'4 h8 h8 |
 g'8 a'8 g'4 fis'4 a'4 |
 h'8 a'8 g'4 fis'8 e'8 d'4 |
 e'8 e'8 d'8 cis'8 h4 r4 \bar "|."
