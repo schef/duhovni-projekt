@@ -27,6 +27,7 @@ romanChordsMusic =
   %septakordi
   <c e g a>-\markup { \maj \sest }
   <c e g b>-\markup { \sedam }
+  <c e g h>-\markup { \maj \sedam }
   <c es g b>-\markup { \min \sedam }
   <c es ges b>-\markup { \hdim }
   %nonakordi
