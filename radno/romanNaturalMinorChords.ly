@@ -1,17 +1,15 @@
-%ROMAN CHORDS
-
 % correct markup for "b" and "#" (use symbols from current font...)
 chordFlat = \markup { \hspace #0.1 \fontsize #-1 \raise #0.3 "$" }
 chordSharp = \markup { \hspace #0.1 \fontsize #-1 \raise #0.3 "#" }
 
-min = \markup { \fontsize #0 \raise #0 #(ly:export (ly:wide-char->utf-8 #x2013)) }
-maj = \markup { \fontsize #0 \raise #0 #(ly:export (ly:wide-char->utf-8 #x0394)) }
+min = \markup { \fontsize #-4 \raise #0.4 #(ly:export (ly:wide-char->utf-8 #x2013)) }
+maj = \markup { \fontsize #-6 \raise #0.6 #(ly:export (ly:wide-char->utf-8 #x0394)) }
 dim = \markup { \fontsize #-4 \raise #0.45 #(ly:export (ly:wide-char->utf-8 #x00b0)) }
 hdim = \markup { \fontsize #-4 \raise #0.25 #(ly:export (ly:wide-char->utf-8 #x00d8)) }
 aug = \markup { \fontsize #-4 \raise #0.75 "+" }
 cetri = \markup { \fontsize #-4 \raise #0.5 "4" }
 sest = \markup { \fontsize #-4 \raise #0.5 "6" }
-sedam = \markup { \fontsize #0 \raise #0 "7" }
+sedam = \markup { \fontsize #-4 \raise #0.5 "7" }
 devet = \markup { \fontsize #-4 \raise #0.5 "9" }
 trinaest = \markup { \fontsize #-4 \raise #0.5 "13" }
 sus = \markup { \fontsize #-5 \raise #0.8 "sus" }
@@ -19,13 +17,13 @@ sus = \markup { \fontsize #-5 \raise #0.8 "sus" }
 romanChordsMusic =
 {
   %kvintakordi
-  <c e g b c'>-\markup { \maj }
   <c es g>-\markup { \min }
   <c es ges>-\markup {\dim }
   <c e gis>-\markup { \aug }
   <c f g>-\markup { \sus \cetri }
   %septakordi
   <c e g a>-\markup { \maj \sest }
+  <c e g b>-\markup { \maj \sedam }
   <c e g b>-\markup { \sedam }
   <c es g b>-\markup { \min \sedam }
   <c es ges b>-\markup { \hdim }
@@ -44,7 +42,7 @@ romanChordsAdd = #(append
   (let* ((alt (ly:pitch-alteration pitch)))
   (make-line-markup
     (list
-      (make-simple-markup (vector-ref #("III" "IV" "V" "VI" "VII" "I" "II") (ly:pitch-notename pitch)))
+      (make-simple-markup (vector-ref #("I" "II" "III" "IV" "V" "VI" "VII") (ly:pitch-notename pitch)))
       ;; If it's natural, do nothing
       (if (= alt 0)
         (make-line-markup (list empty-markup))

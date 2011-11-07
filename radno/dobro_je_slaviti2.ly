@@ -14,6 +14,8 @@
 \include "deutsch.ly"
 \include "config.ly"
 \include "zigZag.ly"
+\include "jazzChords.ly"
+\include "romanChords.ly"
 
 %NOTE
 scoreA = {
@@ -85,34 +87,49 @@ e'8 e'8 d'8 cis'8 h4 r4 \bar "|."
 
 %AKORDI
 chordsA = \chordmode {
-\jazzyChords
-%\skip 8
-	h1:m a2 d2
-	e:m b:m e:m fis
-%pomice akord u gore
-%\override ChordName #'Y-offset = #4
-%pomice akord u desno
-%\once \override ChordNames.ChordName #'extra-offset = #'(10 . 0)
+  %\skip 8
+  h1:m a2 d2 e:m h:m e:m fis:7
+  %pomice akord u gore
+  %\override ChordName #'Y-offset = #4
+  %pomice akord u desno
+  %\once \override ChordNames.ChordName #'extra-offset = #'(10 . 0)
 }
 
 chordsB = \chordmode {
-\jazzyChords
-	s1
-	h2:m a2 d e:m
-	g a fis2 fis2
+	s1 h2:m a2 d e:m g a fis2:7 fis2:7
 }
 
 chordsC = \chordmode {
-\jazzyChords
-	e1:m a d h:m
-	e:m fis h:m a2/cis d
-	h1:m fis2 b:m
+	e1:m a d h:m e:m fis:7 h:m a2/cis d h1:m fis2:7 h:m
 }
 
 chordsD = \chordmode {
-\jazzyChords
-h1:m a2 d2
-e:m h:m e:m h:m
+  h1:m a2 d2 e:m h:m fis:7 h:m
+}
+
+%RIMSKI AKORDI
+
+romanChordsA = \chordmode {
+  %\skip 8
+  %h1:m a2 d2 e:m b:m e:m fis
+  %a:m g c d:m a:m d:m e:7
+  a1 g2 c2 d a d e:7
+  %pomice akord u gore
+  %\override ChordName #'Y-offset = #4
+  %pomice akord u desno
+  %\once \override ChordNames.ChordName #'extra-offset = #'(10 . 0)
+}
+
+romanChordsB = \chordmode {
+s1 a2 g2 c d f g e2:7 e2:7
+}
+
+romanChordsC = \chordmode {
+d1 g c a d e:7 a g2/h:8 c a1 e2:7 a
+}
+
+romanChordsD = \chordmode {
+a1 g2 c2 d a e:7 a
 }
 
 %HRVATSKI TEKST
@@ -144,7 +161,7 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 \score {
 	<<
 	\new ChordNames { \romanDegreeChords
-			  \chordsA
+			  \romanChordsA
 			}
 	\new ChordNames { \standardChords
                           %\transpose d h,
@@ -166,7 +183,7 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 \score {
 	<<
 	\new ChordNames { \romanDegreeChords
-			  \chordsB
+			  \romanChordsB
 			}
 	\new ChordNames { \standardChords
 			  %\transpose e c
@@ -186,7 +203,7 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 \score {
 	<<
 	\new ChordNames { \romanDegreeChords
-			  \chordsC
+			  \romanChordsC
 			}
 	\new ChordNames { \standardChords
 			  \chordsC
@@ -206,7 +223,7 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 \score {
 	<<
 	\new ChordNames { \romanDegreeChords
-			  \chordsD
+			  \romanChordsD
 						}
 	\new ChordNames { \standardChords
 			  %\transpose e c

@@ -5,16 +5,18 @@
 
 %variable stupnjeva
 #(define fontStupnjevaVelicina 0) 
-#(define fontStupnjeva "JohnSans White Pro") 
+#(define fontStupnjeva "Lilypond JohnSans White Pro") 
 
 %variable akordi
 #(define fontAkordiVelicina 3) 
-#(define fontAkordi "JohnSans Medium Pro") 
+#(define fontAkordi "Lilypond JohnSans Medium Pro") 
 
 %velicina papira
 #(define mm 1.0)
 #(set-global-staff-size 16)
 
+\include "jazzChords.ly"
+\include "romanChords.ly"
 
 \paper {
 indent = 0
@@ -71,15 +73,15 @@ romanDegreeChords = {
   \override ChordName #'font-name = #fontStupnjeva
   \set chordRootNamer = #my-chord-name->cigo-markup
   \set chordChanges = ##t
+  \romanChords
 %  \transpose \tonalitet c
 }
 
 standardChords = {
-  \semiGermanChords
   \override ChordName #'font-size = #fontAkordiVelicina
   \override ChordName #'font-name = #fontAkordi
-  \set chordRootNamer = #my-chord-name->pop-markup
   \set chordChanges = ##t
+  \jazzyChords
 }
 
 voiceFont = {
