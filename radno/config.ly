@@ -68,10 +68,19 @@ evenFooterMarkup = \markup { \fill-line { \center-column { \override #'(font-nam
 
 %definicije unutar knjige
 
-romanDegreeChords = {
+romanMinorChords = {
   \override ChordName #'font-size = #fontStupnjevaVelicina
   \override ChordName #'font-name = #fontStupnjeva
-  \set chordRootNamer = #my-chord-name->cigo-markup
+  \set chordRootNamer = #my-chord-name->minor-markup
+  \set chordChanges = ##t
+  \romanChords
+%  \transpose \tonalitet c
+}
+
+romanMajorChords = {
+  \override ChordName #'font-size = #fontStupnjevaVelicina
+  \override ChordName #'font-name = #fontStupnjeva
+  \set chordRootNamer = #my-chord-name->major-markup
   \set chordChanges = ##t
   \romanChords
 %  \transpose \tonalitet c

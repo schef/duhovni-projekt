@@ -39,8 +39,8 @@ romanChordsAdd = #(append
   (sequential-music-to-chord-exceptions romanChordsMusic #t)
     ignatzekExceptions)
 
-% cigo
-#(define (my-chord-name->cigo-markup pitch lowercase?)
+% roman chords minor
+#(define (my-chord-name->minor-markup pitch lowercase?)
   (let* ((alt (ly:pitch-alteration pitch)))
   (make-line-markup
     (list
@@ -65,6 +65,31 @@ romanChordsAdd = #(append
             ))
         ))))))
 
+% roman chords major
+#(define (my-chord-name->major-markup pitch lowercase?)
+  (let* ((alt (ly:pitch-alteration pitch)))
+  (make-line-markup
+    (list
+      (make-simple-markup (vector-ref #("I" "II" "III" "IV" "V" "VI" "VII") (ly:pitch-notename pitch)))
+      ;; If it's natural, do nothing
+      (if (= alt 0)
+        (make-line-markup (list empty-markup))
+        (if (= alt FLAT)
+          ;; Otherwise, handle adding the flat symbol
+          (make-line-markup
+            (list
+              (make-hspace-markup -0.05)
+              (markup #:fontsize -2 (make-raise-markup 0.35
+                (make-text-markup "!")))
+            ))
+          ;; or handle adding the sharp symbol
+          (make-line-markup
+            (list
+              (make-hspace-markup -0.05)
+              (markup #:fontsize -2 (make-raise-markup 0.35
+                (make-text-markup "#")))
+            ))
+        ))))))
 
 romanChords =
 {

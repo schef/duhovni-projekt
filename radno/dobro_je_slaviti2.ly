@@ -160,7 +160,7 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 %DIO A
 \score {
 	<<
-	\new ChordNames { \romanDegreeChords
+	\new ChordNames { \romanMinorChords
 			  \romanChordsA
 			}
 	\new ChordNames { \standardChords
@@ -182,7 +182,7 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 %DIO B
 \score {
 	<<
-	\new ChordNames { \romanDegreeChords
+	\new ChordNames { \romanMinorChords
 			  \romanChordsB
 			}
 	\new ChordNames { \standardChords
@@ -202,7 +202,7 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 %DIO C
 \score {
 	<<
-	\new ChordNames { \romanDegreeChords
+	\new ChordNames { \romanMinorChords
 			  \romanChordsC
 			}
 	\new ChordNames { \standardChords
@@ -222,7 +222,7 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 %DIO D
 \score {
 	<<
-	\new ChordNames { \romanDegreeChords
+	\new ChordNames { \romanMinorChords
 			  \romanChordsD
 						}
 	\new ChordNames { \standardChords
