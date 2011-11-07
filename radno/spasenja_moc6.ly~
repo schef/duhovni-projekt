@@ -48,7 +48,7 @@ scoreA = \relative c' {
 scoreB = \relative c' {
 	\key e \major
 	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") B }
-	\set Score.currentBarNumber = #9
+	\set Score.currentBarNumber = #11
 	%\partial 4
 	e'4 e e8[ e] e fis |
 	fis4 fis4. fis8 fis[ e] |
@@ -64,7 +64,7 @@ scoreB = \relative c' {
 scoreC = \relative c' {
 	\key e \major
 	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") C }
-	\set Score.currentBarNumber = #19
+	\set Score.currentBarNumber = #17
 	%\partial 2
 	r8 a''16 gis a8 gis r8 gis16 fis gis8 fis ~ |
 	fis8 fis4. ~ fis4 fis16 gis8. |
@@ -197,23 +197,23 @@ Sad se pre -- da -- jem
 }
 
 %DIO C
-%\score {
-%  <<
-%  \new ChordNames { \romanMajorChords
-%                    \romanChordsC
-%                  }
-%  \new ChordNames { \standardChords
-%                    \chordsC
-%                  }
-%  \new Voice { \voiceFont
-%               %\transpose d h, 
-%               \scoreC
-%             }
-%  \addlyrics { \lyricsFont \lyricsC }
-%  >>
-%  \layout {\context {\Staff \remove "Time_signature_engraver" }}
-%  %\midi {}
-%}
+\score {
+  <<
+  \new ChordNames { \romanMajorChords
+                    \romanChordsC
+                  }
+  \new ChordNames { \standardChords
+                    \chordsC
+                  }
+  \new Voice { \voiceFont
+               %\transpose d h, 
+               \scoreC
+             }
+  \addlyrics { \lyricsFont \lyricsC }
+  >>
+  \layout {\context {\Staff \remove "Time_signature_engraver" }}
+  %\midi {}
+}
 
 %ENGLESKI (STRANI) TEKST
 

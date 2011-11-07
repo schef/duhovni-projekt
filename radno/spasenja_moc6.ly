@@ -48,7 +48,7 @@ scoreA = \relative c' {
 scoreB = \relative c' {
 	\key e \major
 	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") B }
-	\set Score.currentBarNumber = #9
+	\set Score.currentBarNumber = #11
 	%\partial 4
 	e'4 e e8[ e] e fis |
 	fis4 fis4. fis8 fis[ e] |
