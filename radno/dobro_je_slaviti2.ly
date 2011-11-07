@@ -161,20 +161,20 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 \score {
 	<<
 	\new ChordNames { \romanMinorChords
-			  \romanChordsA
-			}
+			              \romanChordsA
+			            }
 	\new ChordNames { \standardChords
-                          %\transpose d h,
-			  \chordsA
-			}
+                   %\transpose d h,
+			              \chordsA
+			            }
 	\new Voice { \voiceFont
-                     %\transpose d h,
-		     \scoreA
-		   }
-	\addlyrics { \override LyricText #'font-name = #"JohnSans Text Pro" \lyricsAOne }
-	%\addlyrics { \override LyricText #'font-name = #"JohnSans Text Pro" \lyricsATwo } 
-	%\addlyrics { \override LyricText #'font-name = #"JohnSans Text Pro" \lyricsAThree } 
-	%\addlyrics { \override LyricText #'font-name = #"JohnSans Text Pro" \lyricsAFour } 
+               %\transpose d h,
+		           \scoreA
+		         }
+	\addlyrics { \lyricsFont \lyricsAOne }
+	%\addlyrics { \lyricsFont \lyricsATwo }
+	%\addlyrics { \lyricsFont \lyricsAThree }
+	%\addlyrics { \lyricsFont \lyricsAFour }
 	>>
 	%\midi {}
 }
@@ -183,17 +183,17 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 \score {
 	<<
 	\new ChordNames { \romanMinorChords
-			  \romanChordsB
-			}
+			              \romanChordsB
+			            }
 	\new ChordNames { \standardChords
-			  %\transpose e c
-			  \chordsB
-			}
+			              %\transpose e c
+			              \chordsB
+			            }
 	\new Voice { \voiceFont
-                     %\transpose d h,
-		     \scoreB
-		   }
-	\addlyrics { \override LyricText #'font-name = #"JohnSans Text Pro" \lyricsB }
+               %\transpose d h,
+		           \scoreB
+		         }
+	\addlyrics { \lyricsFont \lyricsB }
 	>>
 	\layout {\context {\Staff \remove "Time_signature_engraver" }}
 	%\midi {}
@@ -203,17 +203,16 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
 \score {
 	<<
 	\new ChordNames { \romanMinorChords
-			  \romanChordsC
-			}
+			              \romanChordsC
+			            }
 	\new ChordNames { \standardChords
-			  \chordsC
-			}
-	\new Voice {
-			\voiceFont
-                        %\transpose d h,	
-			\scoreC
-		   }
-	\addlyrics { \override LyricText #'font-name = #"JohnSans Text Pro" \lyricsC }
+			              \chordsC
+			            }
+	\new Voice { \voiceFont
+               %\transpose d h,	
+			         \scoreC
+		         }
+	\addlyrics { \lyricsFont \lyricsC }
 	>>
 	\layout {\context {\Staff \remove "Time_signature_engraver" }}
 	%\midi {}
@@ -233,7 +232,7 @@ pje -- va -- ti i -- me -- nu tvo -- me, Sve -- vi -- šnji!
                         %\transpose d h,	
 			\scoreD
 			}
-	\addlyrics { \override LyricText #'font-name = #"JohnSans Text Pro" \lyricsD }
+	\addlyrics { \lyricsFont \lyricsD }
 	>>
 	\layout {\context {\Staff \remove "Time_signature_engraver" }}
 	%\midi {}

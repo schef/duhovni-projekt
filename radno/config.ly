@@ -96,3 +96,11 @@ standardChords = {
 voiceFont = {
   \override Score.BarNumber #'font-name = "JohnSans Medium Pro"
 }
+
+lyricsFont = {
+  \override LyricText #'font-name = #"JohnSans Text Pro"
+}
+
+lyricsExtFont = {
+  \override LyricText #'font-name = #"JohnSans White Pro"
+}
