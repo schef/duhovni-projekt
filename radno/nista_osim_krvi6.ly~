@@ -9,7 +9,7 @@
 #(define brojStraniceDesno "4" )
 #(define copyright "\"Nothing But The Blood\" by Matt Redman, Copyright ©" )
 
-#(define tonalitet "fis" )
+#(define tonalitet "d" )
 
 \include "deutsch.ly"
 \include "config.ly"
@@ -66,7 +66,7 @@ scoreB = \relative c' {
 }
 
 scoreC = \relative c' {
-	\key e \major
+	\key d \major
 	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") C }
 	\set Score.currentBarNumber = #19
 	%\partial 2
@@ -111,15 +111,22 @@ chordsD = \chordmode {
 %AKORDI STUPNJEVI
 
 romanChordsA = \chordmode {
-	ces1
+	\skip8
+	c1 | a | c | a |
+	g | f | c | 
 }
 
 romanChordsB = \chordmode {
-	ces1
+	c1 | c | a | a |
+	g | f | c | c |
+	c1 | c | a | a |
+	g | f | c | g2 f2 | 
+  
 }
 
 romanChordsC = \chordmode {
-	ces1
+	c1 | c | a | a |
+	g | f | c | c |
 }
 
 %HRVATSKI TEKST
@@ -201,24 +208,24 @@ Hra -- bro kro -- čim sad, u si -- gur -- no -- sti
   %\midi {}
 }
 
-%DIO C
-%\score {
-%  <<
-%  \new ChordNames { \romanMajorChords
-%                    \romanChordsC
-%                  }
-%  \new ChordNames { \standardChords
-%                    \chordsC
-%                  }
-%  \new Voice { \voiceFont
-%               %\transpose d h, 
-%               \scoreC
-%             }
-%  \addlyrics { \lyricsFont \lyricsC }
-%  >>
-%  \layout {\context {\Staff \remove "Time_signature_engraver" }}
-%  %\midi {}
-%}
+DIO C
+\score {
+  <<
+  \new ChordNames { \romanMajorChords
+                    \romanChordsC
+                  }
+  \new ChordNames { \standardChords
+                    \chordsC
+                  }
+  \new Voice { \voiceFont
+               %\transpose d h, 
+               \scoreC
+             }
+  \addlyrics { \lyricsFont \lyricsC }
+  >>
+  \layout {\context {\Staff \remove "Time_signature_engraver" }}
+  %\midi {}
+}
 
 %ENGLESKI (STRANI) TEKST
 
