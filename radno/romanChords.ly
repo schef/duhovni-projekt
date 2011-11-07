@@ -1,20 +1,20 @@
 %ROMAN CHORDS
 
 % correct markup for "b" and "#" (use symbols from current font...)
-chordFlat = \markup { \hspace #0.1 \fontsize #-1 \raise #0.3 "$" }
-chordSharp = \markup { \hspace #0.1 \fontsize #-1 \raise #0.3 "#" }
+chordFlat = \markup { \hspace #0 \fontsize #0 \raise #0.3 "$" }
+chordSharp = \markup { \hspace #0 \fontsize #0 \raise #0.3 "#" }
 
 min = \markup { \fontsize #0 \raise #0 #(ly:export (ly:wide-char->utf-8 #x2013)) }
 maj = \markup { \fontsize #0 \raise #0 #(ly:export (ly:wide-char->utf-8 #x0394)) }
-dim = \markup { \fontsize #-4 \raise #0.45 #(ly:export (ly:wide-char->utf-8 #x00b0)) }
-hdim = \markup { \fontsize #-4 \raise #0.25 #(ly:export (ly:wide-char->utf-8 #x00d8)) }
-aug = \markup { \fontsize #-4 \raise #0.75 "+" }
-cetri = \markup { \fontsize #-4 \raise #0.5 "4" }
-sest = \markup { \fontsize #-4 \raise #0.5 "6" }
+dim = \markup { \fontsize #0 \raise #0 #(ly:export (ly:wide-char->utf-8 #x00b0)) }
+hdim = \markup { \fontsize #0 \raise #0 #(ly:export (ly:wide-char->utf-8 #x00d8)) }
+aug = \markup { \fontsize #0 \raise #0 "+" }
+cetri = \markup { \fontsize #0 \raise #0 "4" }
+sest = \markup { \fontsize #0 \raise #0 "6" }
 sedam = \markup { \fontsize #0 \raise #0 "7" }
-devet = \markup { \fontsize #-4 \raise #0.5 "9" }
-trinaest = \markup { \fontsize #-4 \raise #0.5 "13" }
-sus = \markup { \fontsize #-5 \raise #0.8 "sus" }
+devet = \markup { \fontsize #0 \raise #0 "9" }
+trinaest = \markup { \fontsize #0 \raise #0 "13" }
+sus = \markup { \fontsize #0 \raise #0 "sus" }
 
 romanChordsMusic =
 {
