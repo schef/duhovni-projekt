@@ -28,6 +28,7 @@ jazzyChordsMusic =
   <c e g a>-\markup { \maj \sest }
   <c es g as>-\markup { \min \chordFlat \sest }
   <c e g b>-\markup { \sedam }
+  <c e g h>-\markup { \maj \sedam }
   <c es g b>-\markup { \min \sedam }
   <c es ges b>-\markup { \hdim }
   <c f g des'>-\markup { \sus \chordFlat \devet }
