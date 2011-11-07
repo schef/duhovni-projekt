@@ -52,15 +52,15 @@ romanChordsAdd = #(append
           ;; Otherwise, handle adding the flat symbol
           (make-line-markup
             (list
-              (make-hspace-markup -0.05)
-              (markup #:fontsize -2 (make-raise-markup 0.35
+              (make-hspace-markup 0)
+              (markup #:fontsize 0 (make-raise-markup 0
                 (make-text-markup "!")))
             ))
           ;; or handle adding the sharp symbol
           (make-line-markup
             (list
-              (make-hspace-markup -0.05)
-              (markup #:fontsize -2 (make-raise-markup 0.35
+              (make-hspace-markup 0)
+              (markup #:fontsize 0 (make-raise-markup 0
                 (make-text-markup "#")))
             ))
         ))))))
@@ -78,15 +78,15 @@ romanChordsAdd = #(append
           ;; Otherwise, handle adding the flat symbol
           (make-line-markup
             (list
-              (make-hspace-markup -0.05)
-              (markup #:fontsize -2 (make-raise-markup 0.35
+              (make-hspace-markup 0.2)
+              (markup #:fontsize 0 (make-raise-markup 0
                 (make-text-markup "!")))
             ))
           ;; or handle adding the sharp symbol
           (make-line-markup
             (list
-              (make-hspace-markup -0.05)
-              (markup #:fontsize -2 (make-raise-markup 0.35
+              (make-hspace-markup 0)
+              (markup #:fontsize 0 (make-raise-markup 0
                 (make-text-markup "#")))
             ))
         ))))))
