@@ -6,12 +6,12 @@ chordSharp = \markup { \hspace #0 \fontsize #0 \raise #0.3 "#" }
 
 min = \markup { \fontsize #0 \raise #0 #(ly:export (ly:wide-char->utf-8 #x2013)) }
 maj = \markup { \fontsize #0 \raise #0 #(ly:export (ly:wide-char->utf-8 #x0394)) }
-dim = \markup { \fontsize #0 \raise #0 #(ly:export (ly:wide-char->utf-8 #x00b0)) }
+dim = \markup { \hspace #-0.2 \fontsize #-5 \raise #0.8 #(ly:export (ly:wide-char->utf-8 #x00b0)) }
 hdim = \markup { \fontsize #0 \raise #0 #(ly:export (ly:wide-char->utf-8 #x00d8)) }
 aug = \markup { \fontsize #0 \raise #0 "+" }
 cetri = \markup { \fontsize #0 \raise #0 "4" }
 sest = \markup { \fontsize #0 \raise #0 "6" }
-sedam = \markup { \fontsize #0 \raise #0 "7" }
+sedam = \markup { \fontsize #-0.05 \raise #0 "7" }
 devet = \markup { \fontsize #0 \raise #0 "9" }
 trinaest = \markup { \fontsize #0 \raise #0 "13" }
 sus = \markup { \fontsize #0 \raise #0 "sus" }

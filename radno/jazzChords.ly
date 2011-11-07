@@ -7,7 +7,7 @@ chordSharp = \markup { \hspace #0.2 \fontsize #-3 \raise #0.7 "#" }
 %definicija znakova
 min = \markup { \fontsize #-4 \raise #0.55 #(ly:export (ly:wide-char->utf-8 #x2013)) }
 maj = \markup { \fontsize #-4 \raise #0.8 #(ly:export (ly:wide-char->utf-8 #x0394)) }
-dim = \markup { \fontsize #-7 \raise #1.2 #(ly:export (ly:wide-char->utf-8 #x00b0)) }
+dim = \markup { \hspace #0.08 \fontsize #-7 \raise #1.34 #(ly:export (ly:wide-char->utf-8 #x00b0)) }
 hdim = \markup { \fontsize #-7 \raise #1.2 #(ly:export (ly:wide-char->utf-8 #x00d8)) }
 aug = \markup { \fontsize #-7 \raise #1.2 "+" }
 cetri = \markup { \fontsize #-4 \raise #0.8 "4" }
@@ -15,7 +15,7 @@ sest = \markup { \fontsize #-4 \raise #0.8 "6" }
 sedam = \markup { \fontsize #-4 \raise #0.8 "7" }
 devet = \markup { \fontsize #-4 \raise #0.8 "9" }
 trinaest = \markup { \fontsize #-4 \raise #0.8 "13" }
-sus = \markup { \fontsize #-5 \raise #1.2 "sus" }
+sus = \markup { \hspace #0.1 \fontsize #-5 \raise #1.16 "sus" }
 
 jazzyChordsMusic =
 {
