@@ -168,7 +168,7 @@ Sad se pre -- da -- jem
                \scoreA
              }
   \addlyrics { \lyricsFont \lyricsAOne }
-  %\addlyrics { \lyricsFont \lyricsATwo }
+  \addlyrics { \lyricsFont \lyricsATwo }
   %\addlyrics { \lyricsFont \lyricsAThree }
   %\addlyrics { \lyricsFont \lyricsAFour }
   >>

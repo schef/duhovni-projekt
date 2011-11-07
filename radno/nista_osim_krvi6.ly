@@ -180,7 +180,7 @@ Hra -- bro kro -- čim sad, u si -- gur -- no -- sti
                \scoreA
              }
   \addlyrics { \lyricsFont \lyricsAOne }
-  %\addlyrics { \lyricsFont \lyricsATwo }
+  \addlyrics { \lyricsFont \lyricsATwo }
   %\addlyrics { \lyricsFont \lyricsAThree }
   %\addlyrics { \lyricsFont \lyricsAFour }
   >>

@@ -1,15 +1,15 @@
 \version "2.14.2"
 
-#(define naslov "KAD SVE UTIHNE" )
+#(define naslov "SVE ŠTO DIŠE" )
 #(define autor "MATT REDMAN" )
 #(define mjera "TEST | TEST" )
 
 #(define brojPjesme "345" )
 #(define brojStraniceLijevo "3" )
 #(define brojStraniceDesno "4" )
-#(define copyright "The Heart of Worship” by Matt Redman Copyright © 1997 Thankyou Music" )
+#(define copyright "\"Everything That Has Breath\" by Matt Redman Copyright © 1997 Thankyou Music" )
 
-#(define tonalitet "d" )
+#(define tonalitet "e" )
 
 \include "deutsch.ly"
 \include "config.ly"
@@ -19,52 +19,50 @@
 
 %NOTE
 scoreA = \relative c' {
-	\key d \major
+	\key e \major
 	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") A }
 	%triola = \times 2/3
 	%\override Staff.TimeSignature #'style = #'()
 	%\partial 4
 	%\repeat volta 2 {
 	%}
-	r4. a'16 a16 a8 d,4 e8 ~ |
-	e4. e8 fis8 e e d16 d |
-	r4. a'16 a16 a8 d,4 e8 ~ |
-	e1 |
-	r4. a16 a16 a8 d,4 e8 ~ |
-	e2 fis8 e e d16 d |
-	r4. a'16 a16 a8 d,4 e8 ~ |
-	e1 |
-	r8 g8 g g fis e d e ~ |
-	e4. e16 d fis8 e d h |
-	r8 g'8 g g fis e d e ~ |
-	e1 |
-	r8 g8 g g fis e d e ~ |
-	e4. e16 d fis8 e d h |
-	r8 g'8 g g a fis h e, ~ |
-	e1 |	
+	r4 gis'8 gis fis4 e |
+	r4 gis8 gis fis4 e |
+	r4 gis8 gis fis4 e |
+	a4 gis gis fis8 e |
 	%\alternative {
 	%prima
 	%	{ }
 	%sekunda
 	%	{\set Timing.measurePosition = #(ly:make-moment -3 4) }
 	%}
-	\bar "||" \break
+	\bar ":|"
+	r1 | r1 |
+	\bar "||"
 }
 
 scoreB = \relative c' {
-	\key d \major
+	\key e \major
 	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") B }
-	\set Score.currentBarNumber = #17
+	\set Score.currentBarNumber = #7
 	%\partial 4
-	r8 a'8 a a a d, d h' ~ |
-	h8 a4 fis8 ~ fis8 e4 d8 |
-	fis8 fis g fis ~ fis4 r4 |
-	fis8[ fis] g fis4 e8 d8[ d] |
-	r8 a'8 a a a d, d h' ~ |
-	h8 a4 fis8 ~ fis8 e4 d8 |
-	fis8 fis g fis ~ fis4 r4 |
-	fis8[ fis] g fis4 e8 d8[ d] |
-	\bar "|." \break
+	r8 h'8 h gis h16 h8 cis16 ~ cis4 |
+	r8 h8 h gis h16 h8 cis16 ~ cis4 |
+	r8 h8 h h cis h h16 h8 e,16 ~ |
+	e4 r4 r2 |
+	r8 h'8 h gis h16 h8 cis16 ~ cis4 |
+	r8 h8 h gis h16 h8 cis16 ~ cis4 |
+	r8 h8 h h cis h h16 h8 e,16 ~ |
+	e4 r4 r4 r8 e8 |
+	fis4 gis fis gis |
+	h4 gis fis2 |
+	fis4 gis fis gis |
+	h4 gis fis2 |
+	fis4 gis fis gis |
+	h4 gis fis e |
+	cis'1 |
+	r1 |
+	\bar "||" \break
 }
 
 scoreC = \relative c' {
@@ -79,7 +77,8 @@ scoreC = \relative c' {
 %AKORDI
 chordsA = \chordmode {
 %\skip 8
-	ces1
+	e | h/dis | cis:m | a2 h2 |
+	fis1:m | fis:m |
 %pomice akord u gore
 %\override ChordName #'Y-offset = #4
 %pomice akord u desno
@@ -87,7 +86,10 @@ chordsA = \chordmode {
 }
 
 chordsB = \chordmode {
-	ces1
+	e1 | h/dis | cis:m | a |
+	e1 | h/dis | cis:m | a |
+	fis:m | e/gis | fis:m | e/gis |
+	fis:m | e/gis | a | a |
 }
 
 chordsC = \chordmode {
@@ -115,28 +117,28 @@ romanChordsC = \chordmode {
 %HRVATSKI TEKST
 
 lyricsAOne = \lyricmode {
-Kad sve u -- ti -- hne
-I gla -- zba pre -- sta -- ne
-Te -- bi do -- la -- zim
-Že -- lim do -- nije -- ti
-Ne -- što po -- se -- bno
-Što te ra -- du -- je
-
-Vi -- še od sa -- me pje -- sme
-Ne -- što mno -- go du -- blje
-Do -- no -- sim te -- bi na dar
-Pro -- ni -- češ du -- šu mo -- ju
-Vi -- diš sr -- ce mo -- je
-Ku -- ca li o -- no za tebe
+Sve što di -- še, sve što di -- še, sve što di -- še 
+Ne -- ka sla -- vi te
 }
 
-lyricsB = \lyricmode {
-Do -- la -- zim po -- no -- vo bli -- že te -- bi
-Jer va -- žan si ti
-Va -- žan si ti I -- su -- se
-O -- pro -- sti Go -- spo -- de za sve dru -- go
-Kada va -- žan si ti
-Va -- žan si ti I -- su -- se
+lyricsBOne = \lyricmode {
+Sla -- vim te u -- ju -- tro sla -- vim te na -- ve -- čer
+U mla -- do -- sti i sta -- ro -- sti
+Sla -- vim te smije -- \skip8 hom
+I tu -- žan sla -- vim te
+Pro -- sla -- vljam te -- be za -- u -- vijek
+
+Kad spo -- zna -- li bi tvo -- ju moć
+Sna -- gu lju -- bav bes -- kraj -- nu
+Za -- u -- vijek bi te -- be sla -- vi -- li
+}
+
+lyricsBTwo = \lyricmode {
+Sla -- ve -- te an -- đe -- li, ne -- be -- sa sla -- ve -- te
+Sla -- ve te u -- vijek za -- u -- vijek
+I ze -- mlja sla -- vi te
+Sa svim stvo -- re -- nji -- ma
+Sla -- ve te na -- ro -- di \skip8 svi
 }
 
 lyricsC = \lyricmode {
@@ -144,19 +146,8 @@ lyricsC = \lyricmode {
 }
 
 lyricsATwo = \lyricmode {
-Vje -- čni Kra -- lju moj
-Ne -- i -- zre -- ci -- vo
-Si vrije -- dan ti
-Sla -- bi bez -- vrije -- dni
-Se -- be pre -- da -- jem
-Da te pro -- sla -- vim
-
-Vi -- še od sa -- me pje -- sme
-Ne -- što mno -- go du -- blje
-Do -- no -- sim te -- bi na dar
-Pro -- ni -- češ du -- šu mo -- ju
-Vi -- diš sr -- ce mo -- je
-Ku -- ca li o -- no za tebe
+Ja ću slavi -- ti, ja ću slavi -- ti
+Svim što i -- mam te -- be sla -- vi -- ti
 }
 
 \book {
@@ -198,7 +189,8 @@ Ku -- ca li o -- no za tebe
                %\transpose d h,
                \scoreB
              }
-  \addlyrics { \lyricsFont \lyricsB }
+  \addlyrics { \lyricsFont \lyricsBOne }
+  \addlyrics { \lyricsFont \lyricsBTwo }
   >>
   \layout {\context {\Staff \remove "Time_signature_engraver" }}
   %\midi {}
@@ -228,42 +220,20 @@ Ku -- ca li o -- no za tebe
 %\markup { \lyricsExtFont)
 %	\wordwrap {
 %	\abox A
-%When the music fades
-%All is stripped away
-%And I simply come
-%Longing just to bring
-%Something that's of worth
-%That will bless your heart
-%
-%I'll bring You more than a song
-%For a song in itself
-%Is not what You have required
-%You search much deeper within
-%Through the way things appear
-%You're looking into my heart
+%"kitica 1 (A)"
 %	}
 %}
 %
 %\markup { \lyricsExtFont)
 %	\wordwrap {
-%King of endless worth
-%No one could express
-%How much you deserve
-%Though I'm weak and poor
-%All I have is yours
-%Every single breath
+%"kitica 2 (A)"
 %	}
 %}
 %
 %\markup { \lyricsExtFont)
 %	\wordwrap {
 %	\abox B
-%I'm coming back to the heart of worhip
-%And it's all about You
-%It's all about You, Jesus
-%I'm sorry, Lord, for the thing I've made it
-%When it's all about You
-%It's all about You, Jesus
+%"refren (B)"
 %	}
 %}
 %

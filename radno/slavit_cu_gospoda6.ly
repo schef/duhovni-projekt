@@ -178,7 +178,7 @@ Ti me ra -- du -- ješ pje -- vam Go -- spo -- du
                \scoreA
              }
   \addlyrics { \lyricsFont \lyricsAOne }
-  %\addlyrics { \lyricsFont \lyricsATwo }
+  \addlyrics { \lyricsFont \lyricsATwo }
   %\addlyrics { \lyricsFont \lyricsAThree }
   %\addlyrics { \lyricsFont \lyricsAFour }
   >>

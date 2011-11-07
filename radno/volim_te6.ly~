@@ -1,15 +1,15 @@
 \version "2.14.2"
 
-#(define naslov "NIŠTA OSIM KRVI" )
-#(define autor "MATT REDMAN" )
+#(define naslov "VOLIM TE" )
+#(define autor "MARIJA LACKOVIĆ" )
 #(define mjera "TEST | TEST" )
 
 #(define brojPjesme "345" )
 #(define brojStraniceLijevo "3" )
 #(define brojStraniceDesno "4" )
-#(define copyright "\"Nothing But The Blood\" by Matt Redman, Copyright ©" )
+#(define copyright "Copyright Information ©" )
 
-#(define tonalitet "d" )
+#(define tonalitet "a" )
 
 \include "deutsch.ly"
 \include "config.ly"
@@ -19,73 +19,86 @@
 
 %NOTE
 scoreA = \relative c' {
-	\key d \major
+	\key a \major
 	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") A }
 	%triola = \times 2/3
 	%\override Staff.TimeSignature #'style = #'()
-	\partial 8
-	\repeat volta 2 { 
-	d16 e |
-	fis2 a8 g16 fis ~ fis g8 fis16 ~ |
-	fis2 a8 a16 h ~ h g8 fis16 ~ |
-	fis2 a8 g16 fis ~ fis g8 fis16 ~ |
-	fis2 a8 g16 fis ~ fis g8 e16 ~ |
-	e2 a8 g16 fis ~ fis g8 g16 ~ |
-	g2 a8 g16 fis ~ fis g8 fis16 ~ |
-	fis1 |
-}
-	\alternative {
-		{\set Timing.measurePosition = #(ly:make-moment -7 8) r2 r4 r8 }
-		{\set Timing.measurePosition = #(ly:make-moment -4 4 ) r1}
-	}
+	%\partial 4
+	%\repeat volta 2 {
+	%}
+	r4 e'8 e e8 e4 fis8 ~ |
+	fis8 e4 d8 ~ d cis4. |
+	r4 e8 e e e4 e8 ~ |
+	e8 d4 cis8 ~ cis4 h |
+	d2 cis2 |
+	a1 |
+	d2 cis2 |
+	h1 |
+	r4 e8 e e8 e4 fis8 ~ |
+	fis8 e4 d8 ~ d cis4. |
+	r4 e8 e e e4 e8 ~ |
+	e8 d4 cis8 ~ cis4 h |
+	d2 cis2 |
+	a1 |
+	d2 e2 |
+	e2. \wstem #'(-4 . 4) r4 |
+	%\alternative {
+	%prima
+	%	{ }
+	%sekunda
+	%	{\set Timing.measurePosition = #(ly:make-moment -3 4) }
+	%}
 	\bar "||" \break
 }
 
 scoreB = \relative c' {
-	\key d \major
+	\key a \major
 	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") B }
-	\set Score.currentBarNumber = #10
+	\set Score.currentBarNumber = #16
 	%\partial 4
-	e'8 fis4 fis8 ~ fis d4 e8 ~ |
-	e fis4 fis8 ~ fis2 |
-	e8 fis4 fis8 ~ fis d4 e8 ~ |
-	e fis4 fis8 ~ fis2 |
-	e8[ e] e[ fis] e[ d] ~ d4 |
-	e8[ e] e[ fis] e[ d] ~ d4 |
-	e4. fis8 fis2 |
-	r1 |
-	e8 fis4 fis8 ~ fis d4 e8 ~ |
-	e fis4 fis8 ~ fis2 |
-	e8 fis4 fis8 ~ fis d4 e8 ~ |
-	e fis4 fis8 ~ fis2 |
-	e8[ e] e[ fis] e[ d] ~ d4 |
-	e8[ e] e[ fis] e[ d] ~ d4 |
-	e4. d8 d2 |
-	r1 |
-	\bar "|." \break
+	r2 r4 \wstem #'(-2 . 2) gis''8 a ~ |
+	a4 a8 a a a4 a8 ~ |
+	a8 gis4 fis8 ~ fis e4. |
+	r4 gis8 gis gis gis4 gis8 ~ |
+	gis8 a4 h8 ~ h gis4. |
+	a2 gis2 |
+	e1 |
+	fis2 a2 |
+	gis2. gis8 a ~|
+	a4 a8 a a a4 a8 ~ |
+	a8 gis4 fis8 ~ fis e4. |
+	r4 gis8 gis gis gis4 gis8 ~ |
+	gis8 a4 h8 ~ h gis4. |
+	a2 h |
+	a1 |
+	fis2 a |
+	gis1 |	
+	\bar "||" \break
 }
 
 scoreC = \relative c' {
-	\key d \major
+	\key a \major
 	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") C }
-	\set Score.currentBarNumber = #19
+	\set Score.currentBarNumber = #32
 	%\partial 2
-	a''8 fis fis e fis2 ~ |
-	fis1
-	a8 fis fis e fis2 ~ |
-	fis1
-	e8 e e fis e d ~ d4 |
-	e8 e e fis e d ~ d4 |
-	e4. d8 d2 |
-	r1 |
-	\bar "|." \break
+	a''2 gis |
+	e1 |
+	a2 gis |
+	e1 |
+	a2 gis |
+	e1 |
+	fis2 a |
+	gis1	
+	\bar ":|"
 }
 
 %AKORDI
 chordsA = \chordmode {
-	\skip 8
-	d1 | h:m | d | h:m |
-	a | g | d |
+%\skip 8
+	a1 | a | e1/gis | e1/gis |
+	fis1:m | d | h:m | e |
+	a1 | a | e1/gis | e1/gis |
+	fis1:m | d | h:m | e1 |
 %pomice akord u gore
 %\override ChordName #'Y-offset = #4
 %pomice akord u desno
@@ -93,15 +106,16 @@ chordsA = \chordmode {
 }
 
 chordsB = \chordmode {
-	d1 | d | h:m | h:m | 
-	a | g | d | d |
-	d | d | h:m | h:m |
-	a | g | d | a2 g2 |
+	s1 
+	a1 | a | e1 | e |
+	fis1:m | d | h:m | e |
+	a1 | a | e1 | e |
+	fis1:m | d | h:m | e |
 }
 
 chordsC = \chordmode {
-	d1 | d1 | h:m | h:m
-	a | g | d1 | d1
+	a1 | a | e/gis | e/gis |
+	fis1:m | d | h:m | e
 }
 
 chordsD = \chordmode {
@@ -111,56 +125,54 @@ chordsD = \chordmode {
 %AKORDI STUPNJEVI
 
 romanChordsA = \chordmode {
-	\skip8
-	c1 | a | c | a |
-	g | f | c | 
+	c1 | c | g1/h:8 | g1/h:8 | 
+	a1 | f | d | g |
+	c1 | c | g1/h:8 | g1/h:8 | 
+	a1 | f | d | g |
 }
 
 romanChordsB = \chordmode {
-	c1 | c | a | a |
-	g | f | c | c |
-	c1 | c | a | a |
-	g | f | c | g2 f2 | 
-  
+	s1
+	c1 | c | g1 | g | 
+	fis1:m | d | h:m | e |
+	c1 | c | g1 | g |
+	fis1:m | d | h:m | e |
+	
 }
 
 romanChordsC = \chordmode {
-	c1 | c | a | a |
-	g | f | c | c |
+	c1 | c | g1/h:8 | g1/h:8 | 
+	a1 | f | d | g |
 }
 
 %HRVATSKI TEKST
 
 lyricsAOne = \lyricmode {
-Tvo -- ja krv vi -- še go -- vo -- ri
-Od svih va -- pa -- ja, pra -- znih, ze -- malj -- skih
-O -- prav -- da -- va me, od sveg bra -- ni me
-Kri -- ste, tvo -- ja krv
+Sla -- va, sla -- va te -- bi, O -- če
+Stvo -- ri -- te -- lju sve -- mi -- ra i ze -- mlje sve, ze -- mlje sve
+Sla -- va, sla -- va te -- bi, O -- če
+Što to -- li -- ko lju -- bi -- o si cije -- li svijet, cije -- li svijet
 }
 
 lyricsB = \lyricmode {
-Što će grije -- he o -- pra -- ti
-O -- pet nas is -- pu -- ni -- ti
-Ni -- šta o -- sim kr -- vi
-Ni -- šta o -- sim kr -- vi Kri -- sto -- ve
-Što me či -- ni pot -- pu -- nim
-Pri -- ja -- te -- ljem Gos -- pod -- njim
-Niš -- ta o -- sim kr -- vi
-Tvo -- je kr -- vi, Kra -- lju I -- su -- se
+Pje -- vam, u vi -- si -- nu pru -- žam ru -- ke
+Po -- di -- žem svoj glas da ču -- ju svi da si naj -- ve -- ći
+Ple -- šem, jer me ra -- dost i -- spu -- nja -- va
+Sr -- ce vje -- ru -- je i je -- zik pri -- zna -- je: Vo -- lim te
 }
 
 lyricsC = \lyricmode {
-Hva -- la ti za krv
-Hva -- la ti za krv
-Ni -- šta o -- sim Kr -- vi
-Tvo -- je kr -- vi, Kra -- lju I -- su -- se
+Vo -- lim -- te
+Vo -- lim -- te
+Vo -- lim -- te
+Vo -- lim -- te
 }
 
 lyricsATwo = \lyricmode {
-Tvoj \skip8 križ mi -- lost svje -- do -- či
-"O sr" -- cu O -- če -- vu "što put" nam pri -- pra -- vi
-Hra -- bro kro -- čim sad, u si -- gur -- no -- sti
-"Zbog kr" -- vi Kri -- sto -- ve
+Sla -- va, sla -- va te -- bi, Kri -- ste
+Za sve što u -- či -- ni -- o si za me -- ne, za me -- ne
+Sla -- va, sla -- va te -- bi, Kri -- ste
+Što u te -- bi i -- mam ži -- vot, i -- mam sve, i -- mam sve
 }
 
 \book {
@@ -180,7 +192,7 @@ Hra -- bro kro -- čim sad, u si -- gur -- no -- sti
                \scoreA
              }
   \addlyrics { \lyricsFont \lyricsAOne }
-  %\addlyrics { \lyricsFont \lyricsATwo }
+  \addlyrics { \lyricsFont \lyricsATwo }
   %\addlyrics { \lyricsFont \lyricsAThree }
   %\addlyrics { \lyricsFont \lyricsAFour }
   >>

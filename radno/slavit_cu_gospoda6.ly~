@@ -115,11 +115,18 @@ chordsD = \chordmode {
 %AKORDI STUPNJEVI
 
 romanChordsA = \chordmode {
-	ces1
+	c2/f f2 | c2/f f | g2/c c | g2/c c |
+	c2/f f2 | c2/f f | g2/c c | g2/c c | 
+	c2/f f2 | c2/f f | g2/c c | g2/c c | 
+	c2/f f2 | c2/f f | g2/c c | g2/c c |
+	f1 | f1 | d1 | g1 | 
 }
 
 romanChordsB = \chordmode {
-	ces1
+	s1
+	c1 | d | f | g | 
+	c | c/e:8 | f | g | 
+	c | c |
 }
 
 romanChordsC = \chordmode {
