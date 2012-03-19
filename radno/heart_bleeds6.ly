@@ -1,7 +1,7 @@
 \version "2.14.2"
 
-#(define naslov "TEST" )
-#(define autor "TEST" )
+#(define naslov "HEART BLEEDS" )
+#(define autor "JOHN MARK McMILLAN" )
 #(define mjera "TEST | TEST" )
 
 #(define brojPjesme "345" )
@@ -9,7 +9,7 @@
 #(define brojStraniceDesno "4" )
 #(define copyright "Copyright Information ©" )
 
-#(define tonalitet "fis" )
+#(define tonalitet "e" )
 
 \include "deutsch.ly"
 \include "config.ly"
@@ -24,30 +24,48 @@ scoreA = \relative c' {
 	%triola = \times 2/3
 	%\override Staff.TimeSignature #'style = #'()
 	%\partial 4
-	%\repeat volta 2 {
-	%}
-	c'1
-	%\alternative {
+	\repeat volta 2 {
+	r2 h'8 h4 h8 ~ |
+  h4 r4 cis4 h8 gis8 ( |
+  e4 ) r4 r2 |
+  r4 r8 e8 cis'4 h8 gis8 ~ |
+  gis4 r4 r2 |
+  r4 r8 e8 cis'4 h8 gis8 (|
+  e4 ) r4 r2 |  
+                  }
+	\alternative {
 	%prima
-	%	{ }
+		{ r1 }
 	%sekunda
 	%	{\set Timing.measurePosition = #(ly:make-moment -3 4) }
-	%}
+  { r2 r8 gis4 fis8 ~ }
+	}
+  fis4 r4 r8 e4 fis8 ~ |
+  fis4 r2 e8 cis'8 ~ |
+  cis4. h8 h4 gis8 gis ~ |
+  gis2 r2 |
 	\bar "||" \break
 }
 
 scoreB = \relative c' {
 	\key e \major
 	\mark \markup { \abox B }
-	\set Score.currentBarNumber = #9
+	\set Score.currentBarNumber = #14
 	%\partial 4
-	c1
+	r4 e fis gis |
+  h4 gis fis8 gis ~ gis4 |
+  r4 e fis gis |
+  h4 gis fis8 ( gis fis e |
+  cis4 ) fis4 gis fis |
+  e8 fis4 gis8 ~ gis4 a8 gis16 ( fis |
+  e2 ) r2 |
+  r1 |
 	\bar "|." \break
 }
 
 scoreC = \relative c' {
 	\key e \major
-	\mark \markup { \abox C }
+	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") C }
 	\set Score.currentBarNumber = #19
 	%\partial 2
 	c1
@@ -57,7 +75,7 @@ scoreC = \relative c' {
 %AKORDI
 chordsA = \chordmode {
 %\skip 8
-	ces1
+	e1 e fis:m fis:m a a e e e fis:m fis:m a h
 %pomice akord u gore
 %\override ChordName #'Y-offset = #4
 %pomice akord u desno
@@ -65,7 +83,7 @@ chordsA = \chordmode {
 }
 
 chordsB = \chordmode {
-	ces1
+	e1 e h h a h a2 a4 a4/gis h1
 }
 
 chordsC = \chordmode {
@@ -113,9 +131,9 @@ lyricsATwo = \lyricmode {
 %DIO A
 \score {
   <<
-  \new ChordNames { \romanMajorChords
-                    \romanChordsA
-                  }
+  %\new ChordNames { \romanMajorChords
+  %                  \romanChordsA
+  %                }
   \new ChordNames { \standardChords
                    %\transpose d h,
                     \chordsA
@@ -136,9 +154,9 @@ lyricsATwo = \lyricmode {
 
 \score {
   <<
-  \new ChordNames { \romanMajorChords
-                    \romanChordsB
-                  }
+  %\new ChordNames { \romanMajorChords
+  %                  \romanChordsB
+  %                }
   \new ChordNames { \standardChords
                     %\transpose e c
                     \chordsB
