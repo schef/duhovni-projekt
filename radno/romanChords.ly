@@ -19,19 +19,19 @@ sus = \markup { \fontsize #0 \raise #0 "sus" }
 romanChordsMusic =
 {
   %kvintakordi
-  <c e g b c'>-\markup { \maj }
-  <c es g>-\markup { \min }
-  <c es ges>-\markup {\dim }
-  <c e gis>-\markup { \aug }
-  <c f g>-\markup { \sus \cetri }
+  <c e g b c'>-\markup { }
+  <c es g>-\markup { }
+  <c es ges>-\markup { }
+  <c e gis>-\markup { }
+  <c f g>-\markup { }
   %septakordi
-  <c e g a>-\markup { \maj \sest }
-  <c e g b>-\markup { \sedam }
-  <c e g h>-\markup { \maj \sedam }
-  <c es g b>-\markup { \min \sedam }
-  <c es ges b>-\markup { \hdim }
+  <c e g a>-\markup { }
+  <c e g b>-\markup { }
+  <c e g h>-\markup { }
+  <c es g b>-\markup { }
+  <c es ges b>-\markup { }
   %nonakordi
-  <c es g b d'>-\markup { \min \devet }
+  <c es g b d'>-\markup { }
   % Add more as needed
 }
 
@@ -40,12 +40,12 @@ romanChordsAdd = #(append
   (sequential-music-to-chord-exceptions romanChordsMusic #t)
     ignatzekExceptions)
 
-% roman chords minor
-#(define (my-chord-name->minor-markup pitch lowercase?)
+% roman chords
+#(define (my-chord-name->major-markup pitch lowercase?)
   (let* ((alt (ly:pitch-alteration pitch)))
   (make-line-markup
     (list
-      (make-simple-markup (vector-ref #("III" "IV" "V" "VI" "VII" "I" "II") (ly:pitch-notename pitch)))
+      (make-simple-markup (vector-ref #("I" "II" "III" "IV" "V" "VI" "VII") (ly:pitch-notename pitch)))
       ;; If it's natural, do nothing
       (if (= alt 0)
         (make-line-markup (list empty-markup))
@@ -53,7 +53,7 @@ romanChordsAdd = #(append
           ;; Otherwise, handle adding the flat symbol
           (make-line-markup
             (list
-              (make-hspace-markup 0)
+              (make-hspace-markup 0.2)
               (markup #:fontsize 0 (make-raise-markup 0
                 (make-text-markup "!")))
             ))
@@ -66,12 +66,12 @@ romanChordsAdd = #(append
             ))
         ))))))
 
-% roman chords major
-#(define (my-chord-name->major-markup pitch lowercase?)
+% roman chords minor
+#(define (my-chord-name->minor-markup pitch lowercase?)
   (let* ((alt (ly:pitch-alteration pitch)))
   (make-line-markup
     (list
-      (make-simple-markup (vector-ref #("I" "II" "III" "IV" "V" "VI" "VII") (ly:pitch-notename pitch)))
+      (make-simple-markup (vector-ref #("III" "IV" "V" "VI" "VII" "I" "II") (ly:pitch-notename pitch)))
       ;; If it's natural, do nothing
       (if (= alt 0)
         (make-line-markup (list empty-markup))

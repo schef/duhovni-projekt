@@ -19,7 +19,7 @@
 
 %NOTE
 scoreA = {
-	\key h \minor
+	\key d \major
 	\mark \markup \abox A
 	%triola = \times 2/3
 	%\override Staff.TimeSignature #'style = #'()
@@ -88,7 +88,7 @@ e'8 e'8 d'8 cis'8 h4 r4 \bar "|."
 %AKORDI
 chordsA = \chordmode {
   %\skip 8
-  h1:m a2 d2 e:m h:m e:m fis:7
+  b1:m a2 d2 e:m h:m e:m fis:7
   %pomice akord u gore
   %\override ChordName #'Y-offset = #4
   %pomice akord u desno

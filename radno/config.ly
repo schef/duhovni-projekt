@@ -5,11 +5,11 @@
 
 %variable stupnjeva
 #(define fontStupnjevaVelicina 0) 
-#(define fontStupnjeva "Lilypond JohnSans White Pro") 
+#(define fontStupnjeva "LilypondJohnSansWhitePro") 
 
 %variable akordi
 #(define fontAkordiVelicina 3) 
-#(define fontAkordi "Lilypond JohnSans Medium Pro") 
+#(define fontAkordi "LilypondJohnSansMediumPro") 
 
 %velicina papira
 #(define mm 1.0)

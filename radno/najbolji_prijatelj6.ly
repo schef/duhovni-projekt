@@ -94,11 +94,11 @@ scoreC = \relative c' {
 chordsA = \chordmode {
 	\skip 4
 	d2 d/fis | g1 | a | h:m |
-	b | a | d | g2 a2 |
+	ais | a | d | g2 a2 |
 	d2 d/fis | g1 | a | h:m |
-	b | a | d | g2 a2 |
+	ais | a | d | g2 a2 |
 	d2 d/fis | g1 | a | h:m |
-	b | a | d | d2. |
+	ais | a | d | d2. |
 
 %pomice akord u gore
 %\override ChordName #'Y-offset = #4
