@@ -3,6 +3,12 @@
 
 \layout { \context { \Score markFormatter = #format-mark-box-letters } }
 
+\header {
+subtitle = \markup { \sans \subtitle }
+copyright = \markup { \sans \copyright }
+tagline = "" 
+}
+
 myStaffSize = #16
 #(set-global-staff-size myStaffSize)
 \paper {
