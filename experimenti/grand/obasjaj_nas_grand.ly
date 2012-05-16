@@ -1,20 +1,17 @@
 \version "2.14.2"
 
+\header {
+title = "OBASJAJ NAS"
+subtitle = "\"GNADE UND WARHEIT\""
+composer = "ALBERT FREY"
+poet = "TEST | TEST"
+copyright = "\"Gnade und Wahrheit\" von Albert Frey, D&D Medien 2001 ©"
+}
+
 \include "deutsch.ly"
-\include "config_grand.ly"
 \include "jazzChords_grand.ly"
 \include "romanChords_grand.ly"
-
-\header {
-    title = "OBASJAJ NAS"
-    composer = "ALBERT FREY"
-    poet = "TEST | TEST" 
-}
-%#(define brojPjesme "345" )
-%#(define brojStraniceLijevo "3" )
-%#(define brojStraniceDesno "4" )
-%#(define copyright "\"Gnade und Wahrheit\" von Albert Frey, D&D Medien 2001 ©" )
-
+\include "config_grand.ly"
 
 %NOTE
 scoreA = \relative c' {
@@ -40,7 +37,6 @@ scoreA = \relative c' {
 }
 
 scoreB = \relative c' {
-	%\key g \major
 	\mark \default
 	h'4\( a8\) a8 ~ a4 d,4 |
 	h'4\( a8\) a ~ a4 r4 |
@@ -98,9 +94,9 @@ I -- \skip8 su -- se, o -- \skip8 ba -- sjaj nas!
 
 \score {
 <<
-    \new ChordNames { \romanChords \chordsA \chordsB }
-    \new ChordNames { \jazzyChords \chordsA \chordsB }
-    \new Staff { \scoreA \scoreB }
-    \addlyrics { \lyricsAOne \lyricsB }
-    >>
+        \new ChordNames { \romanChords \transpose g c { \chordsA \chordsB } }
+        \new ChordNames { \jazzChords \chordsA \chordsB }
+        \new Staff { \scoreA \scoreB }
+        \addlyrics { \lyricsAOne \lyricsB }
+>>
 }
