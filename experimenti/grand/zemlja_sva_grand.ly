@@ -67,44 +67,57 @@ scoreC = \relative c' {
 	h2 h4 ais ~ |
 	ais2 gis8( fis) gis4( ~ |
 	gis8 fis e4) r2 |
+	r2. gis4 |
+	fis2. ais,4 ~ |
+	ais4 h2 fis'4 ~ |
+	fis2 r2 |
+	e2 dis4 dis( |
+	cis1 ~ |
+	cis1) |
+	r1 |
+
 }
 
-scoreD = \relative c'' {
-	e8 ~ e fis ~ fis h, ~ |
+scoreD = \relative c' {
 	\mark \default
-%	\once \override Score.RehearsalMark #'Y-offset = #-2.5
-	h8 h4 h8 ~ h h4 cis8 ~ |
-	cis2 r8 d8 ~ d h ~ |
-	h8 h4 h8 ~ h e4 cis8( ~ |
-	cis4. d8 ~ d) e4 h8 ~ |
-	h8 h4 h8 ~ h a4 cis8 ~ |
-	cis2 \times 2/3{cis4 cis d ~} |
-	d4 d2 ~ d8 fis( ~ | 
-	fis4. e8 d8) d4 h8 ~ |
-	h8 h4 h8 ~ h h4 cis8 ~ |
-	cis2 r8 d4 d8 ~ |
-	d8 d4 d8 ~ d d4 e8 ~ |
-	e2 r8 fis4 h,8 ~ |
-	h8 h4 h8 ~ h h4 e8 ~ |
-	e2 \times 2/3{cis4 cis d} |
-	d1 |
+	r4 h'4 ais h ~ |
+	h1 |
+	r4 h4 ais h ~ |
+	h1 |
+	r4 h4 ais h ~ |
+	h2 h4 ais ~ |
+	ais2 gis8( fis) gis4( ~ |
+	gis8 fis e4) r2 |
+	r2. gis4 |
+	fis2. ais4 ~ |
+	ais4 h2 gis4 ~ |
+	gis2 r2 |
+	gis4. ais4. h4 |
+	gis4 gis ais h |
+	ais4 ais h cis |
+	h1 ~ |
+	h1 |
+	r1 |
+	r1 |
+	r1 |
 	\bar "|."
 }
 
 chordsA = \chordmode {
-	g1 | a | d/fis | d/fis |
-	g | a | h:m | h:m |
-	g | a | d/fis | d/fis |
-	g | a | d | d |
+	h1 | h | h | h |
+	fis/ais | fis/ais | fis/ais |
+	gis:7/c | cis:m | cis:m | cis:m | cis:m |
+	fis | fis | fis | fis |
 }
 
 chordsB = \chordmode {
 %	\set chordChanges = ##f
-	\once \override ChordNames.ChordName #'X-offset = #1
-	g1 |
+%	\once \override ChordNames.ChordName #'X-offset = #1
+	h1 | h | h | h |
+	fis/ais | fis/ais | fis/ais |
+	gis:7/c | cis:m | cis:m | cis:m | cis:m |
+	fis | fis | fis |
 %	\set chordChanges = ##t
-	a | g | a | g |
-	a | d | d |
 }
 
 chordsC = \chordmode {
@@ -127,56 +140,49 @@ chordsD = \chordmode {
 	a | g/h | a/cis | g | a | d |
 }
 
-lyricsAOne = \lyricmode {
-Oče ulazim u dvore tvoje
-Stvoritelju svemira
-Zadrhtim kad pred tebe stanem
-Slava slava u svetištu tvome
-Sva ta ljepota i sjaj pred tobom
-I sve te štuje
-
-Zemlja sva naviješta
-Tvoja ljubav je posvuda
-I sva priroda slavi te
-Stabla se raduju
-S njima slavim te i ja
-Novu pjesmu pjevam 
-Gospode tvoje sveto ime proslavljam
-
-Isuse Gospode moga spasenja
-Pred tebe dolazim sad 
-I štujem tebe Spasitelju
-Kriste ispuni me svojom silom
-Ljubav da pronosim svud
-Po svijetu da svi te vide
-
-Zemlja sva naviješta
-Tvoja ljubav je posvuda
-I sva priroda slavi te
-Stabla se raduju
-S njima slavim te i ja
-Novu pjesmu pjevam 
-Gospode tvoje sveto ime proslavljam
+lyricsA = \lyricmode {
+Oče u -- la -- zim u dvo -- re tvo -- je
+Stvo -- ri -- te -- lju sve -- mi -- ra
+Za -- drh -- tim kad pred te -- be sta -- nem
+Sla -- va sla -- va u sve -- ti -- štu tvo -- me
+Sva ta lje -- po -- ta i sjaj pred to -- bom
+I sve te štu -- je
 }
 
 lyricsB = \lyricmode {
-}
-
-lyricsATwo = \lyricmode {
+Ze -- mlja sva na -- vije -- šta
+Tvo -- ja lju -- bav je po -- svu -- da
+I sva pri -- ro -- da sla -- vi te
+Sta -- bla se ra -- du -- ju
+S nji -- ma sla -- vim te i ja
+No -- vu pje -- smu pje -- vam 
+Go -- spo -- de tvo -- je sve -- to i -- me pro -- sla -- vljam
 }
 
 lyricsC = \lyricmode {
+I -- su -- se Go -- spo -- de mo -- ga spa -- se -- nja
+Pred te -- be do -- la -- zim sad 
+I štu -- jem te -- be Spa -- si -- te -- lju
+Kri -- ste i -- spu -- ni me svo -- jom si -- lom
+Lju -- bav da pro -- no -- sim svud
+Po svije -- tu da svi te vi -- de
 }
 
 lyricsD = \lyricmode {
+Ze -- mlja sva na -- vije -- šta
+Tvo -- ja lju -- bav je po -- svu -- da
+I sva pri -- ro -- da sla -- vi te
+Sta -- bla se ra -- du -- ju
+S nji -- ma sla -- vim te i ja
+No -- vu pje -- smu pje -- vam 
+Go -- spo -- de tvo -- je sve -- to ime pro -- sla -- vljam
 }
 
 \score {
 <<
-	\new ChordNames { \romanChords \transpose d c { \chordsA \chordsB \chordsC \chordsD } }
+	\new ChordNames { \romanChords \transpose h c { \chordsA \chordsB \chordsC \chordsD } }
 	\new ChordNames { \jazzChords \chordsA \chordsB \chordsC \chordsD }
 	\new Staff { \scoreA \scoreB \scoreC \scoreD }
-	\addlyrics { \lyricsAOne \lyricsB \lyricsC \lyricsD }
-	\addlyrics { \lyricsATwo }
+	\addlyrics { \lyricsA \lyricsB \lyricsC \lyricsD }
 >>
 }
