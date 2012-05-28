@@ -1,7 +1,22 @@
 %#(set-default-paper-size "a4")
 %#(set-global-staff-size 10)
 
-\layout { \context { \Score markFormatter = #format-mark-box-letters } }
+\layout { 
+  \context {
+    \Voice
+    \override BreathingSign #'font-name = #"Helvetica"
+    \override BreathingSign #'font-size = #8
+    \override BreathingSign #'text = #(markup (#:raise 0.2 ","))	
+	%\Score markFormatter = #format-mark-box-letters
+	}
+	}
+
+
+\layout { 
+  \context {
+	\Score markFormatter = #format-mark-box-letters
+	}
+	}
 
 \header {
 subtitle = \markup { \sans \subtitle }

@@ -1,8 +1,8 @@
 \version "2.14.2"
 
 \include "deutsch.ly"
-\include "jazzChords_grand.ly"
-\include "romanChords_grand.ly"
+\include "../jazzChords_grand.ly"
+\include "../romanChords_grand.ly"
 
 \header {
 	title = "BLAGOSLOVLJEN BOG"
@@ -12,7 +12,7 @@
 	copyright = "\"Blessed Be Your Name\" by Matt and Beth Redman, Copyright ©"
 }
 
-\include "config_grand.ly"
+\include "../config_grand.ly"
 
 scoreA = \relative c {
 	\key d \major
@@ -40,7 +40,8 @@ scoreA = \relative c {
 	r4 d8 d d4 a4 |
 	a h cis d |
 	r4 e4 e d |
-	h2
+	\break
+	h2 \breathe
 }
 
 scoreB = \relative c {
