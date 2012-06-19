@@ -122,22 +122,26 @@ chordsB = \chordmode {
 
 chordsC = \chordmode {
 %	\set chordChanges = ##f
-	\once \override ChordNames.ChordName #'X-offset = #1
-	g1 |
+%	\once \override ChordNames.ChordName #'X-offset = #1
+	fis |
 %	\set chordChanges = ##t
-	a | g | a |
-	g/h | a/cis | d | d |
-	g | a | g | a | g | a | d | d |
+	h2. cis4:m | cis1:m | h2./dis fis4:7 | fis1:7
+	gis:m | fis | e:maj7 | e:maj7 |
+	h/dis | h/dis | e | e | 
+	fis2:sus4 fis2 | fis2:sus4 fis |
+	fis1 | 
 }
 
 chordsD = \chordmode {
 %	\set chordChanges = ##f
-	\once \override ChordNames.ChordName #'X-offset = #1
-	g1/d |
+%	\once \override ChordNames.ChordName #'X-offset = #1
+	fis |
 %	\set chordChanges = ##t
-	a/d | g/h | a/cis |
-	g | a | d/fis | d | g |
-	a | g/h | a/cis | g | a | d |
+	h2. cis4:m | cis1:m | h2./dis fis4:7 | fis1:7
+	gis:m | fis | e:maj7 | e:maj7 |
+	h/dis | h/dis | cis:7 | cis:7 |
+	e | fis | h2. cis4:m | cis1:m |
+	h2./dis fis4:m7 | fis1:m7 | h |
 }
 
 lyricsA = \lyricmode {
