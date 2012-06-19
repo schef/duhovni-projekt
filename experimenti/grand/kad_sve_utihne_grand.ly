@@ -52,16 +52,19 @@ scoreB = \relative c' {
 
 %AKORDI
 chordsA = \chordmode {
-%\skip 8
-	ces1
-%pomice akord u gore
-%\override ChordName #'Y-offset = #4
-%pomice akord u desno
-%\once \override ChordNames.ChordName #'extra-offset = #'(10 . 0)
+  es1 | b/d | f:m | b:sus4
+  es1 | b | f:m | b:sus4
+  f2:m es/g | b1:sus4 |
+  f2:m es/g | b1:sus4 |
+  f2:m es/g | b1:sus4 |
+  f2:m es/g | b1:sus4 |
 }
 
 chordsB = \chordmode {
-	ces1
+  es1 | b/d |
+  f:m | as2 b |
+  es1 | b/d |
+  f:m | as2 b |
 }
 
 %HRVATSKI TEKST
@@ -93,9 +96,9 @@ Va -- žan si ti I -- su -- se
 
 \score {
 <<
-        \new ChordNames { \romanChords \transpose d c { \chordsA \chordsB} }
+        \new ChordNames { \romanChords \transpose es c { \chordsA \chordsB} }
         \new ChordNames { \jazzChords \chordsA \chordsB }
-        \new Staff { \scoreA \scoreB }
+        \new Staff { \transpose d es { \scoreA \scoreB } }
         \addlyrics { \lyricsAOne \lyricsB }
 >>
 }
