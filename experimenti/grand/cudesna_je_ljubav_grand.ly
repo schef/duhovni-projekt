@@ -3,13 +3,16 @@
 \include "deutsch.ly"
 \include "romanChords_grand.ly"
 \include "jazzChords_grand.ly"
-\include "config_grand.ly"
 
 \header {
 	title = "ČUDESNA JE LJUBAV"
 	composer = "BILLY JAMES FOOTE"
 	poet= "TEST | TEST"
+	subtitle = ""
+	copyright = "nitsa"
 }
+
+\include "config_grand.ly"
 
 scoreA = \relative c' {
 	\key d \major
@@ -73,27 +76,31 @@ chordsC = \chordmode {
 }
 
 lyricsAOne = \lyricmode {
-Od -- ba -- čen si bio ti zbog me -- ne                  
+Od -- ba -- čen si \skip8 bi -- o ti zbog me -- ne                  
 Ja pri -- hva -- ćen 
-A ti o -- su -- đen
+\left "A ti" o -- su -- đen
 I do -- bro mi je
 Tvoj Duh u me -- ni ži -- vi
-Jer umro si i u -- skrs -- nu -- o
+Jer u -- mro "si i" u -- skrs -- nu -- o
 }
 
-lyricsB = \lyricmode {
+lyricsBOne = \lyricmode {
+\skip8 Ču -- de -- sna je lju -- bav ta
+\skip8 Zbog me -- ne u -- mro je moj \skip8 Kralj
+\skip8 Svi -- me u me -- ni da -- jem ti čast
+}
+
+lyricsBTwo = \lyricmode {
+\repeat unfold 40 { \skip8 }
 Ču -- de -- sna je lju -- bav ta
-Zbog me -- ne u -- mro je moj Kralj
-Ču -- de -- sna je lju -- bav ta
-Ra -- do -- sno te pro -- sla -- vljam
-Svi -- me u me -- ni da -- jem ti čast
+\skip8 Ra -- do -- sno te pro -- sla -- vljam
 }
 
 lyricsC = \lyricmode {
 Ti si moj Kralj
 Ti si moj Kralj
-Ti si moj Kralj
-Ti si moj Kralj
+"[je" -- "sus]" Ti si moj Kralj
+"[je" -- "sus]" Ti si moj Kralj
 }
 
 \score {
@@ -101,6 +108,7 @@ Ti si moj Kralj
 	\new ChordNames { \romanChords \transpose d c { \chordsA \chordsB \chordsC } }
 	\new ChordNames { \jazzChords \chordsA \chordsB \chordsC }
 	\new Staff { \scoreA \scoreB \scoreC }
-	\addlyrics { \lyricsAOne \lyricsB \lyricsC }
+	\addlyrics { \lyricsAOne \lyricsBOne \lyricsC }
+	\addlyrics { \lyricsBTwo }
 >>
 }

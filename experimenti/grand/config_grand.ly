@@ -6,15 +6,36 @@
     \Voice
     \override BreathingSign #'font-name = #"Helvetica"
     \override BreathingSign #'font-size = #8
-    \override BreathingSign #'text = #(markup (#:raise 0.2 ","))	
+    \override BreathingSign #'text = \markup { \hspace #-1 \raise #0.2 "," }
+	%\override BreathingSign #'text = \markup {
+	%  \line {
+	%    \musicglyph #"scripts.caesura.curved"
+	%    \translate #'(-1.75 . 1.6)
+    %    %\musicglyph #"scripts.ufermata"
+	%	"bok"
+    %  }
+    %}	
+    \override BreathingSign #'color = #blue
 	%\Score markFormatter = #format-mark-box-letters
 	}
 	}
 
+breathemoj = {
+  \once \override Score.RehearsalMark #'X-offset = #0.5
+  \once \override Score.RehearsalMark #'Y-offset = #-1.5
+  \once \override Score.RehearsalMark #'outside-staff-priority = #1 
+  \mark \default
+  \breathe
+}
+
+left = { \once \override LyricText #'X-offset = #-2.8 }
 
 \layout { 
   \context {
-	\Score markFormatter = #format-mark-box-letters
+	\Score markFormatter = #format-mark-box-numbers
+	%\Score markFormatter = #format-mark-circle-numbers
+	\override RehearsalMark #'self-alignment-X = #CENTER
+	\override RehearsalMark #'color = #blue
 	}
 	}
 

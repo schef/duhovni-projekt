@@ -5,6 +5,7 @@ title = "DOBRO JE SLAVITI"
 composer = "FRANK BOSCH"
 poet = "UBRZAVAJUĆA | ŽIDOVSKA"
 copyright = "Copyright Information"
+subtitle = ""
 }
 
 \include "deutsch.ly"
@@ -22,13 +23,13 @@ scoreA = {
 	h'8 a'8 g'4 fis'8 e'8 d'4 | }
 	\alternative {
 	{ e'8 e'8 d'8 e'8 fis'4 r4 }
-	{ e'8 e'8 d'8 e'8 fis'4 r8 h8 }
+	{ e'8 e'8 d'8 e'8 fis'4 r8 }
 	}
 }
 
 scoreB = {
-	\once \override Score.RehearsalMark #'Y-offset = #-5
-	\mark \default
+	\breathemoj
+	h8
 	h8 cis'8 d'4 cis'4 e'4 |
 	d'4 a'4 a'4 g'8 g'8 |
 	fis'8\( e'8\) d'4 e'8\( a'4\) g'8 |
@@ -42,7 +43,10 @@ scoreB = {
 }
 
 scoreC = {
+	\once \override Score.RehearsalMark #'Y-offset = #-1.7
+	\once \override Score.RehearsalMark #'outside-staff-priority = #1 
 	\mark \default
+	\override BarLine #'space-alist #'next-note = #'(semi-fixed-space . 3)
 	\repeat volta 2 {
 	g'2. a'8 g'8 |
 	fis'4.\( e'8\) e'2 |
@@ -59,6 +63,8 @@ scoreC = {
 }
 
 scoreD = {
+	\once \override Score.RehearsalMark #'Y-offset = #-1.7
+	\once \override Score.RehearsalMark #'outside-staff-priority = #1 
 	\mark \default
 	fis'4 h4 fis'4 h8 h8 |
 	g'8 a'8 g'4 fis'4 a'4 |

@@ -36,9 +36,9 @@ scoreA = \relative c'' {
 }
 
 scoreB = \relative c'' {
+	%\once \override Score.RehearsalMark #'Y-offset = #-1.7
+	\breathemoj
 	\times 2/3{d4 cis a} |
-	\mark \default
-	\once \override Score.RehearsalMark #'Y-offset = #-1.7
 	h2 a2 |
 	cis4. a8 \times 2/3{d4 cis a} |
 	h2 h4 e |
@@ -50,9 +50,9 @@ scoreB = \relative c'' {
 }
 
 scoreC = \relative c' {
+	%\once \override Score.RehearsalMark #'Y-offset = #-2.5
+	\breathemoj
 	d8 d h' ~ |
-	\mark \default
-	\once \override Score.RehearsalMark #'Y-offset = #-2.5
 	h a a a ~ a fis fis fis ~ |
 	fis e e e ~ e4 d8 h' ~ |
 	h8 a a d ~ \times 2/3{d4 fis, a} |
@@ -72,9 +72,8 @@ scoreC = \relative c' {
 }
 
 scoreD = \relative c'' {
+	\breathemoj
 	e8 ~ e fis ~ fis h, ~ |
-	\mark \default
-	\once \override Score.RehearsalMark #'Y-offset = #-2.5
 	h8 h4 h8 ~ h h4 cis8 ~ |
 	cis2 r8 d8 ~ d h ~ |
 	h8 h4 h8 ~ h e4 cis8( ~ |
@@ -130,18 +129,20 @@ chordsD = \chordmode {
 }
 
 lyricsAOne = \lyricmode {
-Pre -- di -- vna je lju -- bav ta
+Pre -- di -- vna je lju -- bav ta \skip8
 Ne -- pro -- mje -- nji -- va
-S kri -- ža mi -- lost me pre -- pla -- vlju -- je
-Ne -- vi -- đe -- na još do sad
-Lju -- di ne zna -- ju
-Ka -- ko di -- van pre -- di -- van si ti
+\left "S kri" -- ža mi -- lost me pre -- pla -- vlju -- je
+\skip8 Ne -- vi -- đe -- na još do sad
+\skip8 Lju -- di ne zna -- ju
+\skip8 Ka -- ko di -- van pre -- di -- van si ti
 }
 
 lyricsB = \lyricmode {
 Di -- van si vo -- lim te
-Di -- van o -- bo -- ža -- vam te
-Di -- van si mo -- ja du -- ša pje -- va ti
+\skip8 Di -- van o -- bo -- ža -- vam te
+Di -- van si mo -- ja
+\once \override LyricText #'X-offset = #3
+"[duša pjeva ti]" \skip8 \skip8
 }
 
 lyricsATwo = \lyricmode {
@@ -149,14 +150,14 @@ Tvo -- ja sla -- va mo -- ćna je
 Ne -- bo is -- pu -- nja -- va
 Dje -- la tvo -- ja na -- ma go -- vo -- re
 Lje -- po -- tom svo -- jom sr -- ce mi
-Ti na -- da -- hnju -- ješ
-Ka -- ko si -- lan pre -- di -- van si ti
+\skip8 Ti na -- dah -- nju -- ješ
+\skip8 Ka -- ko si -- lan pre -- di -- van si ti
 }
 
 lyricsC = \lyricmode {
-Oči si mo -- je o -- tvo -- ri -- o
-Lju -- ba -- vlju o -- svo -- ji --o
-Jer ni -- šta na svije -- tu ni -- je ka -- o ti
+\skip8 \skip8 O -- či si mo -- je \skip8 o -- tvo -- ri -- o
+\skip8 Lju -- ba -- vlju o -- svo -- ji -- o
+Jer ni -- šta na svije -- tu \skip8 ni -- je ka -- o ti
 }
 
 lyricsD = \lyricmode {

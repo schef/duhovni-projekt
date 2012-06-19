@@ -41,12 +41,16 @@ scoreA = \relative c {
 	a h cis d |
 	r4 e4 e d |
 	\break
-	h2 \breathe
-}
+	h2 }
 
 scoreB = \relative c {
+	%\override Score.RehearsalMark #'break-align-symbols = #'(breathing-sign)
+	%\override Score.RehersalMark #'break-align-anchor-alignment = #RIGHT
+	%\once \override Score.RehearsalMark #'Y-offset = #-1.5
+	%\once \override Score.RehearsalMark #'X-offset = #0.02
+	\breathemoj
+	%\mark \default
 	fis'8 e e d |
-	\mark \default
 	d4. d8 ~ d e4 e8 ~ |
 	e2 fis8 e e d |
 	d1 ~ |
@@ -81,6 +85,7 @@ chordsA = \chordmode {
 }
 
 chordsB = \chordmode {
+	%\once \override ChordNames.ChordName #'X-offset = #1
 	h1 | fis | gis:m | e |
 	h1 | fis | gis2:m fis2 | e1|
 }
