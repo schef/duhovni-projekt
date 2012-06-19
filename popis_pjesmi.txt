@@ -6,7 +6,7 @@
 +duse_sveti
 +hosana
 +iznad_svih_sila
-+[nema akorde]kad_sve_utihne
++kad_sve_utihne
 +najbolji_prijatelji
 +najveci_dar
 +nebeski_kralj
@@ -21,8 +21,5 @@
 +ti_svjetlo_svijeta
 +volim_te
 +zauvijek
--zemlja_sva
--znam_da_bog_sad_ovdje_prebiva
-
-za kreksa: 
-	sleš u akordima je grdi...možda tanje? pozicija?
++zemlja_sva
++[fali tekst]znam_da_bog_sad_ovdje_prebiva
