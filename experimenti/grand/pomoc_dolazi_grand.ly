@@ -7,7 +7,7 @@
 \header {
 	title = "POMOĆ DOLAZI"
 	subtitle = "\"HELP IS ON THE WAY\""
-	composer = "UNKONOWN"
+	composer = "AUTOR NEPOZNAT"
 	poet= "TEST | TEST"
 	copyright = "Copyright Information"
 }

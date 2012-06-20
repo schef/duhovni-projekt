@@ -1,31 +1,25 @@
 \version "2.14.2"
 
-#(define naslov "NIŠTA OSIM KRVI" )
-#(define autor "MATT REDMAN" )
-#(define mjera "TEST | TEST" )
-
-#(define brojPjesme "345" )
-#(define brojStraniceLijevo "3" )
-#(define brojStraniceDesno "4" )
-#(define copyright "\"Nothing But The Blood\" by Matt Redman, Copyright ©" )
-
-#(define tonalitet "d" )
-
 \include "deutsch.ly"
-\include "config.ly"
-\include "zigZag.ly"
-\include "jazzChords.ly"
-\include "romanChords.ly"
+\include "../jazzChords_grand.ly"
+\include "../romanChords_grand.ly"
 
-%NOTE
+\header {
+        title = "NIŠTA OSIM KRVI"
+        subtitle = "\"NOTHING BUT THE BLOOD\""
+        composer = "MATT REDMAN"
+        poet= "256 BPM | ROCK"
+        copyright = "\"Nothing But The Blood\" by Matt Redman, Copyright ©"
+}
+
+\include "../config_grand.ly"
+
 scoreA = \relative c' {
 	\key d \major
-	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") A }
-	%triola = \times 2/3
-	%\override Staff.TimeSignature #'style = #'()
+	\mark \default
 	\partial 8
 	\repeat volta 2 { 
-	d16 e |
+	d16 e | \bar "|:"
 	fis2 a8 g16 fis ~ fis g8 fis16 ~ |
 	fis2 a8 a16 h ~ h g8 fis16 ~ |
 	fis2 a8 g16 fis ~ fis g8 fis16 ~ |
@@ -35,17 +29,14 @@ scoreA = \relative c' {
 	fis1 |
 }
 	\alternative {
-		{\set Timing.measurePosition = #(ly:make-moment -7 8) r2 r4 r8 }
-		{\set Timing.measurePosition = #(ly:make-moment -4 4 ) r1}
+		{r2 r4 r8 e8}
+		{r1}
 	}
 	\bar "||" \break
 }
 
 scoreB = \relative c' {
-	\key d \major
-	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") B }
-	\set Score.currentBarNumber = #10
-	%\partial 4
+	\mark \default
 	e'8 fis4 fis8 ~ fis d4 e8 ~ |
 	e fis4 fis8 ~ fis2 |
 	e8 fis4 fis8 ~ fis d4 e8 ~ |
@@ -66,10 +57,7 @@ scoreB = \relative c' {
 }
 
 scoreC = \relative c' {
-	\key d \major
-	\mark \markup { \box \override #'(font-name . "JohnSans Medium Pro") C }
-	\set Score.currentBarNumber = #19
-	%\partial 2
+	\mark \default
 	a''8 fis fis e fis2 ~ |
 	fis1
 	a8 fis fis e fis2 ~ |
@@ -81,15 +69,10 @@ scoreC = \relative c' {
 	\bar "|." \break
 }
 
-%AKORDI
 chordsA = \chordmode {
-	\skip 8
+	\skip8
 	d1 | h:m | d | h:m |
-	a | g | d |
-%pomice akord u gore
-%\override ChordName #'Y-offset = #4
-%pomice akord u desno
-%\once \override ChordNames.ChordName #'extra-offset = #'(10 . 0)
+	a | g | d | d | d |
 }
 
 chordsB = \chordmode {
@@ -104,33 +87,6 @@ chordsC = \chordmode {
 	a | g | d1 | d1
 }
 
-chordsD = \chordmode {
-	ces1
-}
-
-%AKORDI STUPNJEVI
-
-romanChordsA = \chordmode {
-	\skip8
-	c1 | a | c | a |
-	g | f | c | 
-}
-
-romanChordsB = \chordmode {
-	c1 | c | a | a |
-	g | f | c | c |
-	c1 | c | a | a |
-	g | f | c | g2 f2 | 
-  
-}
-
-romanChordsC = \chordmode {
-	c1 | c | a | a |
-	g | f | c | c |
-}
-
-%HRVATSKI TEKST
-
 lyricsAOne = \lyricmode {
 Tvo -- ja krv vi -- še go -- vo -- ri
 Od svih va -- pa -- ja, pra -- znih, ze -- malj -- skih
@@ -139,7 +95,7 @@ Kri -- ste, tvo -- ja krv
 }
 
 lyricsB = \lyricmode {
-Što će grije -- he o -- pra -- ti
+\skip8 Što će grije -- he o -- pra -- ti
 O -- pet nas is -- pu -- ni -- ti
 Ni -- šta o -- sim kr -- vi
 Ni -- šta o -- sim kr -- vi Kri -- sto -- ve
@@ -157,109 +113,18 @@ Tvo -- je kr -- vi, Kra -- lju I -- su -- se
 }
 
 lyricsATwo = \lyricmode {
-Tvoj \skip8 križ mi -- lost svje -- do -- či
+\skip8 \skip8 križ mi -- lost svje -- do -- či
 "O sr" -- cu O -- če -- vu "što put" nam pri -- pra -- vi
 Hra -- bro kro -- čim sad, u si -- gur -- no -- sti
-"Zbog kr" -- vi Kri -- sto -- ve
+"Zbog kr" -- vi Kri -- sto -- ve Tvoj
 }
-
-\book {
-
-%DIO A
-\score {
-  <<
-  \new ChordNames { \romanMajorChords
-                    \romanChordsA
-                  }
-  \new ChordNames { \standardChords
-                   %\transpose d h,
-                    \chordsA
-                  }
-  \new Voice { \voiceFont
-               %\transpose d h,
-               \scoreA
-             }
-  \addlyrics { \lyricsFont \lyricsAOne }
-  \addlyrics { \lyricsFont \lyricsATwo }
-  %\addlyrics { \lyricsFont \lyricsAThree }
-  %\addlyrics { \lyricsFont \lyricsAFour }
-  >>
-  %\midi {}
-}
-
-%DIO B
 
 \score {
-  <<
-  \new ChordNames { \romanMajorChords
-                    \romanChordsB
-                  }
-  \new ChordNames { \standardChords
-                    %\transpose e c
-                    \chordsB
-                  }
-  \new Voice { \voiceFont
-               %\transpose d h,
-               \scoreB
-             }
-  \addlyrics { \lyricsFont \lyricsB }
-  >>
-  \layout {\context {\Staff \remove "Time_signature_engraver" }}
-  %\midi {}
+<<
+        \new ChordNames { \romanChords \transpose d c { \chordsA \chordsB \chordsC } }
+        \new ChordNames { \jazzChords \chordsA \chordsB \chordsC }
+        \new Staff { { \scoreA \scoreB \scoreC } }
+        \addlyrics { \lyricsAOne \lyricsB \lyricsC }
+        \addlyrics { \lyricsATwo }
+>>
 }
-
-%DIO C
-\score {
-  <<
-  \new ChordNames { \romanMajorChords
-                    \romanChordsC
-                  }
-  \new ChordNames { \standardChords
-                    \chordsC
-                  }
-  \new Voice { \voiceFont
-               %\transpose d h, 
-               \scoreC
-             }
-  \addlyrics { \lyricsFont \lyricsC }
-  >>
-  \layout {\context {\Staff \remove "Time_signature_engraver" }}
-  %\midi {}
-}
-
-%ENGLESKI (STRANI) TEKST
-
-%\markup { \lyricsExtFont)
-%	\wordwrap {
-%	\abox A
-%"kitica 1 (A)"
-%	}
-%}
-%
-%\markup { \lyricsExtFont)
-%	\wordwrap {
-%"kitica 2 (A)"
-%	}
-%}
-%
-%\markup { \lyricsExtFont)
-%	\wordwrap {
-%	\abox B
-%"refren (B)"
-%	}
-%}
-%
-%\markup { \lyricsExtFont)
-%	\wordwrap {
-%	\abox C
-%"chorus (C)"
-%	}
-%}
-
-}
-     \layout {
-       \context {
-         \Score
-         \remove "Bar_number_engraver"
-       }
-     }

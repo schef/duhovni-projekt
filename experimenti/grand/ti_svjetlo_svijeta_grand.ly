@@ -5,8 +5,8 @@
 \include "jazzChords_grand.ly"
 
 \header {
-	title = "TI SVIJETLO SVIJETA"
-	subtitle = ""
+	title = "TI SVJETLO SVIJETA"
+	subtitle = "\"LIGHT OF THE WORLD\""
 	composer = "TIM HUGES"
 	poet= "TEST | TEST"
 	copyright = "Copyright Information"
