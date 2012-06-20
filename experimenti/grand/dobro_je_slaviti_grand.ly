@@ -46,7 +46,7 @@ scoreC = {
 	\once \override Score.RehearsalMark #'Y-offset = #-1.7
 	\once \override Score.RehearsalMark #'outside-staff-priority = #1 
 	\mark \default
-	\override BarLine #'space-alist #'next-note = #'(semi-fixed-space . 3)
+	\once \override Staff.BarLine #'extra-spacing-width = #'(0 . 1)
 	\repeat volta 2 {
 	g'2. a'8 g'8 |
 	fis'4.\( e'8\) e'2 |
@@ -65,6 +65,7 @@ scoreC = {
 scoreD = {
 	\once \override Score.RehearsalMark #'Y-offset = #-1.7
 	\once \override Score.RehearsalMark #'outside-staff-priority = #1 
+	\once \override Staff.BarLine #'extra-spacing-width = #'(0 . 1)
 	\mark \default
 	fis'4 h4 fis'4 h8 h8 |
 	g'8 a'8 g'4 fis'4 a'4 |

@@ -7,6 +7,7 @@
     \override BreathingSign #'font-name = #"Helvetica"
     \override BreathingSign #'font-size = #8
     \override BreathingSign #'text = \markup { \hspace #-1 \raise #0.2 "," }
+	\override BreathingSign #'outside-staff-priority = #1 
 	%\override BreathingSign #'text = \markup {
 	%  \line {
 	%    \musicglyph #"scripts.caesura.curved"
