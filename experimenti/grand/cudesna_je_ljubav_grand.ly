@@ -8,8 +8,8 @@
 	title = "ČUDESNA JE LJUBAV"
 	composer = "BILLY JAMES FOOTE"
 	poet= "TEST | TEST"
-	subtitle = ""
-	copyright = "nitsa"
+	subtitle = "\"AMAZING LOVE\""
+	copyright = "Copyright"
 }
 
 \include "config_grand.ly"
