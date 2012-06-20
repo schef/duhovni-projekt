@@ -32,8 +32,9 @@ scoreA = \relative c' {
 	dis2.
 }
 
-scoreB = \relative c' {	
+scoreB = \relative c' {		
 	\breathemoj
+	\once \override NoteColumn #'X-offset = #1
 	h''8 h ~ |
 	h4. cis8 ~ cis4 gis8 fis ~ |
 	fis4. gis8 ~ gis4. h8 |
@@ -47,9 +48,9 @@ scoreB = \relative c' {
 }
 
 scoreC = \relative c' {
-	\once \override BreathingSign #'text = \markup { \hspace #3  \raise #0.2 "," }
-	\once \override Score.RehearsalMark #'X-offset = #3
 	\breathemoj
+	\once \override BreathingSign #'minimum-X-extent = #'(-4 . 0)
+	\once \override Score.RehearsalMark #'X-offset = #4
 	\once \override NoteColumn #'X-offset = #5
 	h''8 |
 	cis8[ h] h[ a] a gis4 fis8 ~ |
