@@ -6,8 +6,7 @@
     \Voice
     \override BreathingSign #'font-name = #"Helvetica"
     \override BreathingSign #'font-size = #8
-    \override BreathingSign #'text = \markup { \hspace #-1 \raise #0.2 "," }
-	\override BreathingSign #'outside-staff-priority = #1 
+    \override BreathingSign #'text = \markup { \raise #0.2 "," }
 	%\override BreathingSign #'text = \markup {
 	%  \line {
 	%    \musicglyph #"scripts.caesura.curved"
@@ -22,9 +21,12 @@
 	}
 
 breathemoj = {
-  \once \override Score.RehearsalMark #'X-offset = #0.5
+  \override Score.RehearsalMark #'extra-spacing-width = #'(0 . 0)
+  \override Score.RehearsalMark #'extra-spacing-height = #'(-inf.0 . +inf.0) 
+  \once \override Score.RehearsalMark #'X-offset = #0.05
   \once \override Score.RehearsalMark #'Y-offset = #-1.5
   \once \override Score.RehearsalMark #'outside-staff-priority = #1 
+  %\override Score.RehearsalMark #'break-align-symbols = #'(breathing-sign)
   \mark \default
   \breathe
 }
