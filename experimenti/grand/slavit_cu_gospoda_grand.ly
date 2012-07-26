@@ -73,9 +73,9 @@ chordsB = \chordmode {
 %HRVATSKI TEKST
 
 lyricsAOne = \lyricmode {
-Sla -- vit ću Go -- spo -- da za -- u -- vijek
+Sla -- vit ću Go -- spo -- da za -- u -- vi -- jek
 U nje -- ga se sva -- gda u -- zda -- jem
-On me stra -- ha o -- slo -- bo -- dio
+On me stra -- ha o -- slo -- bo -- di -- o
 Ko -- rak moj on je u -- čvr -- sti -- o
 Ne po -- sus -- ta -- jem
 Pje -- vam Go -- spo -- du
