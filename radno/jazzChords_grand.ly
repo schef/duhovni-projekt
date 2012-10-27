@@ -7,7 +7,7 @@ chordSharp = \markup { \hspace #0.2 \fontsize #-3 \raise #0.7 "#" }
 %definicija znakova
 min = \markup { \fontsize #-4 \raise #0.55 #(ly:export (ly:wide-char->utf-8 #x2013)) }
 maj = \markup { \fontsize #-4 \raise #0.8 #(ly:export (ly:wide-char->utf-8 #x0394)) }
-dim = \markup { \fontsize #-7 \raise #1.2 #(ly:export (ly:wide-char->utf-8 #x00b0)) }
+dim = \markup { \hspace #0.08 \fontsize #-7 \raise #1.34 #(ly:export (ly:wide-char->utf-8 #x00b0)) }
 hdim = \markup { \fontsize #-7 \raise #1.2 #(ly:export (ly:wide-char->utf-8 #x00d8)) }
 aug = \markup { \fontsize #-7 \raise #1.2 "+" }
 cetri = \markup { \fontsize #-4 \raise #0.8 "4" }
@@ -15,9 +15,9 @@ sest = \markup { \fontsize #-4 \raise #0.8 "6" }
 sedam = \markup { \fontsize #-4 \raise #0.8 "7" }
 devet = \markup { \fontsize #-4 \raise #0.8 "9" }
 trinaest = \markup { \fontsize #-4 \raise #0.8 "13" }
-sus = \markup { \fontsize #-5 \raise #1.2 "sus" }
+sus = \markup { \hspace #0.1 \fontsize #-5 \raise #1.16 "sus" }
 
-jazzyChordsMusic =
+jazzChordsMusic =
 {
   %kvintakordi
   <c es g>-\markup { \min }
@@ -28,6 +28,7 @@ jazzyChordsMusic =
   <c e g a>-\markup { \maj \sest }
   <c es g as>-\markup { \min \chordFlat \sest }
   <c e g b>-\markup { \sedam }
+  <c e g h>-\markup { \maj \sedam }
   <c es g b>-\markup { \min \sedam }
   <c es ges b>-\markup { \hdim }
   <c f g des'>-\markup { \sus \chordFlat \devet }
@@ -39,8 +40,8 @@ jazzyChordsMusic =
 }
 
 % Add to existing exceptions
-jazzyChordsAdd = #(append
-  (sequential-music-to-chord-exceptions jazzyChordsMusic #t)
+jazzChordsAdd = #(append
+  (sequential-music-to-chord-exceptions jazzChordsMusic #t)
   ignatzekExceptions)
 
 % definition from scm/chord-name.scm
@@ -113,9 +114,12 @@ myGermanChords = {
 }
 
 
-jazzyChords =
+jazzChords =
 {
-  \set chordNameExceptions = #jazzyChordsAdd
+  \set chordNameExceptions = #jazzChordsAdd
   \set chordRootNamer = #(chord-name->semi-german-markup #f)
   \set chordNoteNamer = #note-name->german-markup
+  \override ChordName #'font-size = 3
+  \override ChordName #'font-name = "Lilypond JohnSans Medium Pro"
+  \set chordChanges = ##t
 }

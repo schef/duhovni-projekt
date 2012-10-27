@@ -1,4 +1,4 @@
 #kopiraj
 
-cp ./*.ttf /usr/share/fonts/TTF/
+cp ./fonts ~/.fonts
 
