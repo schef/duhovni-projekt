@@ -3,6 +3,9 @@
 ## Dobrodošli!
 Evo lista pjesmi koje smo dosad napravili. Napomena: Pjesme nisu gotove, one su u **BETA** fazi razvoja.
 
+
+![alt text](/path/to/img.jpg "Title")
+
 1. blagoslovljen_bog
 [GitHub](http://github.com/schef/duhovni-projekt/blob/master/radno/COMPILE/blagoslovljen_bog_grand.pdf)
 1. dobro_je_slaviti

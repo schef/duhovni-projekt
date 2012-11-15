@@ -4,10 +4,10 @@
 chordFlat = \markup { \hspace #0 \fontsize #0 \raise #0.3 "$" }
 chordSharp = \markup { \hspace #0 \fontsize #0 \raise #0.3 "#" }
 
-min = \markup { \fontsize #0 \raise #0 #(ly:export (ly:wide-char->utf-8 #x2013)) }
-maj = \markup { \fontsize #0 \raise #0 #(ly:export (ly:wide-char->utf-8 #x0394)) }
-dim = \markup { \hspace #-0.2 \fontsize #-5 \raise #0.8 #(ly:export (ly:wide-char->utf-8 #x00b0)) }
-hdim = \markup { \fontsize #0 \raise #0 #(ly:export (ly:wide-char->utf-8 #x00d8)) }
+min = \markup { \fontsize #0 \raise #0 \char ##x2013 }
+maj = \markup { \fontsize #0 \raise #0 \char ##x0394 }
+dim = \markup { \hspace #-0.2 \fontsize #-5 \raise #0.8 \char ##x00b0)) }
+hdim = \markup { \fontsize #0 \raise #0 \char ##x00d8 }
 aug = \markup { \fontsize #0 \raise #0 "+" }
 cetri = \markup { \fontsize #0 \raise #0 "4" }
 sest = \markup { \fontsize #0 \raise #0 "6" }
