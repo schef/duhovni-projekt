@@ -114,15 +114,16 @@ for key in rijecnik:
       for ndx2, member2 in enumerate(lines):
         if rijecnik[key] in lines[ndx2]:
           linijaTekst = lines[ndx2].split()
+          navodniki = 0
           #print ("Tekst")
           #print (linijaTekst)
           brojSlogovaTekst = (brojanjeSlogovaTekst(regexTekst, linijaTekst))
           razlika = brojSlogovaFraza-brojSlogovaTekst
-          #print(razlika, linijaTekst)
+ #         print(razlika, linijaTekst)
           if razlika > 0:
             #treba dodati skip
             while razlika != 0:
-              linijaTekst.insert(-1, "\skip8")
+              linijaTekst.insert(-1, "_")
               razlika -= 1
           elif razlika < 0:
             #treba spojiti elemente
@@ -132,15 +133,20 @@ for key in rijecnik:
               slog2 = linijaTekst.pop(-2)
               if slog2 == "--":
                 slog3 = linijaTekst.pop(-2)
-                rec = "\"" + slog3 + " " + slog2 + " " + slog1 + "\""
+                rec = slog3 + " " + slog2 + " " + slog1
               else:
-                rec = "\"" + slog2 + " " + slog1 + "\""
+                rec = slog2 + " " + slog1
               razlika +=1
+              navodniki += 1
               linijaTekst.insert(-1, rec)
           if lines[ndx2] != linijaTekst:
+            if navodniki:
+              rec = linijaTekst.pop(-2)
+              temp = "\"" + rec + "\""
+              linijaTekst.insert(-1, temp)
             lines[ndx2] = "  " + spajanjeListe(linijaTekst) + "\n"
             listaErrora.append("Error @ line: " + str(ndx2))
-            #print (linijaTekst)
+#            print (linijaTekst)
 
 for i in lines:
   sys.stdout.write(i)
