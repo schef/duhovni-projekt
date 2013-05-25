@@ -203,6 +203,44 @@ Kad bol pri -- ti -- sne o -- da -- svud, %text07
 bla -- go -- slov -- ljen Bog %text08
 }
 
+lyricsAOneEng = \lyricmode {
+  \override LyricText #'(font-name) = "Baskerville" 
+  \override LyricText #'font-size = #-2
+ Ble -- ssed be Your name in the land that is plen -- ti -- ful 
+ Where Your streams of a -- bun -- dance flow 
+ Ble -- ssed be Your name 
+ %And
+ ble -- ssed be Your name when I'm found in the de -- sert place 
+ Though I walk through the wil -- der -- ness 
+ Ble -- ssed be your name 
+
+ E -- very ble -- ssing You pour out I'll turn back to praise 
+ %And
+ when the dark -- ness clo -- ses in Lord 
+ Still I will say 
+
+ Ble -- ssed be the name of the Lord 
+ Ble -- ssed be Your name 
+ Ble -- ssed be the name of the Lord 
+ Ble -- ssed be Your glo _ -- rio -- us name 
+
+ You give and take a -- way 
+ You give and take a -- way 
+ My heart will choose to say 
+ Lord, ble -- ssed be Your name
+}
+
+lyricsATwoEng = \lyricmode {
+  \override LyricText #'(font-name) = "Baskerville" 
+  \override LyricText #'font-size = #-2
+ Ble -- ssed be Your name when the sun's shi -- ning down on me 
+ When the world's all as it should be? 
+ Ble -- ssed be Your name 
+ And ble -- ssed be Your name on the road marked 
+ with su -- ffe -- ring 
+ Though there's pain in the o -- ffe -- ring 
+ Ble -- ssed be Your name 
+}
 %\score {
 %<<
 %	\new ChordNames { \romanChords \transpose h c { \chordsA \chordsB \chordsC } }
@@ -218,10 +256,13 @@ bla -- go -- slov -- ljen Bog %text08
 	\new ChordNames { \romanChords \transpose h c \myChords }
 	\new ChordNames { \jazzChords \myChords }
 	\new Staff { \myScore }
+	\addlyrics { \lyricsAOneEng }
 	\addlyrics { \lyricsAOne \lyricsB \lyricsC }
+	\addlyrics { \lyricsATwoEng }
 	\addlyrics { \lyricsATwo }
 >>
 }
+
 
 %\markup { \override #'(font-name . "JohnSans White Pro")
 %	\wordwrap {
