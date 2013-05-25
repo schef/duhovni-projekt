@@ -63,16 +63,16 @@ lyricsB = \lyricmode {
 }
 
 lyricsATwo = \lyricmode {
-  Mo -- ćnu ru -- ku on pru -- ža nam %tekst01
+  Mo -- ćnu ru -- ku on pru -- ža nam \skip8 %tekst01
   Vje -- čna je nje -- go -- va lju -- bav %tekst02
-  No -- vi ži -- vot nam da -- ru -- je %tekst03
+  No -- vi ži -- vot nam da -- ru -- je \skip8 %tekst03
   Vje -- čna je nje -- go -- va lju -- bav %tekst04
 }
 
 lyricsAThree = \lyricmode {
-  Od i -- zla -- ska sun -- ca do za -- la -- ska %tekst01
+  Od i -- zla -- ska sun -- ca do za -- "la -- ska" %tekst01
   Vje -- čna je nje -- go -- va lju -- bav %tekst02
-  Mi -- lo -- šću Bo -- žjom će -- mo ži -- vje -- ti %tekst03
+  Mi -- lo -- šću Bo -- žjom će -- mo ži -- "vje -- ti" %tekst03
   Vje -- čna je nje -- go -- va lju -- bav %tekst04
 }
 

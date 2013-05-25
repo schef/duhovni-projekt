@@ -1,4 +1,4 @@
-%#(set-default-paper-size "a4")
+#(set-default-paper-size "a4")
 %#(set-global-staff-size 10)
 
 \layout { 
@@ -48,15 +48,15 @@ copyright = \markup { \sans \copyright }
 tagline = "" 
 }
 
-myStaffSize = #16
+myStaffSize = #20
 #(set-global-staff-size myStaffSize)
 \paper {
 #(define fonts (make-pango-font-tree "JohnSans Medium Pro" "Lilypond JohnSans White Pro" "Lilypond JohnSans Medium Pro" (/ myStaffSize 20)))
 markup-system-spacing #'padding = #7
 %system-system-spacing #'padding = #10
 indent = 0
-paper-width = 138 \mm
-paper-height = 214 \mm
+%paper-width = 138 \mm
+%paper-height = 214 \mm
 top-markup-spacing #'padding = #2
 markup-system-spacing #'padding = #5
 markup-system-spacing #'stretchability = #5
