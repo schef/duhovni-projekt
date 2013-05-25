@@ -1,0 +1,5 @@
+used \displayLilyMusic to transpose actual score
+alias lilypond="lilypond --include=$HOME/lilypond/duhovni-projekt/config" #for config files
+
+or direct in vimrc:
+map <buffer> <F5> :w<Return>:se makeprg=lilypond\ \"%<\"<Return>:make<Return>

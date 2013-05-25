@@ -5,10 +5,11 @@ chordFlat = \markup { \hspace #0.2 \fontsize #-3 \raise #0.7 "!" }
 chordSharp = \markup { \hspace #0.2 \fontsize #-3 \raise #0.7 "#" }
 
 %definicija znakova
-min = \markup { \fontsize #-4 \raise #0.55 #(ly:export (ly:wide-char->utf-8 #x2013)) }
-maj = \markup { \fontsize #-4 \raise #0.8 #(ly:export (ly:wide-char->utf-8 #x0394)) }
-dim = \markup { \hspace #0.08 \fontsize #-7 \raise #1.34 #(ly:export (ly:wide-char->utf-8 #x00b0)) }
-hdim = \markup { \fontsize #-7 \raise #1.2 #(ly:export (ly:wide-char->utf-8 #x00d8)) }
+%min = \markup { \fontsize #-4 \raise #0.55 #(ly:export (ly:wide-char->utf-8 #x2013)) }
+min = \markup { \fontsize #-4 \raise #0.55 \char ##x2013 }
+maj = \markup { \fontsize #-4 \raise #0.8 \char ##x0394 }
+dim = \markup { \hspace #0.08 \fontsize #-7 \raise #1.34 \char ##x00b0 }
+hdim = \markup { \fontsize #-7 \raise #1.2 \char ##x00d8 }
 aug = \markup { \fontsize #-7 \raise #1.2 "+" }
 cetri = \markup { \fontsize #-4 \raise #0.8 "4" }
 sest = \markup { \fontsize #-4 \raise #0.8 "6" }

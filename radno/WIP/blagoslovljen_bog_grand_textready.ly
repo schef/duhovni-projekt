@@ -4,13 +4,36 @@
 \include "jazzChords_grand.ly"
 \include "romanChords_grand.ly"
 
+%verified and audited by Stjepan Horvat, 100% transcribed
+%date: Sat May 25 18:23:22 CEST 2013
+%iskreno.hr quality confirmed
+
+%id3info
+%*** Tag information for Music/Matt Redman - Blessed Be Your Name.mp3
+%=== TIT2 (Title/songname/content description): Blessed be Your Name
+%=== TPUB (Publisher): Survivor/Chordant
+%=== TCON (Content type): Religious
+%=== POPM (Popularimeter): Windows Media Player 9 Series, counter=0 rating=255
+%=== TRCK (Track number/Position in set): 2
+%=== TYER (Year): 2002
+%=== TALB (Album/Movie/Show title): Where Angels Fear to Tread
+%=== TPE2 (Band/orchestra/accompaniment): Matt Redman
+%=== TCOM (Composer): Beth Redman/Matt Redman
+%=== TPE1 (Lead performer(s)/Soloist(s)): Matt Redman
+%*** mp3 info
+%MPEG1/layer III
+%Bitrate: 128KBps
+%Frequency: 44KHz
+
+%groovesharkID: 35990787
+
 \header {
 	title = "BLAGOSLOVLJEN BOG"
 	subtitle = "\"BLESSED BE YOUR NAME\""
 	composer = "MATT I BETH REDMAN"
 	poet= "115 BPM | ROCK"
 	copyright = "\"Blessed Be Your Name\" by Matt and Beth Redman, Copyright ©"
-  %album = Where Angels Fear to Tread
+  %album = "Where Angels Fear to Tread"
 }
 
 \include "config_grand.ly"
@@ -142,13 +165,13 @@ myChords = \chordmode {
 }
 
 lyricsAOne = \lyricmode {
-Bla -- go -- slov -- ljen Bog  %text01
+Bla -- go -- slov -- ljen Bog %text01
 u ze -- mlji pu -- noj o -- bi -- lja %text02
 Kad iz -- lije -- va svoj bla -- go -- slov, %text03
 bla -- go -- slov -- ljen Bog %text04
 Bla -- go -- slov -- ljen Bog %text05
 kad na -- đem se u pu -- sti -- nji %text06
-I di -- vlji -- nom ho -- dam sam, %text07
+I di -- vlji -- nom ho -- dam sam, _ %text07
 bla -- go -- slov -- ljen Bog %text08
 
 Za sve bla -- go -- slo -- ve tvo -- je pro -- slav -- ljam te %text09
@@ -159,20 +182,20 @@ lyricsB = \lyricmode {
 Bla -- go -- slov -- ljen Bog, Go -- spod moj %text11
 Bla -- go -- slov -- ljen Bog %text12
 Bla -- go -- slov -- ljen Bog, Go -- spod moj %text13
-Bla -- go -- slov -- ljen Bog, Go -- spod moj %text14
+Bla -- go -- slov -- ljen Bog, Go -- spod moj _ %text14
 }
 
 lyricsC = \lyricmode {
-Ti nam da -- ješ sve %text15
-Ti nam u -- zi -- maš %text16
+Ti nam da -- ješ sve _ %text15
+Ti nam u -- zi -- maš _ %text16
 Svim sr -- cem pje -- vam ti %text17
-Da, bla -- go -- slov -- ljen Bog %text18
+Da, bla -- go -- slov -- ljen Bog _ %text18
 }
 
 lyricsATwo = \lyricmode {
 Bla -- go -- slov -- ljen Bog %text01
-ka -- da sun -- ce gri -- je me %text01
-I sve ka -- ko tre -- ba je, %text03
+ka -- da sun -- ce gri -- je me _ %text02
+I sve ka -- ko tre -- ba je, _ %text03
 bla -- go -- slov -- ljen Bog %text04
 Bla -- go -- slov -- ljen Bog %text05
 na pu -- tu pu -- nom ne -- vo -- lja %text06
