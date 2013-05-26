@@ -1,5 +1,12 @@
 used \displayLilyMusic to transpose actual score
-alias lilypond="lilypond --include=$HOME/lilypond/duhovni-projekt/config" #for config files
+alias lilypond="lilypond --include=$HOME/lilypond/duhovni-projekt/config" #for config files not working
 
 or direct in vimrc:
-map <buffer> <F5> :w<Return>:se makeprg=lilypond\ \"%<\"<Return>:make<Return>
+map <buffer> <F5> :w<Return>:se makeprg=lilypond\ \-I\ /root/lilypond/duhovni\-projekt/config\ \"%<\"<Return>:make<Return>
+
+#creating empty lyrics using vim
+s/[A-Za-z,.!?šđžčćŠĐŽČĆ]/_/g
+s/__/_/g
+s/_/\\slb/g
+s/--//g
+s/  / /g

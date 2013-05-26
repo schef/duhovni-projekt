@@ -102,7 +102,7 @@
 phraseBreak = { \bar "" \break }
 %phraseBreak = { }
 
-myScore = {
+originalScore = {
     \key h \major
 
     \mark \default %verse
@@ -121,13 +121,13 @@ myScore = {
     dis''8 cis'' cis'' h' | h'4. h'8 ~ h' cis''4 cis''8 ~ | cis''2 \phraseBreak %phrase11
     dis''8 cis'' cis'' h' | h'2 r2 | r2 \phraseBreak %phrase12
     dis''8 cis'' cis'' h' | h'4. h'8 ~ h' cis''4 cis''8 ~ | cis''2 \phraseBreak %phrase13
-    dis''8 cis'' cis'' h' | dis''4 \( e''8 \) dis'' ~ dis'' cis''4 h'8 ~ | h'2 r4 r8 \phraseBreak %phrase14
+    dis''8 cis'' cis'' h' | dis''4 ( e''8 ) dis'' ~ dis'' cis''4 h'8 ~ | h'2 r4 r8 \phraseBreak %phrase14
 
     \breathemoj %bridge
     h'8 \bar "||" dis''4 dis'' dis''4. cis''8 | cis''4 r4 r4 r8 \phraseBreak %phrase15
     h'8 | dis''4 dis'' dis''4. cis''8 | cis''4 r4 r4 r8 \phraseBreak %phrase16
     h' | dis''4 dis'' dis''4. cis''8 | cis''4 r4 r4 r8 \phraseBreak %phrase17
-    h' | dis''4 dis'' dis''4. cis''8 | cis'' \( h'4. \) r2 | \phraseBreak %phrase18
+    h' | dis''4 dis'' dis''4. cis''8 | cis'' ( h'4. ) r2 | \phraseBreak %phrase18
     \bar "|."
 }
 
@@ -151,7 +151,7 @@ myScore = {
 %	h1 | fis | gis:m | e |
 %}
 
-myChords = \chordmode {
+originalChords = \chordmode {
 	h1 | fis | gis:m | e |
 	h1 | fis | e | e |
 	h1 | fis | gis:m | e |
@@ -164,7 +164,7 @@ myChords = \chordmode {
 	h1 | fis | gis:m | e |
 }
 
-lyricsAOne = \lyricmode {
+croatianLyricsA = \lyricmode {
 Bla -- go -- slov -- ljen Bog %text01
 u ze -- mlji pu -- noj o -- bi -- lja %text02
 Kad iz -- lije -- va svoj bla -- go -- slov, %text03
@@ -176,23 +176,20 @@ bla -- go -- slov -- ljen Bog %text08
 
 Za sve bla -- go -- slo -- ve tvo -- je pro -- slav -- ljam te %text09
 Ka -- da ta -- ma sve za -- mra -- či, tad mo -- gu reć %text10
-}
 
-lyricsB = \lyricmode {
 Bla -- go -- slov -- ljen Bog, Go -- spod moj %text11
 Bla -- go -- slov -- ljen Bog %text12
 Bla -- go -- slov -- ljen Bog, Go -- spod moj %text13
-Bla -- go -- slov -- ljen Bog, Go -- spod moj _ %text14
-}
+Bla -- go -- slov -- ljen Bog, Go -- spod moj %text14
 
-lyricsC = \lyricmode {
 Ti nam da -- ješ sve _ %text15
 Ti nam u -- zi -- maš _ %text16
 Svim sr -- cem pje -- vam ti %text17
 Da, bla -- go -- slov -- ljen Bog _ %text18
+
 }
 
-lyricsATwo = \lyricmode {
+croatianLyricsB = \lyricmode {
 Bla -- go -- slov -- ljen Bog %text01
 ka -- da sun -- ce gri -- je me _ %text02
 I sve ka -- ko tre -- ba je, _ %text03
@@ -203,44 +200,87 @@ Kad bol pri -- ti -- sne o -- da -- svud, %text07
 bla -- go -- slov -- ljen Bog %text08
 }
 
-lyricsAOneEng = \lyricmode {
+englishLyricsA = \lyricmode {
   \override LyricText #'(font-name) = "Baskerville" 
   \override LyricText #'font-size = #-2
- Ble -- ssed be Your name in the land that is plen -- ti -- ful 
- Where Your streams of a -- bun -- dance flow 
- Ble -- ssed be Your name 
- %And
- ble -- ssed be Your name when I'm found in the de -- sert place 
- Though I walk through the wil -- der -- ness 
- Ble -- ssed be your name 
-
- E -- very ble -- ssing You pour out I'll turn back to praise 
- %And
- when the dark -- ness clo -- ses in Lord 
- Still I will say 
-
- Ble -- ssed be the name of the Lord 
- Ble -- ssed be Your name 
- Ble -- ssed be the name of the Lord 
- Ble -- ssed be Your glo _ -- rio -- us name 
-
- You give and take a -- way 
- You give and take a -- way 
- My heart will choose to say 
- Lord, ble -- ssed be Your name
+  Ble -- ssed be Your name in the land that is plen -- ti -- ful 
+  Where Your streams of a -- bun -- dance flow 
+  Ble -- ssed be Your name 
+  %And
+  ble -- ssed be Your name when I'm found in the de -- sert place 
+  Though I walk through the wil -- der -- ness 
+  Ble -- ssed be your name 
+  
+  E -- very ble -- ssing You pour out I'll turn back to praise 
+  %And
+  when the dark -- ness clo -- ses in Lord 
+  Still I will say 
+  
+  Ble -- ssed be the name of the Lord 
+  Ble -- ssed be Your name 
+  Ble -- ssed be the name of the Lord 
+  Ble -- ssed be Your glo -- rio -- us name 
+  
+  You give and take a -- way 
+  You give and take a -- way 
+  My heart will choose to say 
+  Lord, ble -- ssed be Your name
 }
 
-lyricsATwoEng = \lyricmode {
+englishLyricsB = \lyricmode {
   \override LyricText #'(font-name) = "Baskerville" 
   \override LyricText #'font-size = #-2
- Ble -- ssed be Your name when the sun's shi -- ning down on me 
- When the world's all as it should be? 
- Ble -- ssed be Your name 
- And ble -- ssed be Your name on the road marked 
- with su -- ffe -- ring 
- Though there's pain in the o -- ffe -- ring 
- Ble -- ssed be Your name 
+  Ble -- ssed be Your name when the sun's shi -- ning down on me 
+  When the world's all as it should be? 
+  Ble -- ssed be Your name 
+  %And
+  ble -- ssed be Your name on the road marked 
+  with su -- ffe -- ring 
+  Though there's pain in the o -- ffe -- ring 
+  Ble -- ssed be Your name 
 }
+
+slb = \lyricmode { "______" } %variable for empty syllable
+emptyLyricsA = \lyricmode {
+  \override LyricText #'(font-name) = "Baskerville" 
+  \override LyricText #'font-size = #-2
+  \slb \slb \slb \slb \slb %\slb01
+  \slb \slb \slb \slb \slb \slb \slb %\slb02
+  \slb \slb \slb \slb \slb \slb \slb \slb %\slb03
+  \slb \slb \slb \slb \slb %\slb04
+  \slb \slb \slb \slb \slb %\slb05
+  \slb \slb \slb \slb \slb \slb \slb \slb %\slb06
+  \slb \slb \slb \slb \slb \slb \slb \slb %\slb07
+  \slb \slb \slb \slb \slb %\slb08
+  
+  \slb \slb \slb \slb \slb \slb \slb \slb \slb \slb \slb \slb %\slb09
+  \slb \slb \slb \slb \slb \slb \slb \slb \slb \slb \slb \slb %\slb10
+  
+  \slb \slb \slb \slb \slb \slb \slb \slb %\slb11
+  \slb \slb \slb \slb \slb %\slb12
+  \slb \slb \slb \slb \slb \slb \slb \slb %\slb13
+  \slb \slb \slb \slb \slb \slb \slb \slb \slb %\slb14
+  
+  \slb \slb \slb \slb \slb \slb %\slb15
+  \slb \slb \slb \slb \slb \slb %\slb16
+  \slb \slb \slb \slb \slb \slb %\slb17
+  \slb \slb \slb \slb \slb \slb \slb %\slb18
+
+}
+
+emptyLyricsB = \lyricmode {
+  \override LyricText #'(font-name) = "Baskerville" 
+  \override LyricText #'font-size = #-2
+  \slb \slb \slb \slb \slb %\slb01
+  \slb \slb \slb \slb \slb \slb \slb \slb %\slb02
+  \slb \slb \slb \slb \slb \slb \slb \slb %\slb03
+  \slb \slb \slb \slb \slb %\slb04
+  \slb \slb \slb \slb \slb %\slb05
+  \slb \slb \slb \slb \slb \slb \slb \slb %\slb06
+  \slb \slb \slb \slb \slb \slb \slb \slb %\slb07
+  \slb \slb \slb \slb \slb %\slb08
+}
+
 %\score {
 %<<
 %	\new ChordNames { \romanChords \transpose h c { \chordsA \chordsB \chordsC } }
@@ -253,13 +293,15 @@ lyricsATwoEng = \lyricmode {
 
 \score {
 <<
-	\new ChordNames { \romanChords \transpose h c \myChords }
-	\new ChordNames { \jazzChords \myChords }
-	\new Staff { \myScore }
-	\addlyrics { \lyricsAOneEng }
-	\addlyrics { \lyricsAOne \lyricsB \lyricsC }
-	\addlyrics { \lyricsATwoEng }
-	\addlyrics { \lyricsATwo }
+	\new ChordNames { \romanChords \transpose h c \originalChords }
+	\new ChordNames { \jazzChords \originalChords }
+	\new Staff { \originalScore }
+	\addlyrics { \englishLyricsA }
+	\addlyrics { \croatianLyricsA }
+	\addlyrics { \emptyLyricsA }
+	\addlyrics { \englishLyricsB }
+	\addlyrics { \croatianLyricsB }
+	\addlyrics { \emptyLyricsB }
 >>
 }
 

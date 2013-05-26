@@ -46,7 +46,9 @@ regexMusic = [
     re.compile("g.*"),
     re.compile("a.*"),
     re.compile("b.*"),
-    re.compile("h.*")
+    re.compile("h.*"),
+    re.compile("\("),
+    re.compile("\)")
     ]
 
 regexText = [
@@ -77,11 +79,18 @@ regexText = [
 # FUNCTION which counts musical syllables based on regexMusic and returns the number
 def countingMusicalSyllables(linija):
   counter = 0
+  tie = 0
   for ndx, member in enumerate(linija):
     if any(regex.match(member) for regex in regexMusic):
-      if linija[ndx-1] != "~":
-        if (linija[ndx-1] != "|" or linija[ndx-2] != "~"):
-          counter += 1
+      if linija[ndx] == "(": #checks if there is tie so no count
+        tie = 1
+      if tie == 1:
+        if linija[ndx] == ")": #until this one
+          tie = 0
+      else:
+        if linija[ndx-1] != "~":
+          if (linija[ndx-1] != "|" or linija[ndx-2] != "~"):
+            counter += 1
   return(counter)
 
 # FUNCTION which counts textual syllables based on regexText and returns the number
@@ -112,9 +121,9 @@ for key in simpleDict: #goes through simpleDict keys and look for it in linesInF
               word = []
               word.insert(0, lineWithMatchingValue.pop(-2)) #pops the last syllable from the text phrase
               word.insert(0, lineWithMatchingValue.pop(-2)) #pops the last syllable from the text phrase
-              if word[1] == "--": #checks if the second pop is a --
+              if word[0] == "--": #checks if the second pop is a --
+                word.pop(0) # remove the --
                 word.insert(0, lineWithMatchingValue.pop(-2)) #pop another one
-                word.pop(-2) # remove the --
               difference += 1
               lineWithMatchingValue.insert(-1, "".join(word)) #add the "new" word
           if linesInFilename[ndx2] != lineWithMatchingValue: #if we have changed the line
