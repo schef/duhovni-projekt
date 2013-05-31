@@ -59,7 +59,7 @@ originalScore = {
     dis''8 cis'' cis'' h' | h'4. h'8 ~ h' cis''4 cis''8 ~ | cis''2 \phraseBreak %phrase11
     dis''8 cis'' cis'' h' | h'2 r2 | r2 \phraseBreak %phrase12
     dis''8 cis'' cis'' h' | h'4. h'8 ~ h' cis''4 cis''8 ~ | cis''2 \phraseBreak %phrase13
-    dis''8 cis'' cis'' h' | dis''4 ( e''8 ) dis'' ~ dis'' cis''4 h'8 ~ | h'2 r4 r8 \phraseBreak %phrase14
+    dis''8 cis'' cis'' h' | dis''4 \( e''8 \) dis'' ~ dis'' cis''4 h'8 ~ | h'2 r4 r8 \phraseBreak %phrase14
 
     \breathemoj %bridge
     h'8 \bar "||" dis''4 dis'' dis''4. cis''8 | cis''4 r4 r4 r8 \phraseBreak %phrase15
@@ -180,7 +180,7 @@ englishLyricsA = \lyricmode {
   Ble -- ssed be the name of the Lord 
   Ble -- ssed be Your name 
   Ble -- ssed be the name of the Lord 
-  Ble -- ssed be Your glo -- rio -- us name 
+  Ble -- ssed be Your glo  _ -- rio -- us name 
   
   You give and take a -- way 
   You give and take a -- way 
