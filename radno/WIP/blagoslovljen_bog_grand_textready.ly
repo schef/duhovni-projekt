@@ -37,70 +37,8 @@
 }
 
 \include "config_grand.ly"
-
-%scoreA = \relative c {
-%	\key d \major
-%	\mark \default
-%	r4 r8 fis8 ~ fis a4 g8 ~ |
-%	g8 a4 a8 ~ a4. e8 |
-%	fis8 fis4 fis8 ~ fis a4 g8 ~ |
-%	g8 a4 a8 ~ a4. e8 |
-%	fis8 fis4 fis8 ~ fis a4 g8 ~ |
-%	g8 a4 a8 ~ a2 |
-%	fis8 e e d d2 |
-%	r1 |
-%	r4 r8 fis8 ~ fis a4 g8 ~ |
-%	g8 a4 a8 ~ a4. e8 |
-%	fis8 fis4 fis8 ~ fis a4 g8 ~ |
-%	g8 a4 a8 ~ a4. e8 |
-%	fis8 fis4 fis8 ~ fis a4 g8 ~ |
-%	g8 a4 a8 ~ a2 |
-%	fis8 e e d d2 |
-%	r1 |
-%	r4 d'8 d d4 a4 |
-%	a h cis d |
-%	r4 e4 e d |
-%	h1 |
-%	r4 d8 d d4 a4 |
-%	a h cis d |
-%	r4 e4 e d |
-%	\break
-%	h2 }
-%
-%scoreB = \relative c {
-%	%\override Score.RehearsalMark #'break-align-symbols = #'(breathing-sign)
-%	%\override Score.RehersalMark #'break-align-anchor-alignment = #RIGHT
-%	%\once \override Score.RehearsalMark #'Y-offset = #-1.5
-%	%\once \override Score.RehearsalMark #'X-offset = #0.02
-%	\breathemoj
-%	%\mark \default
-%	fis'8 e e d |
-%	d4. d8 ~ d e4 e8 ~ |
-%	e2 fis8 e e d |
-%	d1 ~ |
-%	d2 fis8 e e d |
-%	d4. d8 ~ d e4 e8 ~ |
-%	e2 fis8 e e d |
-%	fis4( g8) fis ~ fis e4 d8 ~ |
-%	d1 |
-%	\bar "||" \break
-%}
-%
-%scoreC = \relative c {
-%	\mark \default
-%	fis'4 fis fis4. e8 |
-%	e2 r2 |
-%	fis4 fis fis4. e8 |
-%	e8( d4.) r4 r8 d8 |
-%	fis4 fis fis4. e8 |
-%	e2 r4 r8 d8 |
-%	fis4 g fis4. e8 |
-%	e8( d4.) r2 |
-%	\bar "|." \break
-%}
-
-phraseBreak = { \bar "" \break }
-%phraseBreak = { }
+%phraseBreak = { \bar "" \break }
+phraseBreak = { }
 
 originalScore = {
     \key h \major
@@ -131,26 +69,6 @@ originalScore = {
     \bar "|."
 }
 
-%chordsA = \chordmode {
-%	h1 | fis | gis:m | e |
-%	h1 | fis | e | e |
-%	h1 | fis | gis:m | e |
-%	h1 | fis | e | e |
-%	h1 | fis | gis:m | e |
-%	h1/dis | fis | gis:m | e |
-%}
-%
-%chordsB = \chordmode {
-%	%\once \override ChordNames.ChordName #'X-offset = #1
-%	h1 | fis | gis:m | e |
-%	h1 | fis | gis2:m fis2 | e1|
-%}
-%
-%chordsC = \chordmode {
-%	h1 | fis | gis:m | e |
-%	h1 | fis | gis:m | e |
-%}
-
 originalChords = \chordmode {
 	h1 | fis | gis:m | e |
 	h1 | fis | e | e |
@@ -165,39 +83,82 @@ originalChords = \chordmode {
 }
 
 croatianLyricsA = \lyricmode {
-Bla -- go -- slov -- ljen Bog %text01
-u ze -- mlji pu -- noj o -- bi -- lja %text02
-Kad iz -- lije -- va svoj bla -- go -- slov, %text03
-bla -- go -- slov -- ljen Bog %text04
-Bla -- go -- slov -- ljen Bog %text05
-kad na -- đem se u pu -- sti -- nji %text06
-I di -- vlji -- nom ho -- dam sam, _ %text07
-bla -- go -- slov -- ljen Bog %text08
+%verse 1
 
-Za sve bla -- go -- slo -- ve tvo -- je pro -- slav -- ljam te %text09
-Ka -- da ta -- ma sve za -- mra -- či, tad mo -- gu reć %text10
+Bla -- go -- slo -- vlje -- no
+Tvo -- je i -- me u o -- bi -- lju,
+ko -- je da -- ješ u po -- to -- ku,
+Bla -- go -- slo -- vlje -- no.
+Bla -- go -- slo -- vlje -- no
+Tvo -- je i -- me i ka -- da -- se
+na -- đem ja u -- sred pu -- sti -- nje,
+Bla -- go -- slo -- vlje -- no.
 
-Bla -- go -- slov -- ljen Bog, Go -- spod moj %text11
-Bla -- go -- slov -- ljen Bog %text12
-Bla -- go -- slov -- ljen Bog, Go -- spod moj %text13
-Bla -- go -- slov -- ljen Bog, Go -- spod moj %text14
+%bridge
 
-Ti nam da -- ješ sve _ %text15
-Ti nam u -- zi -- maš _ %text16
-Svim sr -- cem pje -- vam ti %text17
-Da, bla -- go -- slov -- ljen Bog _ %text18
+Za sve Tvo -- je bla -- go -- slo -- ve
+za -- hva -- lju -- jem.
+kad o -- ba -- vi -- ja me ta -- ma,
+još ka -- zu -- jem:
+
+%ref
+
+Bla -- go -- slo -- vlje -- no ne -- ka je,
+Bla -- go -- slo -- vlje -- no,
+Bla -- go -- slo -- vlje -- no ne -- ka je,
+Tvo -- je sve -- to i -- me Go -- spo -- de.
+
+
+%finale
+
+Ti na -- ma da -- ješ sve
+Ti na -- ma u -- zi -- maš
+a sr -- ce re -- či će
+Bog bla -- go -- slo -- vljen je
+
+%Bla -- go -- slov -- ljen Bog %text01
+%u ze -- mlji pu -- noj o -- bi -- lja %text02
+%Kad iz -- lije -- va svoj bla -- go -- slov, %text03
+%bla -- go -- slov -- ljen Bog %text04
+%Bla -- go -- slov -- ljen Bog %text05
+%kad na -- đem se u pu -- sti -- nji %text06
+%I di -- vlji -- nom ho -- dam sam, _ %text07
+%bla -- go -- slov -- ljen Bog %text08
+%
+%Za sve bla -- go -- slo -- ve tvo -- je pro -- slav -- ljam te %text09
+%Ka -- da ta -- ma sve za -- mra -- či, tad mo -- gu reć %text10
+%
+%Bla -- go -- slov -- ljen Bog, Go -- spod moj %text11
+%Bla -- go -- slov -- ljen Bog %text12
+%Bla -- go -- slov -- ljen Bog, Go -- spod moj %text13
+%Bla -- go -- slov -- ljen Bog, Go -- spod moj %text14
+%
+%Ti nam da -- ješ sve _ %text15
+%Ti nam u -- zi -- maš _ %text16
+%Svim sr -- cem pje -- vam ti %text17
+%Da, bla -- go -- slov -- ljen Bog _ %text18
 
 }
 
 croatianLyricsB = \lyricmode {
-Bla -- go -- slov -- ljen Bog %text01
-ka -- da sun -- ce gri -- je me _ %text02
-I sve ka -- ko tre -- ba je, _ %text03
-bla -- go -- slov -- ljen Bog %text04
-Bla -- go -- slov -- ljen Bog %text05
-na pu -- tu pu -- nom ne -- vo -- lja %text06
-Kad bol pri -- ti -- sne o -- da -- svud, %text07
-bla -- go -- slov -- ljen Bog %text08
+%verse 2
+
+Bla -- go -- slo -- vlje -- no
+Tvo -- je i -- me kad sun -- ce sja
+ka -- da mir svijet i -- spu -- nja -- va,
+Bla -- go -- slo -- vlje -- no.
+Bla -- go -- slo -- vlje -- no
+Tvo -- je i -- me u pa -- tnja -- ma
+ka -- da znam bol da -- ri -- va -- nja,
+Bla -- go -- slo -- vlje -- no.
+%Bla -- go -- slov -- ljen Bog %text01
+%ka -- da sun -- ce gri -- je me _ %text02
+%I sve ka -- ko tre -- ba je, _ %text03
+%bla -- go -- slov -- ljen Bog %text04
+%Bla -- go -- slov -- ljen Bog %text05
+%na pu -- tu pu -- nom ne -- vo -- lja %text06
+%Kad bol pri -- ti -- sne o -- da -- svud, %text07
+%bla -- go -- slov -- ljen Bog %text08
 }
 
 englishLyricsA = \lyricmode {
@@ -281,16 +242,6 @@ emptyLyricsB = \lyricmode {
   \slb \slb \slb \slb \slb %\slb08
 }
 
-%\score {
-%<<
-%	\new ChordNames { \romanChords \transpose h c { \chordsA \chordsB \chordsC } }
-%	\new ChordNames { \jazzChords \chordsA \chordsB \chordsC }
-%	\new Staff { \displayLilyMusic \transpose d h { \scoreA \scoreB \scoreC } }
-%	\addlyrics { \lyricsAOne \lyricsB \lyricsC }
-%	\addlyrics { \lyricsATwo }
-%>>
-%}
-
 \score {
 <<
 	\new ChordNames { \romanChords \transpose h c \originalChords }
@@ -298,10 +249,10 @@ emptyLyricsB = \lyricmode {
 	\new Staff { \originalScore }
 	\addlyrics { \englishLyricsA }
 	\addlyrics { \croatianLyricsA }
-	\addlyrics { \emptyLyricsA }
+%	\addlyrics { \emptyLyricsA }
 	\addlyrics { \englishLyricsB }
 	\addlyrics { \croatianLyricsB }
-	\addlyrics { \emptyLyricsB }
+%	\addlyrics { \emptyLyricsB }
 >>
 }
 

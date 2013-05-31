@@ -4,9 +4,14 @@ alias lilypond="lilypond --include=$HOME/lilypond/duhovni-projekt/config" #for c
 or direct in vimrc:
 map <buffer> <F5> :w<Return>:se makeprg=lilypond\ \-I\ /root/lilypond/duhovni\-projekt/config\ \"%<\"<Return>:make<Return>
 
-#creating empty lyrics using vim
-s/[A-Za-z,.!?šđžčćŠĐŽČĆ]/_/g
-s/__/_/g
-s/_/\\slb/g
-s/--//g
-s/  / /g
+phraseBreak = { \bar "" \break }
+%phraseBreak = { }
+
+#creating empty lyrics using vim on selected lines
+:'<,'>s/[A-Za-zŠĐŽČĆšđžčć_,.!?']\+/_/g | '<,'>s/ -- / /g | '<,'>s/%_/%empty/
+slb = \lyricmode { "______" } %variable for empty syllable
+
+#transposing to actual tonal
+%s/\n//
+%s/\\bar ""  \\break/\r/
+s/\({.*}\) \(.*\)/\\breathemoj\r\2/
