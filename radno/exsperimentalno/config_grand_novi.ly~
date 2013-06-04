@@ -1,0 +1,105 @@
+%%%%%%%%%%%%
+%% CONFIG %%------------------------------------------------------------------------------------
+%%%%%%%%%%%%
+
+#(set-default-paper-size "c5")
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% USER DEF. FUNCTIONS %%------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%to je za breathemoj?
+\layout { 
+  \context {
+    \Voice
+    \override BreathingSign #'font-name = #"Helvetica"
+    \override BreathingSign #'font-size = #8
+    \override BreathingSign #'text = \markup { \raise #0.2 "," }
+    \override BreathingSign #'color = #blue
+  }
+}
+
+breathemoj = {
+  \override Score.RehearsalMark #'extra-spacing-width = #'(0 . 0)
+  \override Score.RehearsalMark #'extra-spacing-height = #'(-inf.0 . +inf.0) 
+  \once \override Score.RehearsalMark #'X-offset = #0.05
+  \once \override Score.RehearsalMark #'Y-offset = #-1.5
+  \once \override Score.RehearsalMark #'outside-staff-priority = #1 
+  %\override Score.RehearsalMark #'break-align-symbols = #'(breathing-sign)
+  \mark \default
+  \breathe
+}
+
+%kaj je ovaj left?
+left = { \once \override LyricText #'X-offset = #-2.8 }
+
+\layout { 
+  \context {
+    \Score markFormatter = #format-mark-box-numbers
+    %\Score markFormatter = #format-mark-circle-numbers
+    \override RehearsalMark #'self-alignment-X = #CENTER
+    \override RehearsalMark #'color = #blue
+  }
+}
+
+%%%%%%%%%%%%
+%% HEADER %% ----------------------------------------------------------------------------------
+%%%%%%%%%%%%
+
+\header {
+  %title = \markup { \fontsize #4 \title }
+  title = \markup { \title }
+  subtitle = \markup { \sans \subtitle }
+  copyright = \markup { \sans \copyright }
+  tagline = "" 
+}
+
+%%%%%%%%%%%%%%%%
+%% STAFF SIZE %% ------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%
+
+myStaffSize = #16
+#(set-global-staff-size myStaffSize)
+
+%%%%%%%%%%%
+%% PAPER %% ------------------------------------------------------------------------------------
+%%%%%%%%%%%
+ 
+\paper {
+#(define fonts (make-pango-font-tree "JohnSans Medium Pro" "Lilypond JohnSans White Pro" "Lilypond JohnSans Medium Pro" (/ myStaffSize 20))) %zakaj mystaf 20?
+indent = 0				%dali da uvuce prvi red
+%annotate-spacing = ##t			%prikaži razmake na papiru
+
+%FIXED VERTICAL SPACING
+top-margin = 10\mm			%gornja margina od ruba papira do područja za print
+bottom-margin = 10\mm			%donja margina od područja za print do dna 
+
+%FIXED HORIZONTAL SPACING
+left-margin = 20\mm			%leva margina od ruba papira do pocetka crtovlja
+right-margin = 20\mm			%desna margina od crtovlja do ruba papira
+
+%FLEXIBLE SPACING
+markup-system-spacing #'padding = 7\mm
+%system-system-spacing #'padding = #10
+%top-markup-spacing #'padding = #2
+%markup-system-spacing #'padding = #5
+%markup-system-spacing #'stretchability = #5
+%score-system-spacing #'padding = #5
+%last-bottom-spacing #'padding = #5
+%score-markup-spacing #'padding = #5
+%top-system-spacing #'padding = #17.5
+
+%markup-markup-spacing #'padding = #3
+
+%system-system-spacing #'padding = #1
+%system-system-spacing #'minimum-distance = #1
+%system-system-spacing #'stretchability = #0
+%score-system-spacing #'stretchability = #5
+
+%PRIKAZ BROJA STRANICA
+print-page-number = ##f
+%first-page-number = #16
+%print-first-page-number = ##t
+%auto-first-page-number = ##t
+%ragged-last-bottom=##t
+}

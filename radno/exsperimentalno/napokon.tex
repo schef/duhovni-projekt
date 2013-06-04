@@ -1,0 +1,132 @@
+%%% LaTeX Template: Book titlepage
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep the referal to HowToTeX.com.
+%%% Date: June 2012
+
+
+% Document class: article with font size 12pt
+% ---------------
+%\documentclass[12pt]{article}
+\documentclass[twoside,12pt]{article}
+
+
+% Call packages
+% ---------------
+%\usepackage{mathptmx}		% font
+%\usepackage[T1]{fontenc}	% font encoding
+%\usepackage{times}
+\usepackage{fontspec}
+\setmainfont{JohnSansMediumPro}
+%\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage[a4paper,bottom=2cm]{geometry} % geometry/margins of page
+\usepackage{multicol}		% multicolumn environments
+\usepackage{tikz}			% used for the 'logo' (remove if unwanted)
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+%\facncyfoot[LE,RO]{\thepage}
+%\setlength{\footskip}{0pt}
+%\fancyhf{} % clear all header and footers
+%\renewcommand{\headrulewidth}{0pt} % remove the header rule
+%\rfoot{\thepage}
+%\fancyhead[LE,RO]{\thepage}
+\fancypagestyle{plain}{%redefining plain pagestyle
+\fancyhf{} %clear all headers and footers fields
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[LE,RO]{\fontsize{40}{40}\bf\thepage} %prints the page number on the right side of the header
+%\setlength{\headsep}{0pt}
+\topmargin = 0pt
+}
+
+% Document properties
+% ---------------
+\setlength{\parindent}{0pt}	% no paragraph indentation
+
+
+
+
+% Begin document
+% ---------------
+\begin{document}
+\begin{titlepage}			% environment specially for titlepages
+\begin{center}				% center everything on the titlepage
+
+% title	
+{\fontsize{16mm}{25mm}\selectfont
+	\textbf{Duhovna Pjesmarica}
+	}
+
+\vspace{40mm}				% vertical spacing
+
+% subtitle 1
+{\fontsize{14pt}{14pt}\selectfont
+	\textbf{\emph{First Subtitle Here}}
+	}
+	
+\vspace{7pt}				% vertical spacing	
+
+% subtitle 2	
+{\fontsize{14pt}{14pt}\selectfont
+	\textbf{And Here is Yet Another Subtitle}
+	}
+	
+\vfill						% vertical spacing	
+
+\begin{multicols}{2}		% start two column layout
+
+% author 1 (left)
+{\fontsize{18pt}{18pt}\selectfont
+	\textbf{\MakeUppercase{Stjepan Horvat}}
+	}
+
+\vspace{5mm}				% vertical spacing	
+
+Riječi Iskrene\\
+Pušćine, Croatia
+
+\columnbreak				% switch over to second column
+
+% author 2 (left)
+{\fontsize{18pt}{18pt}\selectfont
+	\textbf{\MakeUppercase{Benjamin Horvat}}
+	}
+
+\vspace{5mm}				% vertical spacing	
+
+Horvat-Elektornika\\
+Pušćine, Croatia
+\end{multicols}				% end two column layout
+
+\vspace{10mm}				% vertical spacing	
+
+% create logo (letter H within a circle)
+\begin{tikzpicture}
+	\node[circle,draw] at (0,0) {{$\mathcal{DP}$}};
+\end{tikzpicture}
+
+% logo title
+{\small
+\MakeUppercase{iskreno.hr, Duhovni-Projekt}
+}\end{center}
+\end{titlepage}
+
+%\includepdfset{pagecommand=\thispagestyle{plain}} %overide includepdf da ne makne sve naslove i brojanja stranica
+%\newpage
+\tableofcontents
+
+
+\newpage
+\section{jao jao}
+A kaj tu mogu pisati sad?
+What eva...
+
+%\includepdf[noautoscale,pages=-]{blagoslovljen_bog_grand.pdf}
+\section{jo jo}
+\addcontentsline{toc}{section}{Blagoslovljen Bog}
+%\newgeometry{top=3cm}
+%\includepdf[noautoscale,templatesize={145mm}{210mm},pages=-,offset=-65 50]{blagoslovljen_bog_grand.pdf}
+\includepdf[addtotoc={1,chapter,0,SAMPLE PDF 1,chap:samplepdfone},noautoscale,pagecommand={\thispagestyle{headings}},pages=-]{blagoslovljen_bog_grand.pdf}
+\includepdf[pages=-]{dobro_je_slaviti_grand.pdf}
+\restoregeometry
+\end{document}

@@ -1,0 +1,28 @@
+% This is the master file of the folder structure. In order to compile your document, run this file. In most LaTeX editors, the master file can be specified such that the document can also be compiled from the other .tex files (in the docs folder).
+
+% First, the preamble needs to be called. This contains all the 'under the hood' stuff for your document.
+\input{docs/preamble}
+
+% The title page is created with the command \maketitle which needs to be placed after the \begin{document} command. To create the titlepage, some entries are needed: the name of the autor is defined by \author{}, the title by the entry \title{} and the date by the command \date{}. Note that the current date is displayed with \today.
+\author{First von Last}
+\title{Title of document}
+\date{\today}
+
+% All the actual content of your document should be placed after \begin{document} and before \end{document}. This content should be placed in the docs folder and can then be called with \input{docs/filename}.
+\begin{document}
+
+% Here the actual title page is printed, based on the given entries \author{}, \title{} and \date{}.
+\maketitle
+
+% The table of contents can be automatically generated with the \tableofcontents command. Note that you need to compile the document twice in order to see the changes in the table of contents.
+\tableofcontents
+
+% The \input{} command reads and processes the indicated example.tex file. Note that docs/ locates the folder where the .tex file is stored.
+\input{docs/example}
+
+% The bibliography is printed with \bibliography{}. With the command \bibliographystyle{} a style is picked.
+\bibliographystyle{plain}
+\bibliography{refs/references}
+
+% To close your document, add the \end{document} command. Everything after this command will not be processed.
+\end{document}

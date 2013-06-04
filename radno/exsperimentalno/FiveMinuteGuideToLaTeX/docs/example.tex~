@@ -1,0 +1,86 @@
+% A chapter named 'Your first document' is created
+\chapter{Your first document} \label{cha:your-first-document}
+
+
+% A section called 'Basics' is created
+\section{Basics} \label{sec:basics}
+
+Text is formatted with: \textbf{bold}, \textit{italic} and \underline{underline}.
+\Cref{sec:basics} is part of \cref{cha:your-first-document}.
+
+
+% A subsection named 'Typesetting content' is created
+\section{Typesetting content} \label{sec:typesetting}
+
+
+% A subsubsection named 'Equations' is created
+\subsection{Equations} \label{subsec:equations}
+
+% Inline equations
+An example of an inline equation is: the derivative of $x^2$ is $2x$. \Cref{eq:example} shows a display equation:
+% Display equations
+\begin{align} \label{eq:example}
+          y_{0} &= \frac{\sqrt{256}}{2} \\
+                &= 2^{3} = 8 \nonumber 
+\end{align}
+
+
+\subsection{Units} \label{subsec:units}
+
+% % Working with units
+An easy way to work with (SI) units: \SI{1}{\hertz} is equal to \SI{2\pi}{\radian\per\second}.
+
+
+\subsection{Figures} \label{subsec:figures}
+
+% Inserting a figure
+Here a figure named \textit{logo.pdf} is inserted\footnote{The \textit{logo.pdf} file is located in the figs folder.}:
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=50mm]{figs/logo}
+  \caption{Caption example}
+  \label{fig:logo}
+\end{figure}
+
+
+\subsection{Tables} \label{subsec:tables}
+
+% Inserting a table
+A table is shown in \cref{tb:table}.
+\begin{table}[h]
+  \centering
+  \caption{Caption example}
+  \label{tb:table}
+  \begin{tabular}{crl}
+    \toprule
+    Name     & Grade & Year    \\
+    \midrule
+    John     & 7.5   & 2012\\
+    Richard  & 2     & 2010\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\subsection{Lists} \label{subsec:lists}
+% Creating lists
+%% Here a subsubsection is created. Note that this section is not shown in the table of content.
+\subsubsection{Numbered}
+Creating a numbered list:
+\begin{enumerate}
+  \item First entry
+  \item Second entry
+\end{enumerate}
+
+\subsubsection{Descriptive}
+Creating a descriptive list:
+\begin{description}
+  \item[First] entry
+  \item[Second] entry
+\end{description}
+
+
+\section{Reference to bibliography items} \label{sec:bibliography}
+First are reference to a website is made \cite{MiscEntry}, then a reference to an article \cite{ArticleEntry} and finally a reference to a book \cite{last2012}.
+
+\paragraph{Good luck!}

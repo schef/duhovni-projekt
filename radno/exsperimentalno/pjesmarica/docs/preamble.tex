@@ -1,0 +1,24 @@
+\documentclass[twoside,10pt]{article}
+
+\usepackage{fontspec}
+\setmainfont{JohnSansMediumPro}
+
+\usepackage[a4paper,bottom=2cm]{geometry}
+\usepackage{multicol}					% multicolumn environments
+\usepackage{tikz}					% used for the 'logo' (remove if unwanted)
+\usepackage{pdfpages}	
+\usepackage{fancyhdr}
+
+
+%\setlength{\footskip}{0pt}
+
+
+\fancypagestyle{plain}{					% redefining plain pagestyle
+	\fancyhf{} 					% clear all headers and footers fields
+	\renewcommand{\headrulewidth}{0pt}		% remove the header rule
+	\fancyhead[LE,RO]{\fontsize{40}{40}\bf\thepage} % prints the page number on the right side of the header
+	%\setlength{\headsep}{0pt}			% miči header gore/dole
+	%\setlength{\footskip}{0pt}			% miči footer gore/dole
+	%\topmargin = 0pt
+}
+

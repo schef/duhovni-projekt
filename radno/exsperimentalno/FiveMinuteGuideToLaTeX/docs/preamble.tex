@@ -1,0 +1,45 @@
+% This file contains your LaTeX preamble. A preamble is a part of your document where all required packages and macros can be defined. This needs to be done before the \begin{document} command.
+
+% Documentclass:
+% Standard LaTeX classes are: article, book, report, slides, and letter. These cover the basis, but are not best. More advanced users might want to try out the KOMA classes or the memoir class. Optional arguments: 10pt. The font size of the main content is set to 10pt with the option between [].
+\documentclass[10pt]{report}
+
+% Geometry:
+% The papersize of the document is defined with the geometry package. Here, the size is set to A4 with a4paper. Other possibilities are a5paper, b5paper, letterpaper, legalpaper and executivepaper.
+\usepackage[a4paper]{geometry}
+
+% AMS math packages:
+% Required for proper math display.
+\usepackage{amsmath,amsfonts,amsthm}
+
+% Graphicx:
+% If you want to include graphics in your document, the graphicx package is required.
+\usepackage{graphicx}
+
+% Booktabs:
+% The booktabs package is needed for better looking tables. 
+\usepackage{booktabs}
+
+% SIunitx:
+% The SIunitx package enables the \SI{}{} command. It provides an easy way of working with (SI) units.
+\usepackage{siunitx}
+
+% URL:
+% Clickable URL's can be made with this package: \url{}.
+\usepackage{url}
+
+% Caption:
+% For better looking captions. See caption documentation on how to change the format of the captions.
+\usepackage{caption}
+
+% Hyperref:
+% This package makes all references within your document clickable. By default, these references will become boxed and colored. This is turned back to normal with the \hypersetup command below.
+\usepackage{hyperref}
+	\hypersetup{colorlinks=false,pdfborder=0 0 0}
+
+% Cleveref:
+% This package automatically detects the type of reference (equation, table, etc.) when the \cref{} command is used. It then adds a word in front of the reference, i.e. Fig. in front of a reference to a figure. With the \crefname{}{}{} command, these words may be changed.
+\usepackage{cleveref}
+	\crefname{equation}{equation}{equations}
+	\crefname{figure}{figure}{figures}	
+	\crefname{table}{table}{tables}

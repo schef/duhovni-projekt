@@ -1,0 +1,12 @@
+\documentclass[a4paper]{article}
+\usepackage{pdfpages}
+
+\begin{document}
+%\maketitle
+%\tableofcontents
+\includepdfset{pagecommand=\thispagestyle{plain}}
+
+\addcontentsline{toc}{section}{The Name of a Piece of Music}
+\includepdf[noautoscale,pages=-]{blagoslovljen_bog_grand.pdf}
+
+\end{document}

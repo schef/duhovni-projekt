@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{MiscEntry}
+J.D. Doe and D.~Hasselhoff.
+\newblock Title of miscellaneous entry.
+\newblock \url{http://www.howtotex.com/}.
+
+\bibitem{ArticleEntry}
+J.D. Doe and H.~Visser.
+\newblock Title of the article.
+\newblock {\em Journal of the article}, 1:100--102, 2012.
+
+\bibitem{Last2012}
+First~von Last.
+\newblock {\em Book}.
+\newblock Publisher, 2012.
+
+\end{thebibliography}
