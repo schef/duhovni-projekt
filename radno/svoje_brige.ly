@@ -28,8 +28,7 @@ originalScore = \relative c' {
 
 	%kitica1
 	\mark \default %verse
-	\repeat unfold 3 {\skip4}
-	\skip8
+	\partial 4
 	d16 e | fis8 d16 e ~ e8 cis16 d ~ d8 h16 ( a ~ a8 ) \phraseBreak %phrase01
 	d16 e | fis8 d16 e ~ e8 cis16 h ~ h4 r8 \phraseBreak %phrase02
 	d16 e | fis8 d16 e ~ e8 cis16 d ~ d fis8 e16 ~ e8. \phraseBreak %phrase03
@@ -47,7 +46,7 @@ originalScore = \relative c' {
 %	%\once \override ChordNames.ChordName #'X-offset = #1
 
 originalChords = \chordmode {
-	\repeat unfold 4 {\skip4}
+	s8
 	d4 a/cis g2/h |
 	d4 a/cis g2/h |
 	d4 a/cis g/h a |
@@ -142,9 +141,9 @@ englishLyricsB = \lyricmode {
 
 \score {
 <<
-	\new ChordNames { \romanChords \transpose d c \originalChords }
-	\new ChordNames { \jazzChords \originalChords }
-	\new Staff { \originalScore }
+	\new ChordNames { \romanChords \transpose d c \shiftDurations #-1 #0 \originalChords }
+	\new ChordNames { \jazzChords \shiftDurations #-1 #0 \originalChords }
+	\new Staff { \time 2/2 \shiftDurations #-1 #0 \originalScore }
 %	\addlyrics { \englishLyricsA }
 	\addlyrics { \croatianLyricsA }
 %	\addlyrics { \emptyLyricsA }
