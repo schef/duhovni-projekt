@@ -39,7 +39,7 @@ originalScore = \relative c' {
 	d16 e fis a ~ | a8. fis16 ~ fis4 r8 r16 a,16 e'8 cis16 d ~ | d2 r4 \phraseBreak %phrase05
 	d16 e fis a ~ | a8 fis16 e ~ e d d8 ~ d fis16 e ~ e8 d16 d ~ | d2 r4 \phraseBreak %phrase06
 	d16 e fis a ~ | a8. fis16 ~ fis4 r8 r16 a,16 e'8 cis16 d ~ | d2 r4 \phraseBreak %phrase07
-	d16 e fis a ~ | a8 fis16 e ~ e8 d16 d ~ d8 fis16 e ~ e8 d16 d ~ | d2. r8 \phraseBreak %phrase08
+	d16 e fis a ~ | a8 fis16 e ~ e8 d16 d ~ d8 fis16 e ~ e8 d16 d ~ | d2 ~ d4 r8 \phraseBreak %phrase08
 	\bar "|."
 }
 
@@ -52,11 +52,11 @@ originalChords = \chordmode {
 	d4 a/cis g/h a |
 	g4 a d2 |
 	g2 a2 |
-	h2.:m a4 |
+	h2.:m d4/fis |
 	g2 a |
 	d1 |
 	g2 a2 |
-	h2.:m a4 |
+	h2.:m d4/fis |
 	g2 a2 |
 	d8*7
 }
@@ -145,7 +145,7 @@ englishLyricsB = \lyricmode {
 	\new ChordNames { \jazzChords \shiftDurations #-1 #0 \originalChords }
 	\new Staff { \time 2/2 \shiftDurations #-1 #0 \originalScore }
 %	\addlyrics { \englishLyricsA }
-	\addlyrics { \croatianLyricsA }
+\addlyrics { \croatianLyricsA }
 %	\addlyrics { \emptyLyricsA }
 %	\addlyrics { \englishLyricsB }
 	\addlyrics { \croatianLyricsB }
