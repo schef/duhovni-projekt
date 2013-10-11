@@ -10,7 +10,7 @@ subtitle = "\"MADE ME GLAD\""
 composer = "MIRIAM WEBSTER" 
 poet = "83 BPM | BALAD ROCK" 
 %copyright = "\"Made Me Glad\" by Miriam Webster Copyright © 2001 Hillsong Publishing" 
-tagline = ""
+tagline = "Slavit ću Gospoda (2/2)"
 }
 
 \include "config_grand.ly"
