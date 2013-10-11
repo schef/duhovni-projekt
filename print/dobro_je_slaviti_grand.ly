@@ -4,8 +4,8 @@
 title = "DOBRO JE SLAVITI"
 composer = "FRANK BOSCH"
 poet = "UBRZAVAJUĆA | ŽIDOVSKA"
-copyright = "Copyright Information"
 subtitle = ""
+tagline = ""
 }
 
 \include "deutsch.ly"
