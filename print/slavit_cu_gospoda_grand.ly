@@ -1,16 +1,18 @@
 \version "2.14.2"
 
+\include "deutsch.ly"
+\include "jazzChords_grand.ly"
+\include "romanChords_grand.ly"
+
 \header {
 title = "SLAVIT ĆU GOSPODA"
 subtitle = "\"MADE ME GLAD\""
 composer = "MIRIAM WEBSTER" 
-poet = "TEST | TEST" 
-copyright = "\"Made Me Glad\" by Miriam Webster Copyright © 2001 Hillsong Publishing" 
+poet = "83 BPM | BALAD ROCK" 
+%copyright = "\"Made Me Glad\" by Miriam Webster Copyright © 2001 Hillsong Publishing" 
+tagline = ""
 }
 
-\include "deutsch.ly"
-\include "jazzChords_grand.ly"
-\include "romanChords_grand.ly"
 \include "config_grand.ly"
 
 %NOTE
@@ -40,8 +42,8 @@ scoreA = \relative c' {
 }
 
 scoreB = \relative c' {
+        \breathemoj
 	a'8 b8 ~ b c4 b8 ~ |
-	\mark \default
 	b2 ~ b8[ a] b b ~ |
 	b2 ~ b8[ a] b b ~ |
 	b4. g8 ~ g[ a] b b ~ |
@@ -103,3 +105,27 @@ Ti me ra -- du -- ješ pje -- vam Go -- spo -- du
 	\addlyrics { \lyricsATwo }
 >>
 }
+\markup { \override #'(font-name . "JohnSans White Pro")
+	\wordwrap {
+         \box \override #'(font-name . "JohnSans Medium Pro") 1
+  I will bless the Lord forever.
+And I will trust Him at all times.
+He has delivered me from all sin.
+And he has set my feet upon a rock.
+And I will not be moved, and I'll say of the Lord.
+        }}
+        \markup { \override #'(font-name . "JohnSans White Pro")
+	\wordwrap {
+         \box \override #'(font-name . "JohnSans Medium Pro") 2
+You are my shield, My strength.
+My portion, Deliverer.
+My shelter, Strong tower.
+My very present help in time of need.
+        }}
+        \markup { \override #'(font-name . "JohnSans White Pro")
+	\wordwrap {
+         \box \override #'(font-name . "JohnSans Medium Pro") 1'
+Whom have I in Heaven but you?
+There's none I desire beside you.
+You have made me glad and I'll say of the Lord.
+}}
