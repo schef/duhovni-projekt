@@ -15,7 +15,7 @@
     %	"bok"
     %  }
     %}	
-    \override BreathingSign #'color = #blue
+    \override BreathingSign #'color = #(rgb-color 0.64 0.57 0.13)
     %\Score markFormatter = #format-mark-box-letters
   }
 }
@@ -38,7 +38,7 @@ left = { \once \override LyricText #'X-offset = #-2.8 }
     \Score markFormatter = #format-mark-box-numbers
     %\Score markFormatter = #format-mark-circle-numbers
     \override RehearsalMark #'self-alignment-X = #CENTER
-    \override RehearsalMark #'color = #blue
+    \override RehearsalMark #'color = #(rgb-color 0.64 0.57 0.13)
   }
 }
 

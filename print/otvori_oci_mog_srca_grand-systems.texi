@@ -1,0 +1,2 @@
+@image{otvori_oci_mog_srca_grand-1}
+@c eof

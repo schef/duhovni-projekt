@@ -9,7 +9,7 @@
 	composer = "BILLY JAMES FOOTE"
 	poet= "TEST | TEST"
 	subtitle = "\"AMAZING LOVE\""
-	copyright = "Copyright"
+	%copyright = "Copyright"
 }
 
 \include "config_grand.ly"

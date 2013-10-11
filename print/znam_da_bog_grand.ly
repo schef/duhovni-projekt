@@ -9,7 +9,8 @@
 	subtitle = "\"SWEET SWEET SPIRIT\""
 	composer = "DORIS AKERS"
 	poet= "TEST | GOSPEL"
-	copyright = "Copyright Information"
+	%copyright = "Copyright Information"
+        tagline = ""
 }
 
 \include "config_grand.ly"
@@ -17,7 +18,6 @@
 scoreA = \relative c' {
 	\key g \major
 	\mark \default
-	\repeat volta 2 {
 	\partial 2
 	h4 c4 |
 	d2 d2 |
@@ -27,11 +27,7 @@ scoreA = \relative c' {
 	c4. c8 h4 a |
 	g8( e8) d2 fis8 a |
 	h8( a g2. ~ |
-	}
-	\alternative{
-	{g2) h,4 c4 |}
-	{g'2\repeatTie r2 |}
-	}
+	g2)  r2 |
 }
 
 scoreB = \relative c' {
@@ -71,7 +67,6 @@ chordsA = \chordmode {
 	g2/d d |
 	g c:m |
 	g d |
-	g d |
 }
 
 chordsB = \chordmode {
@@ -90,12 +85,11 @@ chordsB = \chordmode {
 lyricsAOne = \lyricmode {
 Znam da Bog sad o -- vdje pre -- bi -- va
 Znam da pri -- su -- tan je Du -- hom svo -- jim on
-Sva su
+
 }
 
 lyricsATwo = \lyricmode {
-\skip8 \skip8
-li -- ca o -- draz ra -- do -- sti
+Sva su li -- ca o -- draz ra -- do -- sti
 Od -- sjaj nje -- go -- ve bo -- žan -- ske svje -- tlo -- sti
 }
 

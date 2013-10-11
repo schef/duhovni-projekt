@@ -1,0 +1,3 @@
+@image{slavit_cu_gospoda_grand-1}
+@image{slavit_cu_gospoda_grand-2}
+@c eof
