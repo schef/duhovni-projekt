@@ -106,14 +106,11 @@ alt = {
 }
 
 tenor = {
-  e' dis' cis' h a gis h h h h h h h h h h h h h
-  e' dis' cis' h a gis h h h h h h a a a s cis' cis' h a gis
-  a a a gis fis fis fis h h h h e e
-  e h a a a gis fis fis fis fis fis fis h h e
-  c,, %#ute do teksta sa pjesmom
-  h h h h h h cis' dis' dis' dis' dis' dis' dis' dis'
-  e' e' e' e' dis' cis' cis' h a cis' h a h cis' e' e' e' e' e' e' e' dis' cis'
-  cis' cis' h a cis' h a gis
+  e'8. dis'16 ~ dis'8 cis'8 h8. a16 ~ a8 gis8 | h16 h8 h16 ~ h16 h8 h16 r2 | h16 h8 h16 ~ h16 h8 h16 ~ h4 h8 h16 h16 ~ | 
+  h2 r2 | e'8. dis'16 ~ dis'8 cis'8 h8. a16 ~ a8 gis8 | h16 h8 h16 ~ h16 h8 h16 r4.. gis16 | a16 a8 a16 ~ a16 h8. cis'8 cis'16 h16 ~ h8 a8 |
+  gis2 r2 | a4 a4 a4 gis4 | fis4 fis8 fis16 h16 ~ h16 h8 h16 ~ h16 h8 e16 ~ | e16 e8. ~ e4 r2 | r2 r4 e8 h8 | 
+  a4 a4 a4 gis4 | fis8 fis16 fis16 ~ fis16 fis8 h16 ~ h16 h8 h16 ~ h16 h8 e16 ~ | e2 r2 | r1 | r1 | r2 r4. h8 | h8. h16 ~ h8 h8 h8. h16 ~ h8 h8 | h8 h8 h8 cis'16 dis'16 ~ dis'4 e'8 e'8 | e'4 ~ e'8. e'16 r4 e'8 e'8 | dis'4 ~ dis'8. cis'16 r2 | cis'8. h16 ~ h8 a8 cis'8. h16 ~ h8 a8 |
+  h4 cis'4 e'4 e'8 e'8 | e'4 ~ e'8. e'16 r4 e'8 e'8 | dis'4 ~ dis'8. cis'16 r2 | cis'16 cis'8 h16 ~ h8 a8 cis'8. h16 ~ h8 a8 | gis1 ||
 }
 
 bass = {
@@ -227,45 +224,49 @@ englishLyrics = \lyricmode {
          (ly:rest-collision::calc-positioning-done grob))))
 
 
-%\score {
-%  \new ChoirStaff <<
-%    \new Staff = women <<
-%      \new Voice = "sopranos" { \voiceOne \originalScore }
-%      \new Voice = "altos" { \voiceTwo << \changePitch \originalScore \alt >> }
-%    >>
-%    %        \new Lyrics \with { alignAboveContext = women } \lyricsto sopranos \englishLyrics
-%    %\new Lyrics \with { alignBelowContext = women } \lyricsto altos \rijeci
-%    % we could remove the line about this with the line below, since we want
-%    % the alto lyrics to be below the alto Voice anyway.
-%    % \new Lyrics \lyricsto altos \altoWords
-%
-%    \new Staff = men <<
-%      \clef bass
-%      \new Voice = "tenors" { \voiceOne << \changePitch \originalScore \tenor >> }
-%      \new Voice = "basses" { \voiceTwo << \changePitch \originalScore \bas >> }
-%    >>
-%    %\new Lyrics \with { alignAboveContext = men } \lyricsto tenors \rijeciBas
-%    %    \new Lyrics \with { alignBelowContext = men } \lyricsto basses \bassWords
-%    % again, we could replace the line above this with the line below.
-%    % \new Lyrics \lyricsto basses \bassWords
-%  >>
-%  \layout {
-%    \context {
-%      % a little smaller so lyrics
-%      % can be closer to the staff
-%      \Staff
-%      \override RestCollision #'positioning-done = #merge-rests-on-positioning
-%      \override VerticalAxisGroup #'minimum-Y-extent = #'(-3 . 3)
-%    }
-%  }
 \score {
-  <<
-    \new ChordNames { \romanChords \transpose e c  \originalChords }
-    \new ChordNames { \jazzChords \originalChords }
-    \new Staff { \time 4/4  \originalScore }
-        \addlyrics { \englishLyrics }
-    \new Staff { \time 4/4  << \changePitch \originalScore \alt >> }
-    %\new Staff { \time 4/4  \clef bass << \changePitch \originalScore \tenor >> }
+  \new ChoirStaff <<
+    \new Staff = women <<
+      \new Voice = "sopranos" { \voiceOne \originalScore }
+      \new Voice = "altos" { \voiceTwo << \changePitch \originalScore \alt >> }
+    >>
+    %        \new Lyrics \with { alignAboveContext = women } \lyricsto sopranos \englishLyrics
+    \new Lyrics \with { alignBelowContext = women } \lyricsto altos \englishLyrics
+    % we could remove the line about this with the line below, since we want
+    % the alto lyrics to be below the alto Voice anyway.
+    % \new Lyrics \lyricsto altos \altoWords
 
+    \new Staff = men <<
+      \clef bass
+      %\new Voice = "tenors" { \voiceOne << \changePitch \originalScore \tenor >> }
+      %\new Voice = "basses" { \voiceTwo << \changePitch \originalScore \tenor >> }
+      \new Voice = "basses" { \key e \major \tenor }
+    >>
+    %\new Lyrics \with { alignAboveContext = men } \lyricsto tenors \rijeciBas
+    %    \new Lyrics \with { alignBelowContext = men } \lyricsto basses \bassWords
+    % again, we could replace the line above this with the line below.
+    % \new Lyrics \lyricsto basses \bassWords
   >>
+  \layout {
+    \context {
+      % a little smaller so lyrics
+      % can be closer to the staff
+      \Staff
+      \override RestCollision #'positioning-done = #merge-rests-on-positioning
+      \override VerticalAxisGroup #'minimum-Y-extent = #'(-3 . 3)
+    }
+  }
+  \midi {}
 }
+%\score {
+%  <<
+%    \new ChordNames { \romanChords \transpose e c  \originalChords }
+%    \new ChordNames { \jazzChords \originalChords }
+%    \new Staff { \time 4/4  \originalScore }
+%    \addlyrics { \englishLyrics }
+%    \new Staff { \time 4/4  << \changePitch \originalScore \alt >> }
+    %\new Staff { \time 4/4  \clef bass << \changePitch \originalScore \tenor >> }
+%    \new Staff { \clef bass \key e \major \tenor }
+    
+%  >>
+%}
