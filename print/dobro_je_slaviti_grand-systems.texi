@@ -1,0 +1,2 @@
+@image{dobro_je_slaviti_grand-1}
+@c eof
