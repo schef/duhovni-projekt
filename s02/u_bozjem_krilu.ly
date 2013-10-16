@@ -1,11 +1,11 @@
 \version "2.16.2"
 
 \header {
-title = ""
-composer = ""
-poet = " BPM | "
+title = "U BOŽJEM KRILU"
+composer = "DANKO TOMANIĆ"
+poet = "132 BPM | HOT ROD POP"
 copyright = ""
-subtitle = ""
+subtitle = "GECEMANI"
 arranger = ""
 }
 
@@ -18,10 +18,34 @@ arranger = ""
 %\once \override Score.RehearsalMark #'Y-offset = #-1.7
 %\once \override Score.RehearsalMark #'outside-staff-priority = #1
 %\once \override Staff.BarLine #'extra-spacing-width = #'(0 . 1)
-note = \relative c' {
+note = \relative c'' {
 	\key c \major
 	\mark \default
-	c1
+	r4 c8 c c c ~ c4 |
+        h4 c8 h ~ h2 |
+        r4 r8 a8 a g4 f8 |
+        e2 r2 |
+        r4 r8 a8 a g4 f8 |
+        e4 f8 e ~ e2 |
+        r4 a8 a a h4 c8 |
+        h1 |
+        
+        \mark \default
+        r4 a8 a h a g c ~ |
+        c8 a4 e8 ~ e2 |
+        r4 r8 a8\( g\) g f g\( ~ |
+        g8 e ~ e4\) r2 |
+        r4 a8 a h a g c ~ |
+        c8 a4 e8 ~ e2 |
+        r4 a8 a8\( g\) g f g\( ~ |
+        g8 e ~ e4\) r2 |
+        
+        \mark \default
+        r4 a8 a h a g c ~ |
+        c8 a4 e8 ~ e2 |
+        r4 a8 a g g e d ~ |
+        d8 c ~ c4 r2 |
+        \bar "|."
 }
 
 %AKORDI
@@ -29,7 +53,13 @@ note = \relative c' {
 %\set chordChanges = ##f
 %\set chordChanges = ##t
 akordi = \chordmode {
-        \set chordChanges = ##f       
+        \set chordChanges = ##t
+        a1:m | e:m | f | e:m |
+        f1 | e:m | f | g |
+        
+        f2 g | c:6 a:m | f g | c1:6 |
+        f2 g | c:6 a:m | f g | c1:6 |
+        f2 g | c:6 a:m | f g | c1:6 |
 }
 
 %HRVATSKI TEKST
@@ -57,5 +87,5 @@ lyricsC = \lyricmode {
         \new ChordNames { \jazzChords \akordi }
         \new Staff { \note }
 >>
-\midi { \tempo 4 = 128 }
+\midi { \tempo 4 = 132 }
 }
