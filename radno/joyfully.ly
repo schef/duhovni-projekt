@@ -70,7 +70,7 @@ originalScore = \relative c'' {
 
 %	%\once \override ChordNames.ChordName #'X-offset = #1
 
-alt = {
+altstari = {
   gis' fis' fis' e' dis' cis' cis' h |
   dis' dis' dis' dis' e' dis' |
   dis' dis' dis' dis' e' fis' fis' cis' cis' e' |
@@ -105,11 +105,47 @@ alt = {
   
 }
 
+alt = {
+      gis'8. fis'16 ~ fis'8 e' dis'8. cis'16 ~ cis'8 h |
+     dis'16 dis'8 dis'16 ~ dis' e'8 dis'16 r2 |
+     dis'16 dis'8 dis'16 ~ dis' e'8 fis'16 ~ fis'4 cis'8 cis'16 e' ~ |
+     e'2 r |
+     gis'8. fis'16 ~ fis'8 e' dis'8. cis'16 ~ cis'8 h |
+     dis'16 dis'8 dis'16 ~ dis' e'8 dis'16 r4.. cis'16 |
+     cis' cis'8 cis'16 ~ cis' e'8. fis'8 fis'16 e' ~ e'8 cis' |
+     e'2 r |
+
+     cis''4-. cis''-. cis''-. h'-. |
+     a' a'8 a'16 a' ~ a' a'8 a'16 ~ a' a'8 a'16 ~ |
+     a' gis'8. ~ gis'4 r2 |
+     r r4 e'8 gis' |
+     a'4-. a'-. cis''-. h'-. |
+     a'8 a'16 a' ~ a' a'8 a'16 ~ a' a'8 gis'16 ~ gis' a'8 gis'16 ~ |
+     gis'2 r |
+     r1 |
+     r2 r4 cis'8 h a8. a16 ~ a h8 cis'16 ~ cis'4 r8 gis' |
+     a'8. gis'16 ~ gis'8 e' a'8. gis'16 ~ gis'8 e' |
+     a' a' gis' a'16 fis' ~ fis'4 
+     
+     e'8 gis' |
+     a'4 ~ a'8. a'16 r4 a'8 a' |
+     gis'4 ~ gis'8. e'16 r2 |
+     fis'8. e'16 ~ e'8 cis' fis'8. e'16 ~ e'8 cis' |
+     e'4 fis' gis' e'8 gis' |
+     a'4 ~ a'8. a'16 r4 a'8 a' |
+     gis'4 ~ gis'8. e'16 r2 |
+     fis'16 fis'8 e'16 ~ e'8 cis' fis'8. e'16 ~ e'8 cis' |
+     h1
+   }
+
 tenor = {
   e'8. dis'16 ~ dis'8 cis'8 h8. a16 ~ a8 gis8 | h16 h8 h16 ~ h16 h8 h16 r2 | h16 h8 h16 ~ h16 h8 h16 ~ h4 h8 h16 h16 ~ | 
   h2 r2 | e'8. dis'16 ~ dis'8 cis'8 h8. a16 ~ a8 gis8 | h16 h8 h16 ~ h16 h8 h16 r4.. gis16 | a16 a8 a16 ~ a16 h8. cis'8 cis'16 h16 ~ h8 a8 |
   gis2 r2 | a4 a4 a4 gis4 | fis4 fis8 fis16 h16 ~ h16 h8 h16 ~ h16 h8 e16 ~ | e16 e8. ~ e4 r2 | r2 r4 e8 h8 | 
-  a4 a4 a4 gis4 | fis8 fis16 fis16 ~ fis16 fis8 h16 ~ h16 h8 h16 ~ h16 h8 e16 ~ | e2 r2 | r1 | r1 | r2 r4. h8 | h8. h16 ~ h8 h8 h8. h16 ~ h8 h8 | h8 h8 h8 cis'16 dis'16 ~ dis'4 e'8 e'8 | e'4 ~ e'8. e'16 r4 e'8 e'8 | dis'4 ~ dis'8. cis'16 r2 | cis'8. h16 ~ h8 a8 cis'8. h16 ~ h8 a8 |
+  a4 a4 a4 gis4 | fis8 fis16 fis16 ~ fis16 fis8 h16 ~ h16 h8 h16 ~ h16 h8 e16 ~ | e2 r2 | r1 | r1 | r2 r4. h8 |
+  %h8. h16 ~ h8 h8 h8. h16 ~ h8 h8    | h8     h8   h8    cis'16 dis'16 ~ dis'4 e'8 e'8
+  h8. h16 ~ h8 h8 h8. h16 ~ h8 cis' | dis'8 dis'8 dis'8 dis'16 dis'16 ~ dis'4 e'8 e'8
+  | e'4 ~ e'8. e'16 r4 e'8 e'8 | dis'4 ~ dis'8. cis'16 r2 | cis'8. h16 ~ h8 a8 cis'8. h16 ~ h8 a8 |
   h4 cis'4 e'4 e'8 e'8 | e'4 ~ e'8. e'16 r4 e'8 e'8 | dis'4 ~ dis'8. cis'16 r2 | cis'16 cis'8 h16 ~ h8 a8 cis'8. h16 ~ h8 a8 | gis1 ||
 }
 
@@ -228,10 +264,11 @@ englishLyrics = \lyricmode {
   \new ChoirStaff <<
     \new Staff = women <<
       \new Voice = "sopranos" { \voiceOne \originalScore }
-      \new Voice = "altos" { \voiceTwo << \changePitch \originalScore \alt >> }
+      %\new Voice = "altos" { \voiceTwo << \changePitch \originalScore \alt >> }
+      \new Voice = "altos" { \voiceTwo \alt }
     >>
     %        \new Lyrics \with { alignAboveContext = women } \lyricsto sopranos \englishLyrics
-    \new Lyrics \with { alignBelowContext = women } \lyricsto altos \englishLyrics
+    \new Lyrics \with { alignBelowContext = women } \lyricsto sopranos \englishLyrics
     % we could remove the line about this with the line below, since we want
     % the alto lyrics to be below the alto Voice anyway.
     % \new Lyrics \lyricsto altos \altoWords
