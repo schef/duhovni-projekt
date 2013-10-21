@@ -10,9 +10,9 @@ arranger = ""
 }
 
 \include "deutsch.ly"
-\include "romanChords_2.0.1.ly"
-\include "jazzChords_2.0.1.ly"
-\include "config_2.0.1.ly"
+\include "../config/romanChords_2.0.1.ly"
+\include "../config/jazzChords_2.0.1.ly"
+\include "../config/config_2.0.1.ly"
 
 %NOTE
 %\once \override Score.RehearsalMark #'Y-offset = #-1.7

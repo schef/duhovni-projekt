@@ -1,22 +1,35 @@
-#(set-default-paper-size "a4")
-%#(set-global-staff-size 10)
+%%%%%%%%%%%%
+%% CONFIG %%-------------------------------------------------------------------------
+%%%%%%%%%%%%
 
-\layout { 
+#(set-default-paper-size "a4")	%format papira
+
+%%%%%%%%%%%%%%%%
+%% STAFF SIZE %% --------------------------------------------------------------------
+%%%%%%%%%%%%%%%%
+
+%myStaffSize = #16
+%#(set-global-staff-size myStaffSize)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% USER DEF. FUNCTIONS %%------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%BREATHEMOJ
+\layout {
   \context {
     \Voice
-    \override BreathingSign #'font-name = #"Helvetica"
-    \override BreathingSign #'font-size = #8
-    \override BreathingSign #'text = \markup { \raise #0.2 "," }
-    %\override BreathingSign #'text = \markup {
-    %  \line {
-    %    \musicglyph #"scripts.caesura.curved"
-    %    \translate #'(-1.75 . 1.6)
-    %    %\musicglyph #"scripts.ufermata"
-    %	"bok"
-    %  }
-    %}	
-    \override BreathingSign #'color = #blue
-    %\Score markFormatter = #format-mark-box-letters    
+    \override BreathingSign #'font-name = #"Helvetica"			%font za zarez
+    \override BreathingSign #'font-size = #8				%velicina fonta za zarez
+    \override BreathingSign #'text = \markup { \raise #0.2 "," }	%stavi zarez
+    \override BreathingSign #'color = #blue				%boja zareza
+  }
+
+  \context {
+    \Score markFormatter = #format-mark-box-numbers			%box oko broja
+    %\Score markFormatter = #format-mark-circle-numbers			%krug oko broja
+    \override RehearsalMark #'self-alignment-X = #CENTER		%pozicija broja na zarez
+    \override RehearsalMark #'color = #blue				%boja rehearsal marka
   }
 }
 
@@ -31,8 +44,10 @@ breathemoj = {
   \breathe
 }
 
-left = { \once \override LyricText #'X-offset = #-2.8 }
+%LEFT
+left = { \once \override LyricText #'X-offset = #-2.8 }                 % \left "S to" -- bom                                                                                           %snipet 737
 
+%MARK DEFAULT I LYRICS FONT SIZE
 \layout { 
   \context {
     \Score markFormatter = #format-mark-box-numbers
@@ -50,6 +65,11 @@ left = { \once \override LyricText #'X-offset = #-2.8 }
     %\override LyricText #'font-family =#'
   } 
 }
+
+%%%%%%%%%%%%
+%% HEADER %% ------------------------------------------------------------------------
+%%%%%%%%%%%%
+
 
 \header {
   title = \markup {  \override #'(font-name . "JohnSans Medium Pro Bold") \title }
