@@ -77,7 +77,7 @@ top-system-spacing #'padding = #17.5
 
 markup-markup-spacing #'padding = #3
 
-system-system-spacing #'padding = #1
+system-system-spacing #'padding = #2
 %system-system-spacing #'minimum-distance = #1
 system-system-spacing #'stretchability = #0
 score-system-spacing #'stretchability = #5
