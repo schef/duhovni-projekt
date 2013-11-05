@@ -1,23 +1,19 @@
-\version "2.16.2"
+\version "2.17.29"
 
 \header {
 title = "HVALOSPJEV LJUBAVI"
 composer = "DANKO TOMANIĆ"
-poet = "121 BPM | COUNTRY"
-copyright = ""
-subtitle = "TVOJE NEBO"
-arranger = ""
+bpm = "121"
+style = "COUNTRY"
+titlex = "TVOJE NEBO"
 }
 
-\include "deutsch.ly"
-\include "../config/romanChords_2.0.1.ly"
-\include "../config/jazzChords_2.0.1.ly"
-\include "../config/config_2.0.1.ly"
+\include "s02.ily"
 
 %NOTE
-%\once \override Score.RehearsalMark #'Y-offset = #-1.7
-%\once \override Score.RehearsalMark #'outside-staff-priority = #1
-%\once \override Staff.BarLine #'extra-spacing-width = #'(0 . 1)
+%\once \override Score.RehearsalMark.Y-offset = #-1.7
+%\once \override Score.RehearsalMark.outside-staff-priority = #1
+%\once \override Staff.BarLine.extra-spacing-width = #'(0 . 1)
 note = \relative c'' {
 	\key f \major
 	\mark \default
@@ -38,7 +34,7 @@ note = \relative c'' {
         r2 a8 b4 c8 |
         c8( d4) c8 g2 |
         r4 r8 b8 b c4 d8 |
-        f4 \times 2/3 {e d c ~} c4 |
+        f4 \tuplet 3/2 {e d c ~} c4 |
         r4 r8 c,8 a'8 b c c( |
         d4) c8 g ~ g2 |
         r4 r8 b8 b b4 b8 |
@@ -47,7 +43,7 @@ note = \relative c'' {
 }
 
 %AKORDI
-%\once \override ChordNames.ChordName #'X-offset = #2
+%\once \override ChordNames.ChordName.X-offset = #2
 %\set chordChanges = ##f
 %\set chordChanges = ##t
 akordi = \chordmode {
@@ -87,3 +83,10 @@ lyricsC = \lyricmode {
 >>
 \midi { \tempo 4 = 121 }
 }
+
+
+%{
+convert-ly (GNU LilyPond) 2.17.95  convert-ly: Processing `'...
+Applying conversion: 2.17.0, 2.17.4, 2.17.5, 2.17.6, 2.17.11, 2.17.14,
+2.17.15, 2.17.18, 2.17.19, 2.17.20, 2.17.25, 2.17.27, 2.17.29
+%}
