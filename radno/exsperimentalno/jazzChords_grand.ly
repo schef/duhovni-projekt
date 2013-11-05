@@ -16,7 +16,7 @@ sest = \markup { \fontsize #-4 \raise #0.8 "6" }
 sedam = \markup { \fontsize #-4 \raise #0.8 "7" }
 devet = \markup { \fontsize #-4 \raise #0.8 "9" }
 trinaest = \markup { \fontsize #-4 \raise #0.8 "13" }
-sus = \markup { \hspace #0.1 \fontsize #-5 \raise #1.16 "sus" }
+sus = \markup { \hspace #0.2 \fontsize #-5 \raise #1.16 "sus" }
 
 jazzChordsMusic =
 {
