@@ -1,11 +1,14 @@
 \version "2.17.29"
 
-\language "deutsch"
+%\language "deutsch"
 
 \header {
   title = "VREMEPLOV"
+  titlex = "UNKNOWN"
   composer = "FRANK BOSCH"
 }
+
+\include "s02.ily"
 
 note = \relative c' {
   \key f \major
@@ -101,9 +104,18 @@ akordi = \chordmode {
 
 \score {
   <<
-  \new ChordNames { \akordi }
+  \new ChordNames { \jazzChords \akordi }
   \new Staff { \note }
   \addlyrics { \tekst }
   \addlyrics { \tekstDva }
   >>
+  \layout {}
+}
+
+\score {
+<<
+        \new ChordNames { \jazzChords \akordi }
+        \new Staff { \note }
+>>
+\midi { \tempo 4 = 79 }
 }
