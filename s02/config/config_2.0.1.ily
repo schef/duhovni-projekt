@@ -1,3 +1,4 @@
+\version "2.16.2"
 %%%%%%%%%%%%
 %% CONFIG %%-------------------------------------------------------------------------
 %%%%%%%%%%%%
@@ -22,14 +23,16 @@
     \override BreathingSign #'font-name = #"Helvetica"			%font za zarez
     \override BreathingSign #'font-size = #8				%velicina fonta za zarez
     \override BreathingSign #'text = \markup { \raise #0.2 "," }	%stavi zarez
-    \override BreathingSign #'color = #blue				%boja zareza
+    %\override BreathingSign #'color = #blue				%boja zareza
+    \override BreathingSign.color = #(rgb-color 0.64 0.57 0.13)
   }
 
   \context {
     \Score markFormatter = #format-mark-box-numbers			%box oko broja
     %\Score markFormatter = #format-mark-circle-numbers			%krug oko broja
     \override RehearsalMark #'self-alignment-X = #CENTER		%pozicija broja na zarez
-    \override RehearsalMark #'color = #blue				%boja rehearsal marka
+    %\override RehearsalMark #'color = #blue				%boja rehearsal marka
+    \override RehearsalMark.color = #(rgb-color 0.64 0.57 0.13)
   }
 }
 
@@ -70,20 +73,47 @@ left = { \once \override LyricText #'X-offset = #-2.8 }                 % \left 
 %% HEADER %% ------------------------------------------------------------------------
 %%%%%%%%%%%%
 
+#(define-markup-command (when-property layout props symbol markp) (symbol? markup?)
+  (if (chain-assoc-get symbol props)
+      (interpret-markup layout props markp)
+      empty-stencil))
+
+\paper {
+  bookTitleMarkup = \markup {
+		\override #'(baseline-skip . 5) %raznam između redova naslova
+    \column { %stvori stupce
+      \fill-line { \when-property #'header:title { %rasporedi broj varijabla po liniji
+        \override #'(font-name . "JohnSans Medium Pro Bold") \override #'(font-size . 4) { \fromproperty #'header:title }
+        }
+    \when-property #'header:composer {
+      \override #'(font-name . "JohnSans White Pro") \override #'(font-size . 1) { \fromproperty #'header:composer } }
+      }
+      \fill-line { %rasporedi broj varijabli pro liniji
+        \when-property #'header:titlex {
+        \override #'(font-name . "JohnSans White Pro Italic") \override #'(font-size . 4) { \fromproperty #'header:titlex }
+        }
+        \line { %stvori novu liniju unutar raspoređene linije da dobimo odnos 1:n
+					\override #'(font-name . "JohnSans White Pro") \override #'(font-size . 1) {
+          \when-property #'header:bpm {
+          { \fromproperty #'header:bpm }
+					{ "BPM" "|" }
+          }
+          \when-property #'header:style {
+         	{ \fromproperty #'header:style }
+          }
+        }
+				}
+      }
+      }
+      }
+      }
 
 \header {
-  title = \markup {  \override #'(font-name . "JohnSans Medium Pro Bold") \title }
-  composer = \markup {  \override #'(font-name . "JohnSans Medium Pro") \composer }
-  subtitle = \markup { \sans \subtitle }
-  arranger = \markup {  \override #'(font-name . "JohnSans Medium Pro") \arranger }
-  %copyright = \markup { \sans \copyright }
-  copyright = \markup { \tiny \sans "zvanstefan@gmail.com (http://iskreno.hr/)" }
-  tagline = \markup { \tiny \sans {
-    \simple #(strftime "%d/%m/%Y" (localtime (current-time)))
-    \with-url #"http://lilypond.org/web/"
-    { LilyPond \simple #(lilypond-version) (http://lilypond.org/) }
-                      }
-  }
+  copyright = \markup { \tiny \sans { "CREATIVE COMMONS AT TRIBUTION 3.0 / RIJEČI ISKRENE, DRAVSKA 8, 40305 PUŠĆINE" } }
+  tagline = \markup { \tiny \sans { \simple #(strftime "%d/%m/%Y" (localtime (current-time)))
+            \with-url #"http://lilypond.org/web/" { LilyPond \simple #(lilypond-version)
+            (http://lilypond.org/) } } }
+
 }
 
 myStaffSize = #20
@@ -92,7 +122,10 @@ myStaffSize = #20
   #(define fonts (make-pango-font-tree "JohnSans Text Pro" "Lilypond JohnSans White Pro" "Lilypond JohnSans Medium Pro" (/ myStaffSize 20)))
   markup-system-spacing #'padding = #7
   %system-system-spacing #'padding = #10
-  indent = 0
+      indent = 0
+      left-margin = 20\mm
+      right-margin = 20\mm
+      top-margin = 15\mm
   %paper-width = 138 \mm
   %paper-height = 214 \mm
   top-markup-spacing #'padding = #4

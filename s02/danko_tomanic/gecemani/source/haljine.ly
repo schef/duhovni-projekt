@@ -1,18 +1,13 @@
 \version "2.16.2"
 
 \header {
-title = "ZNAM"
+title = "HALJINE"
 composer = "DANKO TOMANIĆ"
-poet = "BPM 120 | FUNK ROCK"
-copyright = ""
-subtitle = ""
-arranger = ""
+poet = "120 BPM | 80's POP"
+subtitle = "GECEMANI"
 }
 
-\include "deutsch.ly"
-\include "../config/romanChords_2.0.1.ly"
-\include "../config/jazzChords_2.0.1.ly"
-\include "../config/config_2.0.1.ly"
+\include "s02.ily"
 
 %NOTE
 %\once \override Score.RehearsalMark #'Y-offset = #-1.7
@@ -21,25 +16,27 @@ arranger = ""
 note = \relative c'' {
 	\key a \minor
 	\mark \default
-	r8 c8 c a c a c d ~ |
-        d8 a ~ a4 r2 |
-        r8 d,8 h' h h a g h ~ |
-        h8 c4 c8 ~ c d c h |
-        a8 c c a c( a) c d ~ |
-        d a ~ a4 r8 d8 c h |
-        r8 h8  h h e4 d |
-        d8( c h a ~ a4) r4 |
-        r8
+        \partial 4*3
+	a8 h16 c ~ c8 c h a |
+        g4 a8. g16 ~ g2|
+        r4 a8 h16 c ~ c8 c h a |
+        g4 a8. g16 ~ g2 |
+        r4 f8 g16 a ~ a8 a g f |
+        e4 a8 a ~ a2 |
+        r4 f8 g a a a c ~ |
+        c8 c ~ c4 r8 a4( c8 ~ |
+        c8 h ~ h4) r8 g4 h8 ~ |
+        h4. a8 ~ a2 |
         
-        \breathemoj
-        e8 e d e d e4 |
-        a4 g8 f ~ f e e( d) |
-        r8 d8 d c d c g' d ~ |
-        d8 e ~ e4 r2 |
-        c4. a8 ~ a4 c4 |
-        d4. a8 ~ a4 r4 |
-        r8 h8 h h e4 d |
-        d8( c h a ~ a4) r4 |
+        \mark \default
+        r4 a8 c16 h ~ h8 a g4 |
+        r4 c8 c16 h ~ h8 a gis4 |
+        r8 c,8 a'16 c8. h8 a g a ~ |
+        a8 e ~ e4 r2 |
+        r4 a8 c16 h ~ h8 a g4 |
+        r4 c8 c16 h ~ h8 a gis4 |
+        r8 c,8 a'16 c8. h8 a g a ~ |
+        a8 a ~ a4 r2 |
         \bar "|."
 }
 
@@ -48,11 +45,13 @@ note = \relative c'' {
 %\set chordChanges = ##f
 %\set chordChanges = ##t
 akordi = \chordmode {
-        \set chordChanges = ##f     
-        a1:m | d | g | c4*3 c4/h |
-        a1:m | d | e | a:m |
-        a1 | d:m | g | c4*3 c4/h |
-        a1:m | d:m | e | a:m |
+        \set chordChanges = ##f
+        \skip4*3
+        e1:m7 | a:m7 | e:m7 |
+        d1:m7 | a:m7 | d:m7 | f:6 |
+        g:6 | a:m7 | f2 g2 | c2 e2:7 |
+        f2 g | c1 | f2 g | c e2:7 | 
+        f2 g2 | a:m 
 }
 
 %HRVATSKI TEKST
