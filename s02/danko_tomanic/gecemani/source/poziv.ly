@@ -1,23 +1,19 @@
-\version "2.16.2"
+\version "2.17.29"
 
 \header {
 title = "POZIV"
 composer = "DANKO TOMANIĆ"
-poet = "80 BPM | CRO ROCK"
-copyright = ""
-subtitle = "GECEMANI"
-arranger = ""
+bpm = "80"
+style = "CRO ROCK"
+titlex = "GECEMANI"
 }
 
-\include "deutsch.ly"
-\include "romanChords_2.0.1.ly"
-\include "jazzChords_2.0.1.ly"
-\include "config_2.0.1.ly"
+\include "s02.ily"
 
 %NOTE
-%\once \override Score.RehearsalMark #'Y-offset = #-1.7
-%\once \override Score.RehearsalMark #'outside-staff-priority = #1
-%\once \override Staff.BarLine #'extra-spacing-width = #'(0 . 1)
+%\once \override Score.RehearsalMark.Y-offset = #-1.7
+%\once \override Score.RehearsalMark.outside-staff-priority = #1
+%\once \override Staff.BarLine.extra-spacing-width = #'(0 . 1)
 note = \relative c' {
 	\key a \major
 	\mark \default
@@ -39,7 +35,7 @@ note = \relative c' {
 }
 
 %AKORDI
-%\once \override ChordNames.ChordName #'X-offset = #2
+%\once \override ChordNames.ChordName.X-offset = #2
 %\set chordChanges = ##f
 %\set chordChanges = ##t
 akordi = \chordmode {
@@ -81,3 +77,10 @@ lyricsC = \lyricmode {
 >>
 \midi { \tempo 4 = 80 }
 }
+
+
+%{
+convert-ly (GNU LilyPond) 2.17.95  convert-ly: Processing `'...
+Applying conversion: 2.17.0, 2.17.4, 2.17.5, 2.17.6, 2.17.11, 2.17.14,
+2.17.15, 2.17.18, 2.17.19, 2.17.20, 2.17.25, 2.17.27, 2.17.29
+%}
