@@ -19,7 +19,7 @@ sus = \markup { \fontsize #0 \raise #0 "sus" }
 romanChordsMusic =
 {
   %kvintakordi
-  <c e g b c'>-\markup { }
+  <c d g>-\markup { }
   <c es g>-\markup { }
   <c es ges>-\markup { }
   <c e gis>-\markup { }
@@ -28,9 +28,11 @@ romanChordsMusic =
   <c e g a>-\markup { }
   <c e g b>-\markup { }
   <c e g h>-\markup { }
+  <c f g b>-\markup { }
   <c es g b>-\markup { }
   <c es ges b>-\markup { }
   %nonakordi
+  <c e g b c'>-\markup { }
   <c es g b d'>-\markup { }
   % Add more as needed
 }
