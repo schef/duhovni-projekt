@@ -22,6 +22,7 @@ jazzChordsMusic =
 {
   %kvintakordi
   <c es g>-\markup { \min }
+  <c d g>-\markup { \sus \dva }
   <c es ges>-\markup {\dim }
   <c e gis>-\markup { \aug }
   <c f g>-\markup { \sus \cetri }
