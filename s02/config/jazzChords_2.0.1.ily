@@ -11,6 +11,7 @@ maj = \markup { \fontsize #-4 \raise #0.8 \char ##x0394 }
 dim = \markup { \hspace #0.08 \fontsize #-7 \raise #1.34 \char ##x00b0 }
 hdim = \markup { \fontsize #-7 \raise #1.2 \char ##x00d8 }
 aug = \markup { \fontsize #-7 \raise #1.2 "+" }
+dva = \markup { \fontsize #-4 \raise #0.8 "2" }
 cetri = \markup { \fontsize #-4 \raise #0.8 "4" }
 sest = \markup { \fontsize #-4 \raise #0.8 "6" }
 sedam = \markup { \fontsize #-4 \raise #0.8 "7" }
@@ -22,10 +23,10 @@ jazzChordsMusic =
 {
   %kvintakordi
   <c es g>-\markup { \min }
-  <c d g>-\markup { \sus \dva }
+  <c d g>-\markup { \dva }
   <c es ges>-\markup {\dim }
   <c e gis>-\markup { \aug }
-  <c f g>-\markup { \sus \cetri }
+  <c f g>-\markup { \cetri }
   %septakordi
   <c e g a>-\markup { \sest }
   <c es g as>-\markup { \min \chordFlat \sest }
