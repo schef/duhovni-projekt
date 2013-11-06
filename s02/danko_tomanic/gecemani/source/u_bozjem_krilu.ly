@@ -3,8 +3,8 @@
 \header {
 title = "U BOŽJEM KRILU"
 composer = "DANKO TOMANIĆ"
-poet = "132"
-style = "HOT ROD POP"
+bpm = "76"
+style = "RUSKA"
 titlex = "GECEMANI"
 }
 
@@ -15,32 +15,29 @@ titlex = "GECEMANI"
 %\once \override Score.RehearsalMark.outside-staff-priority = #1
 %\once \override Staff.BarLine.extra-spacing-width = #'(0 . 1)
 note = \relative c'' {
-	\key c \major
+	\key e \minor
+        \time 6/8
 	\mark \default
-	r4 c8 c c c ~ c4 |
-        h4 c8 h ~ h2 |
-        r4 r8 a8 a g4 f8 |
-        e2 r2 |
-        r4 r8 a8 a g4 f8 |
-        e4 f8 e ~ e2 |
-        r4 a8 a a h4 c8 |
-        h1 |
+	g8 fis e e fis g |
+        a4 g8 fis4( fis8) |
+        fis8 e dis e\( e\) fis |
+        g4. r4. |
+        g8\( fis\) e e fis g |
+        a4 g8 fis4. |
+        fis8\( dis\) h g'\( g\) fis |
+        e4. r4. |
         
+        \once \override Score.RehearsalMark.X-offset = #-1.7
+        \once \override Score.RehearsalMark.Y-offset = #-1.4
         \mark \default
-        r4 a8 a h a g c ~ |
-        c8 a4 e8 ~ e2 |
-        r4 r8 a8\( g\) g f g\( ~ |
-        g8 e ~ e4\) r2 |
-        r4 a8 a h a g c ~ |
-        c8 a4 e8 ~ e2 |
-        r4 a8 a8\( g\) g f g\( ~ |
-        g8 e ~ e4\) r2 |
-        
-        \mark \default
-        r4 a8 a h a g c ~ |
-        c8 a4 e8 ~ e2 |
-        r4 a8 a g g e d ~ |
-        d8 c ~ c4 r2 |
+        c'8. c16 c8 c d e |
+        h4 a8 g4\( g8\) |
+        a4 g8 fis g a |
+        a8( \stemUp h4) r4. |
+        c8. c16 c8 c d e |
+        h4 a8 g4\( g8\) |
+        a8 fis h, g'4 fis8 |
+        e4. r4. |
         \bar "|."
 }
 
@@ -50,30 +47,60 @@ note = \relative c'' {
 %\set chordChanges = ##t
 akordi = \chordmode {
         \set chordChanges = ##t
-        a1:m | e:m | f | e:m |
-        f1 | e:m | f | g |
+        e8*6:m | a:m | h:7 | e:m |
+        e8*6:m | a:m | h:7 | e:m |
         
-        f2 g | c:6 a:m | f g | c1:6 |
-        f2 g | c:6 a:m | f g | c1:6 |
-        f2 g | c:6 a:m | f g | c1:6 |
+        a8*6:m | e:m | h:7 | e8*3:m e:7/gis |
+        a8*6:m | e8*3:m c | a:m h:7 | e8*6:m |
 }
 
 %HRVATSKI TEKST
 lyricsAOne = \lyricmode {
+Te -- bi sam pre -- da -- o ra -- ne sve __
+sve svo -- je po __ _ -- ljub -- ce 
+te -- bi sam te ru -- ke pru -- ži -- o
+to si za -- slu __ _ -- ži -- o
 }
 
-lyricsB = \lyricmode {
+lyricsATwo = \lyricmode {
+U tvo -- jim kon -- ci -- ma ži -- vot moj __
+u sr -- cu mi i -- sus krist
+i __ _ dok slu -- šam tih pti -- ca poj
+e -- _ vo pi -- šem ti stih
+
+Vo -- di me o -- će moj ne -- be -- ski
+ti po -- zna -- ješ taj -- ne sve __
+vo -- di me o -- će moj ne -- be -- ski __ _
+što bih ja bez te -- be.
 }
 
-lyricsC = \lyricmode {
+lyricsAThree = \lyricmode {
+Te -- bi sam pre -- da -- o lju -- bav svu __
+sve svo -- je da -- le -- ke sne
+tvo -- ju sam pri -- ma -- o ve -- če -- ru
+ni -- kad ne o -- stav -- ljaj me
+
+Vo -- di me o -- če moj ne -- be -- ski __ _
+ti to je -- di -- ni znaš __
+vo -- di me o -- če moj ne -- be -- ski
+ti vjer -- ni -- ma pri -- pa -- daš.
+}
+
+lyricsBOne = \lyricmode {
+Vo -- di me o -- če moj ne -- be -- ski __ _
+ti to je -- di -- ni znaš __
+vo -- di me o -- če moj ne -- be -- ski __ _
+ti svi -- me u -- pra -- vljaš.
 }
 
 \score {
 <<
-        \new ChordNames { \romanChords \transpose c c \akordi }
+        \new ChordNames { \romanChords \transpose g c \akordi }
         \new ChordNames { \jazzChords \akordi }
         \new Staff { \note }
-        \addlyrics { \lyricsAOne \lyricsB \lyricsC }
+        \addlyrics { \lyricsAOne \lyricsBOne }
+        \addlyrics { \lyricsATwo }
+        \addlyrics { \lyricsAThree }
 >>
 \layout {}
 }
@@ -83,7 +110,7 @@ lyricsC = \lyricmode {
         \new ChordNames { \jazzChords \akordi }
         \new Staff { \note }
 >>
-\midi { \tempo 4 = 132 }
+\midi { \tempo 4 = 76 }
 }
 
 

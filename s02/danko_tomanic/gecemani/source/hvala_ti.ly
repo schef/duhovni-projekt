@@ -3,7 +3,7 @@
 \header {
 title = "HVALA TI"
 composer = "DANKO TOMANIĆ"
-poet = "76"
+bpm = "76"
 style = "MYSTIC CHORAL"
 titlex = "GECEMANI"
 }
@@ -27,6 +27,8 @@ note = \relative c' {
         d4 e fis |
         cis2. |
         
+        \once \override Score.RehearsalMark.X-offset = #-1.05
+        \once \override Score.RehearsalMark.Y-offset = #-1
         \mark \default
         fis4 g a |
         h4 a4. g8 |
@@ -37,6 +39,8 @@ note = \relative c' {
         d4\( d4\) cis4 |
         h2. |
         
+        \once \override Score.RehearsalMark.X-offset = #-1.5
+        \once \override Score.RehearsalMark.Y-offset = #-1.3
         \mark \default
         d4 cis h |
         g'4 fis e |
@@ -63,13 +67,30 @@ akordi = \chordmode {
 }
 
 %HRVATSKI TEKST
-lyricsAOne = \lyricmode {
+lyricsA = \lyricmode {
+  hva -- la ti hva -- la ti go -- spo -- de moj __
+hva -- la za tvo -- _ ju mu -- ku i znoj __
+
+hva -- la za rije -- či što me -- ni si da -- o __
+hva -- la ti što sam te u -- po -- zna -- o __
+
+hva -- la ti hva -- la ti go -- spo -- de __
 }
 
 lyricsB = \lyricmode {
+  hva -- la ti hva -- la ti go -- spo -- de naš __
+hva -- la ti je -- di -- ni u -- sli -- ša -- vaš __
+
+hva -- la što u -- vijek si pri -- su -- tan "s na" -- ma __
+hva -- la na du -- bo -- kim ra -- _ na -- ma __
 }
 
 lyricsC = \lyricmode {
+  lju -- bi -- mo lju -- bi -- mo i -- su -- sa tog __
+on je naš spa -- si -- telj on je naš bog __
+
+za vje -- čni ži -- vot za vje -- či -- tu ra -- dost __
+hva -- la ti hva -- la ti go -- _ spo -- de __
 }
 
 \score {
@@ -77,7 +98,9 @@ lyricsC = \lyricmode {
         \new ChordNames { \romanChords \transpose d c \akordi }
         \new ChordNames { \jazzChords \akordi }
         \new Staff { \note }
-        \addlyrics { \lyricsAOne \lyricsB \lyricsC }
+        \addlyrics { \lyricsA }
+        \addlyrics { \lyricsB }
+        \addlyrics { \lyricsC }
 >>
 \layout {}
 }

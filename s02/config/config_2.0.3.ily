@@ -3,14 +3,15 @@
 %% CONFIG %%-------------------------------------------------------------------------
 %%%%%%%%%%%%
 
-#(set-default-paper-size "a4")	%format papira
+%#(set-default-paper-size "a4")	%format papira
 
 %%%%%%%%%%%%%%%%
 %% STAFF SIZE %% --------------------------------------------------------------------
 %%%%%%%%%%%%%%%%
 
-	%myStaffSize = #16
+%myStaffSize = #24
 %#(set-global-staff-size myStaffSize)
+%#(set-default-paper-size "a4")	%format papira
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%
 	%% USER DEF. FUNCTIONS %%------------------------------------------------------------

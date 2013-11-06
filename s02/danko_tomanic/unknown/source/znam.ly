@@ -29,7 +29,7 @@ note = \relative c'' {
         
         \breathemoj
         e8 e d e d e4 |
-        a4 g8 f ~ f e e( d) |
+        \stemDown a4 g8 f ~ f e e( d) |
         r8 d8 d c d c g' d( ~ |
         d8 e ~ e4) r2 |
         c4. a8 ~ a4 c4 |

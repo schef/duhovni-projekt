@@ -17,7 +17,7 @@ titlex = "GECEMANI"
 note = \relative c' {
 	\key d \major
 	\mark \default
-	e4. fis8 ~ fis4 a, |
+	e4. fis8( fis4) a, |
         e'4. fis8 ~ fis4 e4 |
         e4. d8 ~ d4 cis |
         cis4. d8 ~ d4 a |
@@ -32,7 +32,7 @@ note = \relative c' {
         r8 g g g16 g ~ g8 fis e8 g |
         r8 g8 g g16 g( ~ g8 fis) g4 |
         a1 |
-        r1 |
+        r1 | \break
         
         \mark \default
         a1 ~ |
@@ -67,12 +67,22 @@ akordi = \chordmode {
 
 %HRVATSKI TEKST
 lyricsAOne = \lyricmode {
+Ži -- vot što me -- ni __ si da -- o __ ja ži -- vim
+i te -- bi se kla -- njam i te -- bi __ se di -- vim __
+jer ti si je -- di -- ni ko -- ji mi do -- no -- siš mir
+dije -- li -- mo do -- bro i zlo u -- vijek smo za -- je -- dno.
+}
+
+lyricsATwo = \lyricmode {
+Lju -- bav što me -- ni __ si da -- o __ da lju -- bim
+i ne -- ću da grije -- šim __ da te -- be __ i -- zgu -- bim __
+%jer ti si je -- di -- ni ko -- ji mi do -- no -- siš mir
+%dije -- li -- mo do -- bro i zlo u -- vijek smo za -- je -- dno
 }
 
 lyricsB = \lyricmode {
-}
-
-lyricsC = \lyricmode {
+Tvo -- ja lju -- bav __ o -- na ži -- vi u me -- ni __
+Tvo -- ja lju -- bav __ o -- na ži -- vi u na -- ma. __
 }
 
 \score {
@@ -80,7 +90,8 @@ lyricsC = \lyricmode {
         \new ChordNames { \romanChords \transpose d c \akordi }
         \new ChordNames { \jazzChords \akordi }
         \new Staff { \note }
-        \addlyrics { \lyricsAOne \lyricsB \lyricsC }
+        \addlyrics { \lyricsAOne \lyricsB }
+        \addlyrics { \lyricsATwo }
 >>
 \layout {}
 }

@@ -29,6 +29,8 @@ note = \relative c'' {
         c8 h ~ h4) r8 g4 h8 ~ |
         h4. a8 ~ a2 |
         
+        \once \override Score.RehearsalMark.X-offset = #-2
+        \once \override Score.RehearsalMark.Y-offset = #-1.7
         \mark \default
         r4 a8 c16 h ~ h8 a g4 |
         r4 c8 c16 h ~ h8 a gis4 |
@@ -57,12 +59,30 @@ akordi = \chordmode {
 
 %HRVATSKI TEKST
 lyricsAOne = \lyricmode {
+dok ti lju -- bim i -- me je -- di -- no __
+ti se smi -- ješ gle -- daš i -- skre -- no __
+dok ti nu -- dim svo -- je ru -- ke dvje __ 
+di -- ram tvo -- je ha -- lji -- ne __
+mhm __ da da __ da __
 }
 
-lyricsB = \lyricmode {
+lyricsATwo = \lyricmode {
+  i -- za te -- be ne -- što o -- sta -- je __
+proć će vrije -- me dok te spo -- zna -- jem
+još će mno -- gi lju -- di pri -- ča -- ti __
+ni -- je sve u i -- sti -- ni __
+mhm __ da da __ da __
 }
 
 lyricsC = \lyricmode {
+  je -- di -- no još znam
+je -- di -- no još znam
+da ni -- kad ni -- sam bi -- o __ sam __
+
+je -- di -- no ću znat
+je -- di -- no ću znat
+uz te -- be u -- vijek ra -- do -- stan __
+
 }
 
 \score {
@@ -70,7 +90,8 @@ lyricsC = \lyricmode {
         \new ChordNames { \romanChords \transpose c c \akordi }
         \new ChordNames { \jazzChords \akordi }
         \new Staff { \note }
-        \addlyrics { \lyricsAOne \lyricsB \lyricsC }
+        \addlyrics { \lyricsAOne \lyricsC }
+        \addlyrics { \lyricsATwo }
 >>
 \layout {}
 }
