@@ -26,7 +26,7 @@ jazzChordsMusic =
   <c e gis>-\markup { \aug }
   <c f g>-\markup { \sus \cetri }
   %septakordi
-  <c e g a>-\markup { \maj \sest }
+  <c e g a>-\markup { \sest }
   <c es g as>-\markup { \min \chordFlat \sest }
   <c e g b>-\markup { \sedam }
   <c e g h>-\markup { \maj \sedam }
