@@ -1,7 +1,7 @@
 \version "2.17.29"
 
 \header {
-title = "NEŠTO VUĆE ME SAD"
+title = "NEŠTO VUČE ME SAD"
 composer = "RUDI FAJGL"
 bpm = "98"
 style = "GOSPEL POP"
@@ -21,22 +21,22 @@ note = \relative c'' {
 	r4 h8 h c c h h( |
 	a4) r4 r2 |
 	r4 h8 h c8 c4 g8 |
-	g8 a h a ~ a4 r4 |
+	g8( a) h a ~ a4 r4 |
 	r4 h8 h c c h h( |
 	a4) r4 r4 a8 a |
 	a8 g ~ g4 r2 |
 	a8 g4 g8 g( a) h8 h( ~ |
 	h16 a g8 ~ g2.) |
-	r1 |
+	r1 | \break
 
 	\mark \default
-	r4 c4 g4. e8 |
+	r4 d'4 g,4. e8 |
 	g8 a h a ~ a4 r4 |
 	r8 h8 h h c c c c |
 	h4 h8 a ~ a4 r4 |
-	r4 c4 g4. e8 |
+	r4 d4 g,4. e8 |
 	g8 a h a ~ a4 r4 |
-	r4 c16 c c8 ~ c8 h a g |
+	r4 c8 c16 c ~ c8 h a g |
 	r4 c8 c16 c ~ c8 h a g( |
 	a8) a ~ a2. ~ |
 	a1 |
@@ -49,16 +49,22 @@ note = \relative c'' {
 %\set chordChanges = ##t
 akordi = \chordmode {
         \set chordChanges = ##t       
+				g2 c | d1 | g2 a:m | e:m d |
+				g2 c | d1 | c | a2:m d | g1 |
+				g1 |
+
+				h2:m e:m | c d | e:m c | g d |
+				h2:m e:m | c d | a1:m | c | d | d |
 }
 
 %HRVATSKI TEKST
-lyricsAOne = \lyricmode {
-}
+lyricsA = \lyricmode {
+	Ne -- što vu -- če me sad, __ bli -- že Te -- bi u za -- gr -- ljaj. __
+	Ne -- što vu -- če me sad, __ bli -- že Te -- bi, __ Te -- bi, u za -- gr -- ljaj. __
 
-lyricsB = \lyricmode {
-}
-
-lyricsC = \lyricmode {
+	Bo -- že u -- či -- ni mi to, __ o -- či -- sti mo -- je sr -- ce se -- bi -- čno. __
+	Sad znam da tre -- baš mi Ti. __
+	Mo -- ja du -- ša pa -- ti, želj -- na Tvo -- je lju -- ba -- vi. __
 }
 
 \score {
@@ -66,7 +72,7 @@ lyricsC = \lyricmode {
         \new ChordNames { \romanChords \transpose g c \akordi }
         \new ChordNames { \jazzChords \akordi }
         \new Staff { \note }
-        \addlyrics { \lyricsAOne \lyricsB \lyricsC }
+        \addlyrics { \lyricsA }
 >>
 \layout {}
 }
