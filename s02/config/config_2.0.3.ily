@@ -128,7 +128,7 @@ left = { \once \override LyricText.X-offset = #-2.8 }                 % \left "S
 
 }
 
-myStaffSize = #22
+myStaffSize = #20
 #(set-global-staff-size myStaffSize)
 \paper {
 #(define fonts (make-pango-font-tree "JohnSans Text Pro" "Lilypond JohnSans White Pro" "Lilypond JohnSans Medium Pro" (/ myStaffSize 20)))

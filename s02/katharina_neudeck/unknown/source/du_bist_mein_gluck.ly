@@ -4,7 +4,7 @@
 title = "DU BIST MEIN GLÜCK"
 composer = "KATHARINA NEUDECK"
 bpm = "70"
-style = "BALLADE"
+style = "Ps.73,28"
 titlex = "JAHRESLOSUNG"
 }
 
@@ -18,7 +18,7 @@ note = \relative c' {
 	\key b \major
         \time 4/4
 	\mark \default
-	d16 f f f ~ f8 f16 f ~ f16 g8. r8 es16 d |
+	d16 f f f ~ f8 f16 f ~ f16 g8. r8 es16\( d\) |
 	c8 d16 es ~ es8 d16 d ~ d2 |
 	d16 f f f ~ f8 f16 f ~ f16 g8. r8 es16 d |
 	c8 d16 es ~ es8 d16 d ~ d2 |
@@ -60,12 +60,30 @@ akordi = \chordmode {
 
 %HRVATSKI TEKST
 lyricsAOne = \lyricmode {
+	Herr, ich kann dei -- ne Lie -- be, die sich mir ent -- ge -- gen -- streckt,
+
+	   nur im -- mer mehr er -- fas -- sen, weil du mein Ver -- lan -- gen weckst!
+
+		   Denn ich will bei dir blei -- ben, du nimmst mei -- ne rech -- te __ Hand. __
+
+			  Dan -- ke für dei -- ne Hil -- fe, __ als du mir zur Sei -- te standst! __
+}
+
+lyricsATwo = \lyricmode {
+	Kann ich die Ster -- ne zäh -- len, am __ _ gro -- ßen Him -- mels -- zelt __
+
+	  und dei -- ne Macht be -- grei -- fen, du der Fin -- ster -- nis er -- hellt? __
+
+		  Du zählst auch mei -- ne Trä -- nen, sam -- melst sie in dei -- ner __ Hand! __
+
+			  Ich lo -- be dich und sin -- ge, __ weil mich dei -- ne Gna -- de fand! __
 }
 
 lyricsB = \lyricmode {
-}
+	Herr, du al -- lein bist mein Glück, __ denn du holst mich aus __ der Tie -- fe
 
-lyricsC = \lyricmode {
+	Und ich lauf` zu dir __ zu -- rück __ ich ver -- trau -- e __ dir! __
+	Ich ver -- trau -- e __ dir! __
 }
 
 \score {
@@ -73,7 +91,8 @@ lyricsC = \lyricmode {
         \new ChordNames { \romanChords \transpose b c \akordi }
         \new ChordNames { \jazzChords \akordi }
         \new Staff { \note }
-        \addlyrics { \lyricsAOne \lyricsB \lyricsC }
+        \addlyrics { \lyricsAOne \lyricsB }
+        \addlyrics { \lyricsATwo }
 >>
 \layout {}
 }
