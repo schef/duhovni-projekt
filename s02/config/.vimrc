@@ -7,6 +7,7 @@ set tabstop=2
 set shiftwidth=2
 set autoindent
 set smartindent
+set nu
 
 autocmd FileType lilypond map <buffer> <F6> :!evince "../binary/%<.pdf" &<Return><CR>
 autocmd FileType lilypond map <buffer> <F5> :w<Return>:se makeprg=lilypond.sh\ \"%\"<Return>:make<Return><CR><CR>

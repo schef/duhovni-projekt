@@ -23,7 +23,7 @@ jazzChordsMusic =
 {
   %kvintakordi
   <c es g>-\markup { \min }
-  <c d g>-\markup { \sus \dva }
+  <c d g>-\markup { \dva }
   <c es ges>-\markup {\dim }
   <c e gis>-\markup { \aug }
   <c f g>-\markup { \cetri }
@@ -35,6 +35,7 @@ jazzChordsMusic =
   <c es g b>-\markup { \min \sedam }
   <c es ges b>-\markup { \hdim }
   <c f g des'>-\markup { \sus \chordFlat \devet }
+  <c f g b>-\markup { \sedam \sus \cetri }
   %nonakordi
   <c es g b d'>-\markup { \min \devet }
   <c e fes g b>-\markup { \maj \chordFlat \cetri }
