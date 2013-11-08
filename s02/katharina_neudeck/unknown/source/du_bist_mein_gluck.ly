@@ -35,12 +35,13 @@ note = \relative c' {
 	g8. f16 ~ f es8 f16 ~ f4 r8 c16 d |
 	es8 d16 es ~ es d8 es16 ~ es8 d c b |
 	b'8 a16 g ~ g f f8 ~ f4 r8 c16 d |
-	es8. f16 ~ f8 f ~ f4 r8
+%	es8. f16 ~ f8 f ~ f4 r8
+	es8. f16 ~ f8 f ~ f4 r4 |
 	
-	\breathemoj
-	f16 es |
-	es4. d8 ~ d4. b8 ~ |
-	b1 |
+%	\breathemoj
+%	f16 es |
+%	es4. d8 ~ d4. b8 ~ |
+%	b1 |
 	\bar "|."
 }
 
@@ -54,8 +55,8 @@ akordi = \chordmode {
 				b2/d es | f b | g:m es |
 				f2 g4:m f |
 				es2 b/d | c2:m | f1 | es2 b/d |
-				c4*3 b4/d | es2 b2/d | c2:m f2 |
-				es2 f | b1 |
+				c4*3:m b4/d | es2 b2/d | c2:m f2 |
+				%es2 f | b1 |
 }
 
 %HRVATSKI TEKST
