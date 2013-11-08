@@ -4,7 +4,7 @@
 
 \header {
   title = "VREMEPLOV"
-  titlex = "UNKNOWN"
+  titlex = "KAMP 2013"
   composer = "FRANK BOSCH"
 }
 
@@ -21,7 +21,7 @@ note = \relative c' {
   a8 g g f16 f ~ f4 r8 r16 f |
   e8 f e f16 e ~ e16 d8. r16 d g a |
   b8 a a g16 g ~ g4 r8 r16 f |
-  f8 e d c16 c ~ c4 r8 r16 \mark \default c'16 |
+  f8 e d c16 c ~ c4 r8 r16 \breathemoj c'16 |
   c8 b a g16 g ~ g f8. r8 r16 f |
   a8 b g f16 g ~ g4 r8 r16 c |
   c8 b a g16 g ~ g f8. r8 r16 f |
@@ -92,7 +92,7 @@ akordi = \chordmode {
    f1 |
    c/e |
    f1 |
-   d1:m |
+   g1:m/f |
    f1 |
    c |
    b2/d c/e
