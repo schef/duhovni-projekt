@@ -4,7 +4,7 @@
 title = "MIR VAM OSTAVLJAM"
 composer = "MARANATA"
 bpm = "93"
-style = "ROCK BALADA"
+style = "BALADA"
 titlex = "MIR NEBESKI"
 }
 
@@ -25,16 +25,16 @@ note = \relative c'' {
 	g2 b |
 	c4( d) es2 |
 	b4 g f4. es8 |
-	es1 |
+	es1 | \break
 
 	\mark \default
 	r8 f8 f f f f g as |
 	b4 f8 f ~ f4 g |
 	r8 as8 as as as as b c |
-	c4 g8 g( ~ g g ~ g4) |
+	c4 g8 g\( ~ g g ~ g4\) |
 	r8 b8 b b b b c d |
-	es8( es) c8 c ~ c4 es8( es) |
-	d4 b8 b( ~ b b) d4 |
+	es8\( es\) c8 c ~ c4 es8\( es\) |
+	d4 b8 b\( ~ b b\) d4 |
 	c4 as8 as ~ as2 |
 	\bar "|."
 }
@@ -55,12 +55,33 @@ akordi = \chordmode {
 
 %HRVATSKI TEKST
 lyricsAOne = \lyricmode {
+	Ja vam ne da -- jem ka -- o svijet što da -- je
+	da se ne bo -- ji pla -- ho sr -- ce va -- še __
+	o -- hra -- bri -- te se i mir nek __ _ u -- pra -- vlja __ _
+	va -- ma jer __ _ po -- bije -- dih svijet
+
 }
 
 lyricsB = \lyricmode {
+	Mir, mir, mir, __ mir, mir __ vam o -- sta -- vljam.
+	Mir, mir, mir, __ mir, mir svoj da -- jem vam.
 }
 
-lyricsC = \lyricmode {
+lyricsATwo = \lyricmode {
+	\repeat unfold 18 _
+	Ja vam ne da -- jem ka -- o svijet što da -- je
+	to ni -- je mir što vla -- da i -- znad gro -- ba __
+	to ni -- je mir ko -- ji se si -- lom do -- bi -- va __ _
+	kad smo ti -- ho i šu -- ti -- mo __
+
+}
+
+lyricsAThree = \lyricmode {
+	\repeat unfold 18 _
+	To mir je bo -- žji i -- znad sva -- kog u -- ma
+	mir bo -- žji na ko -- ji ste po -- zva -- ni __ _
+	ču -- vat će va -- še mi -- sli va -- _ ša sr -- ca
+	u bo -- žjem si -- _ nu i -- su -- su __
 }
 
 \score {
@@ -68,7 +89,9 @@ lyricsC = \lyricmode {
         \new ChordNames { \romanChords \transpose es c \akordi }
         \new ChordNames { \jazzChords \akordi }
         \new Staff { \note }
-        \addlyrics { \lyricsAOne \lyricsB \lyricsC }
+        \addlyrics { \lyricsB \lyricsAOne }
+        \addlyrics { \lyricsATwo }
+        \addlyrics { \lyricsAThree }
 >>
 \layout {}
 }

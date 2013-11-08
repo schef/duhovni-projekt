@@ -4,7 +4,7 @@
 title = "DU BIST MEIN GLÜCK"
 composer = "KATHARINA NEUDECK"
 bpm = "70"
-style = "BALLADE"
+style = "Ps.73,28"
 titlex = "JAHRESLOSUNG"
 }
 
@@ -18,7 +18,7 @@ note = \relative c' {
 	\key b \major
         \time 4/4
 	\mark \default
-	d16 f f f ~ f8 f16 f ~ f16 g8. r8 es16 d |
+	d16 f f f ~ f8 f16 f ~ f16 g8. r8 es16\( d\) |
 	c8 d16 es ~ es8 d16 d ~ d2 |
 	d16 f f f ~ f8 f16 f ~ f16 g8. r8 es16 d |
 	c8 d16 es ~ es8 d16 d ~ d2 |
@@ -35,12 +35,13 @@ note = \relative c' {
 	g8. f16 ~ f es8 f16 ~ f4 r8 c16 d |
 	es8 d16 es ~ es d8 es16 ~ es8 d c b |
 	b'8 a16 g ~ g f f8 ~ f4 r8 c16 d |
-	es8. f16 ~ f8 f ~ f4 r8
+%	es8. f16 ~ f8 f ~ f4 r8
+	es8. f16 ~ f8 f ~ f2 |
 	
-	\breathemoj
-	f16 es |
-	es4. d8 ~ d4. b8 ~ |
-	b1 |
+%	\breathemoj
+%	f16 es |
+%	es4. d8 ~ d4. b8 ~ |
+%	b1 |
 	\bar "|."
 }
 
@@ -54,18 +55,36 @@ akordi = \chordmode {
 				b2/d es | f b | g:m es |
 				f2 g4:m f |
 				es2 b/d | c2:m | f1 | es2 b/d |
-				c4*3 b4/d | es2 b2/d | c2:m f2 |
-				es2 f | b1 |
+				c4*3:m b4/d | es2 b2/d | c2:m f2 |
+				%es2 f | b1 |
 }
 
 %HRVATSKI TEKST
 lyricsAOne = \lyricmode {
+	Herr, ich kann dei -- ne Lie -- be, die sich mir ent -- ge -- gen -- streckt,
+
+	   nur im -- mer mehr er -- fas -- sen, weil du mein Ver -- lan -- gen weckst!
+
+		   Denn ich will bei dir blei -- ben, du nimmst mei -- ne rech -- te __ Hand. __
+
+			  Dan -- ke für dei -- ne Hil -- fe, __ als du mir zur Sei -- te standst! __
+}
+
+lyricsATwo = \lyricmode {
+	Kann ich die Ster -- ne zäh -- len, am __ _ gro -- ßen Him -- mels -- zelt __
+
+	  und dei -- ne Macht be -- grei -- fen, du der Fin -- ster -- nis er -- hellt? __
+
+		  Du zählst auch mei -- ne Trä -- nen, sam -- melst sie in dei -- ner __ Hand! __
+
+			  Ich lo -- be dich und sin -- ge, __ weil mich dei -- ne Gna -- de fand! __
 }
 
 lyricsB = \lyricmode {
-}
+	Herr, du al -- lein bist mein Glück, __ denn du holst mich aus __ der Tie -- fe
 
-lyricsC = \lyricmode {
+	Und ich lauf` zu dir __ zu -- rück __ ich ver -- trau -- e __ dir! __
+	Ich ver -- trau -- e __ dir! __
 }
 
 \score {
@@ -73,7 +92,8 @@ lyricsC = \lyricmode {
         \new ChordNames { \romanChords \transpose b c \akordi }
         \new ChordNames { \jazzChords \akordi }
         \new Staff { \note }
-        \addlyrics { \lyricsAOne \lyricsB \lyricsC }
+        \addlyrics { \lyricsAOne \lyricsB }
+        \addlyrics { \lyricsATwo }
 >>
 \layout {}
 }
