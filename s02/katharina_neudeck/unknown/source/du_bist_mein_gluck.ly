@@ -36,7 +36,7 @@ note = \relative c' {
 	es8 d16 es ~ es d8 es16 ~ es8 d c b |
 	b'8 a16 g ~ g f f8 ~ f4 r8 c16 d |
 %	es8. f16 ~ f8 f ~ f4 r8
-	es8. f16 ~ f8 f ~ f4 r4 |
+	es8. f16 ~ f8 f ~ f2 |
 	
 %	\breathemoj
 %	f16 es |
