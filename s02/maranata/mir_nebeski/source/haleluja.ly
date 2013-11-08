@@ -60,12 +60,31 @@ akordi = \chordmode {
 
 %HRVATSKI TEKST
 lyricsAOne = \lyricmode {
+I -- sus je u ta -- mnoj no -- ći __
+ha -- le -- lu -- ja ha -- le -- lu -- ja
+svije -- tlo svije -- tu do -- ni -- o ha -- le -- lu -- ja
 }
 
 lyricsB = \lyricmode {
+Ha -- le -- lu -- ja ha -- le -- lu -- ja sla -- vi go -- spo -- da ha -- le -- lu -- ja
+re -- ci svi -- ma što na kri -- žu zbi -- lo se __
+za -- pje -- vaj "s na" -- ma ha -- le -- lu -- ja
+
 }
 
-lyricsC = \lyricmode {
+lyricsATwo = \lyricmode {
+	\repeat unfold 37 _
+I -- sus u -- mro je zbog grije -- ha __
+pra -- ve -- dan za ne -- pra -- ve -- dne
+da nas "k bo" -- gu pri -- ve -- de ha -- le -- lu -- ja
+}
+
+lyricsAThree = \lyricmode {
+	\repeat unfold 37 _
+U -- đi -- mo na u -- ska vra -- ta __
+ši -- rok put je "k pro" -- pa -- sti __ ""
+za -- to kri -- sta slije -- di -- mo ha -- le -- lu -- ja
+
 }
 
 \score {
@@ -73,7 +92,9 @@ lyricsC = \lyricmode {
         \new ChordNames { \romanChords \transpose c c \akordi }
         \new ChordNames { \jazzChords \akordi }
         \new Staff { \note }
-        \addlyrics { \lyricsAOne \lyricsB \lyricsC }
+        \addlyrics { \lyricsB \lyricsAOne }
+        \addlyrics { \lyricsATwo }
+        \addlyrics { \lyricsAThree }
 >>
 \layout {}
 }
