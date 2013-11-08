@@ -19,21 +19,21 @@ note = \relative c' {
 		\time 3/4
 		\mark \default
 		\partial 4
-		f8( g) |
-		a4 a a8 g |
+		f8\( g\) |
+		a4 a\( a8\) g |
 		f4 c c8 f |
-		a4( a4.) g8 |
-		f4( f) e8 f |
+		a4\( a4.\) g8 |
+		f4\( f\) e8 f |
 		g4 g4. f8 |
-		e8( d) c4 f8 g |
+		e8\( d\) c4 f8 g |
 		a4 f4. d8 |
 		c2 r8 a'8 |
 		c4 c4. c8 |
-		a8( g) f4 f8 g |
-		a2 f8( d) |
+		a8\( g\) f4 f8 g |
+		a2 f8\( d\) |
 		c2 e8 f |
 		g4 g4. g8 |
-		e8( d) c4 c8 c |
+		e8\( d\) c4 c8 c |
 		b'4 a g |
 		f2. |
 		r2
@@ -80,12 +80,26 @@ akordi = \chordmode {
 
 %HRVATSKI TEKST
 lyricsAOne = \lyricmode {
+Da u Kri -- stu spa -- si -- te -- lju mi smo bra -- ća i se -- stre
+sad smo svi je -- dna o -- bi -- telj je -- dan i -- ma -- mo dom
+kad ne -- tko je tu -- _ žan no -- si -- mo nje -- gov bol  %njeg' -- vu bol ??? BOLJE?
+čak i naj -- ma -- nju ra -- _ dost spre -- mno svi dije -- li -- mo
 }
 
 lyricsB = \lyricmode {
+Sre -- tan sam što pri -- pa -- dam bo -- žjoj o -- bi -- te -- lji
+krv i -- su -- sa kri -- sta moj o -- pra grijeh
+bijeh ne -- koć da -- le -- ko po -- stah pri -- ja -- telj "s njim"
+za -- u -- vijek gle sad pri -- pa -- dam bo -- žjoj o -- bi -- te -- lji
+
 }
 
-lyricsC = \lyricmode {
+lyricsATwo = \lyricmode {
+Ne -- _ shva -- čen __ _ u dru -- štvu u -- zeh kri -- _ stov križ __ _
+no -- vu pje -- smu sad pje -- _ vam ra -- do -- šću i -- spu -- njen
+od pro -- sta -- ka po -- sta -- doh pri -- ja -- telj bo -- _ žji
+to -- ga ja ni -- sam do -- sto -- jan i -- pak lju -- bi me bog
+
 }
 
 \score {
@@ -93,7 +107,8 @@ lyricsC = \lyricmode {
 		\new ChordNames { \romanChords \transpose f c \akordi }
 	\new ChordNames { \jazzChords \akordi }
 	\new Staff { \note }
-	\addlyrics { \lyricsAOne \lyricsB \lyricsC }
+	\addlyrics { \lyricsAOne \lyricsB }
+	\addlyrics { \lyricsATwo }
 	>>
 		\layout {}
 }
