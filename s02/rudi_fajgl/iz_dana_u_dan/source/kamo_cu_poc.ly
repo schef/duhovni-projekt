@@ -24,8 +24,8 @@ note = \relative c'' {
 	f2 r2 |
 	f2 f4 g |
 	a4 a b a |
-	a8 \( g ~ g2. ~ |
-	g2 \) r2 |
+	a8 ( g ~ g2. ~ |
+	g2 ) r2 |
 	a2 a4 b8 a ~ |
 	a2 r4 a4 |
 	g4 f f8 g4 f8 ~ |
@@ -33,7 +33,7 @@ note = \relative c'' {
 	a2 c8 b4 a8 ~ |
 	a2 g8 g4 f8 ~ |
 	f1 ~ |
-	f2 r2 |
+	f2 r2 | \break
 	
 	\once \override Score.RehearsalMark.Y-offset = #-1.7
 	\mark \default
@@ -43,8 +43,8 @@ note = \relative c'' {
 	f2 r2 |
 	f2 f4 g |
 	a4 a b a |
-	a8 \( g ~ g2. ~ |
-	g2 \) r2 |
+	a8 ( g ~ g2. ~ |
+	g2 ) r2 |
 	a2 a4 b8 a ~ |
 	a2 r4 a4 |
 	g4 f f8 g4 f8 ~ |
@@ -72,12 +72,30 @@ akordi = \chordmode {
 
 %HRVATSKI TEKST
 lyricsAOne = \lyricmode {
+	Te -- žak je svijet __ u ko -- jem ži -- vi -- mo, __ tko mo -- že u -- tje -- hu da da __
+	tu -- gu i bol, __ tko mo -- že lije -- či -- ti __
+	to mo -- žeš ti, __ bo -- že moj __ 
+
+}
+
+lyricsATwo = \lyricmode {
+	Po -- ne -- kad je, __ i o -- vaj ži -- vot lijep, __ po -- ne -- kad do -- bro i -- de sve __
+	al' do -- đe dan, __ da du -- ši od -- mor daš __
+	ka -- mo ću  poć', __ bo -- že moj __
+	
+}
+
+lyricsAThree = \lyricmode {
+	Pro -- la -- zi sve, __ i ži -- vot pro -- ći će. __ mo -- ja će du -- ša na -- ći mir __
+	o -- vaj ću svijet __ i ja na -- pu -- sti -- ti, __ "k te" -- bi ću poć', bo -- že moj __
 }
 
 lyricsB = \lyricmode {
-}
+	Ka -- mo ću poć', __ o ka -- mo ću poć' __
+	za du -- šu svo -- ju na -- ći lijek __
+	tko mo -- že mi, __ sav grijeh o -- pro -- sti -- ti __
+	"k te" -- bi ću poć', __ bo -- že moj __
 
-lyricsC = \lyricmode {
 }
 
 \score {
@@ -85,7 +103,9 @@ lyricsC = \lyricmode {
         \new ChordNames { \romanChords \transpose f c \akordi }
         \new ChordNames { \jazzChords \akordi }
         \new Staff { \note }
-        \addlyrics { \lyricsAOne \lyricsB \lyricsC }
+        \addlyrics { \lyricsAOne \lyricsB }
+        \addlyrics { \lyricsATwo }
+        \addlyrics { \lyricsAThree }
 >>
 \layout {}
 }
