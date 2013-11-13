@@ -25,10 +25,10 @@ note = \relative c' {
         c8 h a g e2 |
         a8 g f e a g f e |
         r4 e8\( c\) d4. c8 |
-        c2 r2 |
+        c2 r2 | \break
         
-        \once \override Score.RehearsalMark.X-offset = #-1.7
-        \once \override Score.RehearsalMark.Y-offset = #-1.2
+        %\once \override Score.RehearsalMark.X-offset = #-1.7
+        %\once \override Score.RehearsalMark.Y-offset = #-1.2
         \mark \default
         r4 c'4 h4. g8 |
         a4. f8 e2 |
