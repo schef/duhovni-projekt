@@ -1,48 +1,11 @@
-﻿TEBI TREBA BOG-- E
+﻿kada tužan novi dan započinješ, dal' shvaćaš ti , tebi treba bog
+kada tuga tvoje srce zarobi, dal' shvaćaš ti, tebi treba bog
 
+refren:
+svako jutro, tebi treba bog, cijelog dana, tebi treba bog
+svako jutro, tebi treba bog, cijelog dana, tebi treba bog
+i navečer kad spremaš se na spavanje, tebi treba bog
 
-E, C#m, E, C#m, E, C#m, H, H
-
-E                                              C#mol                        A                                 E
-KADA TUŽAN NOVI DAN ZAPOČINJEŠ, DAL' SHVAĆAŠ TI , TEBI TREBA BOG
-                                                C#mol                 A                                H
-KADA TUGA TVOJE SRCE ZAROBI, DAL' SHVAĆAŠ TI, TEBI TREBA BOG
-
-
-                              E                        A                                         E                      A
-Refren:  SVAKO JUTRO, TEBI TREBA BOG, CIJELOG DANA, TEBI TREBA BOG
-                 E                              H                             C#m     A     E          H7          E  H7
-               I NAVEČER KAD SPREMAŠ SE NA SPAVANJE, TEBI TREBA BOG
-
-                              E                        A                                         E                      A
-               SVAKO JUTRO, TEBI TREBA BOG, CIJELOG DANA, TEBI TREBA BOG
-                 E                              H                             C#m     A     E          H7          E  H7
-               I NAVEČER KAD SPREMAŠ SE NA SPAVANJE, TEBI TREBA BOG
-
-
-E                                                     C#m                         A                                E
-KAD MISLIŠ DA TE NITKO NE RAZUMIJE, DAL' SHVAĆAŠ TI, TEBI TREBA BOG
-                                                           C#m                               A  
-KAD POMISLIŠ DA ON SVIH SI ZABORAVLJEN, DAL' SHVAĆAŠ TI,  
-          H
-TEBI TREBA ON
-
-
-
-                              E                        A                                         E                      A
-Refren:  SVAKO JUTRO, TEBI TREBA BOG, CIJELOG DANA, TEBI TREBA BOG
-                 E                              H                             C#m     A     E          H7          E  H7
-               I NAVEČER KAD SPREMAŠ SE NA SPAVANJE, TEBI TREBA BOG
-
-                              E                        A                                         E                      A
-               SVAKO JUTRO, TEBI TREBA BOG, CIJELOG DANA, TEBI TREBA BOG
-                 E                              H                             C#m     A     E          H7          E  H7
-               I NAVEČER KAD SPREMAŠ SE NA SPAVANJE, TEBI TREBA BOG
-
-                              E                        A                                         E                      A
-               SVAKO JUTRO, TEBI TREBA BOG, CIJELOG DANA, TEBI TREBA BOG
-                 E                              H                             C#m     A     E          H7          E  H7
-               I NAVEČER KAD SPREMAŠ SE NA SPAVANJE, TEBI TREBA BOG
-
-
-
+kad misliš da te nitko ne razumije, dal' shvaćaš ti, tebi treba bog
+kad pomisliš da on svih si zaboravljen, dal' shvaćaš ti,  
+tebi treba on
