@@ -8,7 +8,7 @@
   composer = "FRANK BOSCH"
 }
 
-\include "s02.ily"
+\include "s02_frbo.ily"
 
 note = \relative c' {
   \key f \major
