@@ -58,8 +58,23 @@ note = \relative c' {
 }
 
 tekst = \lyricmode {
-\set stanza = "1."
+%\set stanza = "1."
+„Fürchte dich nicht, ich bin mit dir; 
+weiche nicht, denn ich bin dein Gott. 
+Ich stärke dich, ich helfe dir auch, 
+ich halte dich durch die rechte Hand 
+Meiner Gerechtigkeit.“
 
+Manchmal fragst Du Dich, was hat Gott mit mir vor?
+Zweifelnd fühlst Du Dich , wie auf Wegen durchs Moor.
+Ängstlich rufst Du aus: Herr ich seh´ den Weg nicht.
+Doch vergiss nicht was Gott dir verspricht:
+
+„Fürchte dich nicht, ich bin mit dir; 
+weiche nicht, denn ich bin dein Gott. 
+Ich stärke dich, ich helfe dir auch,
+ich halte dich durch die rechte Hand meiner 
+Gerechtigkeit.“
 }
 
 tekstDva = \lyricmode {
@@ -99,12 +114,6 @@ akordi = \chordmode {
   \midi { \tempo 4 = 111 }
 }
 
-%intro E x4
-%kitica bridge refren
-%kitica bridge refren
-%kitica bridge refren
-%refren
-%outro E x4
 
 %\markup {
 %\vspace #2
