@@ -13,13 +13,13 @@
 note = \relative c' {
   \key f \major
   \partial 16*3
-  c16 f g |
+  a'16 a a |
   a8 g g f16 f ~ f4 r8 r16 f |
-  e8 f e f16 e ~ e16 d8. r16 d g a |
+  e8 f e f16 e ~ e16 d8. r16 g g g |
   b8 a a g16 g ~ g4 r8 r16 f |
-  f8 e d c16 c ~ c4 r16 c f g |
+  f8 e d c16 c ~ c4 r16 a' a a |
   a8 g g f16 f ~ f4 r8 r16 f |
-  e8 f e f16 e ~ e16 d8. r16 d g a |
+  e8 f e f16 e ~ e16 d8. r16 a' a a |
   b8 a a g16 g ~ g4 r8 r16 f |
   f8 e d c16 c ~ c4 r8 r16 \breathemoj c'16 |
   c8 b a g16 g ~ g f8. r8 r16 f |
