@@ -12,8 +12,7 @@
 
 note = \relative c' {
   \key d \major
-  \time 3/4
-  
+  \time 3/4  
   d4 d d8 e |
   d2 d8 e |
   fis4 e4. d8 |
